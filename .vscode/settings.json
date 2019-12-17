@@ -1,0 +1,22 @@
+{
+    "cSpell.words": [
+        "Backgroud",
+        "Logf",
+        "Mutex",
+        "Printt",
+        "Syscall",
+        "iface",
+        "learnfunc",
+        "mutexrw",
+        "myinterface",
+        "mymap",
+        "mystruct",
+        "uint",
+        "uintptr"
+    ],
+    "cSpell.ignoreWords": [
+        "wait"
+    ]
+    
+}
+
