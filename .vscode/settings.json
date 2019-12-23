@@ -10,6 +10,7 @@
         "learnfunc",
         "mutexrw",
         "myinterface",
+        "myio",
         "mymap",
         "mystruct",
         "uint",
