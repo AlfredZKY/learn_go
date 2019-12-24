@@ -22,6 +22,6 @@
     "go.autocompleteUnimportedPackages": true,
     "go.docsTool": "gogetdoc",
     "go.formatTool": "goimports",
-    
+    "go.testFlags": ["-v","-count=1"]
 }
 
