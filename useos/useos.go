@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -129,7 +130,125 @@ func useFilefunc() {
 	}
 }
 
+type flagDesc struct {
+	flag int
+	desc string
+}
+
+func createFileFunc() {
+	filename1 := "something2.txt"
+	filePath1 := filepath.Join(os.TempDir(), filename1)
+	fmt.Printf("The file path:%s\n", filePath1)
+	fmt.Println()
+
+	contents0 := "OpenFile is the generalized open call."
+	flagDescList := []flagDesc{
+		{
+			os.O_WRONLY | os.O_CREATE | os.O_TRUNC,
+			"os.O_WRONLY|os.O_CREATE|os.O_TRUNC",
+		},
+		{
+			os.O_WRONLY,
+			"os.O_WRONLY",
+		},
+		{
+			os.O_WRONLY | os.O_APPEND,
+			"os.O_WRONLY|os.O_APPEND",
+		},
+	}
+	for i, v := range flagDescList {
+		fmt.Printf("Open the file with flag %s ...\n", v.desc)
+		file1a, err := os.OpenFile(filePath1, v.flag, 0666)
+		if err != nil {
+			fmt.Printf("error:%v\n", err)
+			continue
+		}
+		fmt.Printf("The descriptor:%d\n", file1a.Fd())
+		contents1 := fmt.Sprintf("[%d] :%s ", i+1, contents0)
+		fmt.Printf("Write %q to the file ...\n", contents1)
+
+		n, err := file1a.WriteString(contents1)
+		if err != nil {
+			fmt.Printf("error:%v\n", err)
+			continue
+		}
+		fmt.Printf("The number of bytes written is %d.\n", n)
+		file1b, err := os.Open(filePath1)
+		fmt.Println("Read bytes from the file ...")
+		bytes, err := ioutil.ReadAll(file1b)
+		if err != nil {
+			fmt.Printf("error:%v\n", err)
+			continue
+		}
+		fmt.Printf("Read(%d):%q\n", len(bytes), bytes)
+		fmt.Println()
+	}
+
+	fmt.Println("Try to create an existing file with flag os.O_TRUNC ...")
+	file2, err := os.OpenFile(filePath1, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0666)
+	if err != nil {
+		fmt.Printf("error:%v\n", err)
+		return
+	}
+	fmt.Printf("The file description:%d\n", file2.Fd())
+	fmt.Printf("Try to create an existing file with flag os.O_EXCL ...")
+	_, err = os.OpenFile(filePath1, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+	fmt.Printf("error:%v\n", err)
+}
+
+type argsDesc struct{
+	action string
+	flag int
+	perm os.FileMode
+}
+
+func osFunc(){
+	fmt.Printf("The mode for dir:\n%32b\n",os.ModeDir)
+	fmt.Printf("The mode for named pipe:\n%32b\n",os.ModeNamedPipe)
+	fmt.Printf("The mode for all of the irregular files:\n%32b\n",os.ModeType)
+	fmt.Printf("The mode for permissions:\n%32b\n",os.ModePerm)
+
+	filename1:="something3.txt"
+	filepath1:=filepath.Join(os.TempDir(),filename1)
+	fmt.Printf("The file path: %s\n",filepath1)
+
+	argsDescList := []argsDesc{
+		{
+			"Create",
+			os.O_RDWR|os.O_CREATE,
+			0644,
+		},
+		{
+			"Reuse",
+			os.O_RDWR|os.O_TRUNC,
+			0666,
+		},
+		{
+			"Open",
+			os.O_RDWR|os.O_APPEND,
+			0777,
+		},
+	}
+	defer os.Remove(filepath1)
+	for _,v := range argsDescList{
+		fmt.Printf("%s the file with perm %o ...\n",v.action,v.perm)
+		file1,err := os.OpenFile(filepath1,v.flag,v.perm)
+		if err != nil{
+			fmt.Printf("error:%v\n",err)
+			continue
+		}
+		info1,err:=file1.Stat()
+		if err != nil{
+			fmt.Printf("error:%v\n",err)
+			continue
+		}
+		fmt.Printf("The file permission:%o\n",info1.Mode().Perm())
+	}
+}
+
 func main() {
 	isdeteminerinterface()
 	useFilefunc()
+	createFileFunc()
+	osFunc()
 }
