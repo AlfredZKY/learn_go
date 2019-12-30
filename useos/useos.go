@@ -100,7 +100,7 @@ func useFilefunc() {
 
 	fmt.Printf("error:%v %s\n", err, underlyingErr)
 	fmt.Println()
-
+	fmt.Println()
 	fmt.Printf("Open a file with path %s ... \n", filePath1)
 	file5a, err := os.Open(filePath1)
 	if err != nil {

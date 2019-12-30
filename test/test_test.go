@@ -1,8 +1,10 @@
 package test
 
 import (
+	"strconv"
 	"fmt"
 	"testing"
+	"github.com/multiformats/go-varint"
 )
 
 func TestHello(t *testing.T) {
@@ -44,4 +46,58 @@ func TestFail(t *testing.T) {
 	//t.FailNow()
 	//t.Error("print info fail")
 	t.Log("testing FailNow")
+}
+
+
+// Protocol represents which protocol an address uses.
+type Protocol = byte
+
+type Address struct{ str string }
+
+const (
+	// ID represents the address ID protocol.
+	ID Protocol = iota
+	// SECP256K1 represents the address SECP256K1 protocol.
+	SECP256K1
+	// Actor represents the address Actor protocol.
+	Actor
+	// BLS represents the address BLS protocol.
+	BLS
+
+	Unknown = Protocol(255)
+)
+
+func TestStrconv(*testing.T){
+	s := "101"
+	v,err := strconv.ParseUint(s,10,64)
+	if err != nil{
+		fmt.Println(err)
+	}
+	fmt.Println("strconv.ParseUint(s,10,64)",v)
+	raw := "101"
+	id, err := strconv.ParseUint(raw, 10, 64)
+	payload := varint.ToUvarint(id)
+	fmt.Println("payload",payload)
+	fmt.Println("varint.ToUvarint(id)",varint.ToUvarint(id))
+	_, n, err := varint.FromUvarint(payload)
+	if err != nil {
+		return 
+	}
+	if n != len(payload) {
+		return
+	}
+
+	fmt.Println("n",n)
+	explen := 1 + len(payload)
+	buf := make([]byte, explen)
+	fmt.Println("explan ",explen)
+	var protocol Protocol
+	protocol = ID
+
+	buf[0] = protocol
+	copy(buf[1:], payload)
+	fmt.Printf("string(buf) %s\n",string(buf))
+	fmt.Printf("%x\n",&(Address{string(buf)}))
+	fmt.Println("buf ",buf)
+	
 }

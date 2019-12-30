@@ -1,0 +1,1 @@
+https://github.com/hyper0x/Golang_Puzzlers/blob/master/src/puzzlers/article36/q0/demo93.go
