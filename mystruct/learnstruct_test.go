@@ -103,10 +103,22 @@ func (cat CatAnimal) GetCategory() string {
 	return cat.Category
 }
 
+type Variable struct {
+	Internal struct {
+		a int
+	}
+	b int
+}
+
 func TestStructNull(t *testing.T) {
 	// 空结构体的特点：1.不占用内存 2。地址不变
 	var s struct{}
 	var s1 struct{}
 	t.Logf("Memory occupied by empty structures is %d", unsafe.Sizeof(s))
 	t.Logf("s address is %p s1 address is %p, s or s1 compare %v", &s, &s1, &s == &s1)
+
+	test := Variable{}
+	test.Internal.a=3
+	test.b=3
+	fmt.Println(test)
 }
