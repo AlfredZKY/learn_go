@@ -21,7 +21,7 @@ func TestGoRoutineProcess(t*testing.T){
 	// go func() { 
 	// 	fmt.Println("My first goroutine")
 	// }()
-	
+	fmt.Println("hello")
 }
 
 func TestGoRoutineBlocked(t*testing.T){
