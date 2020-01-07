@@ -152,3 +152,41 @@ func TestMutexRW(t *testing.T) {
 		<-sign
 	}
 }
+
+func TestMutexSort(t *testing.T) {
+	var mutex sync.Mutex
+	fmt.Println("Lock the lock. (main)")
+	mutex.Lock()
+	fmt.Println("The lock is locked. (main)")
+	for i := 1; i <= 3; i++ {
+		go func(i int) {
+			fmt.Printf("Lock the lock. (g%d)\n", i)
+			mutex.Lock()
+			fmt.Printf("The lock is locked. (g%d)\n", i)
+		}(i)
+	}
+	time.Sleep(time.Second)
+	fmt.Println("Unlock the lock. (main)")
+	mutex.Unlock()
+	fmt.Println("The lock is unlocked. (main)")
+	time.Sleep(time.Second * 2)
+}
+
+func TestMultiLock(t *testing.T) {
+	// 恢复在之前低版本是可以恢复的
+	defer func() {
+		fmt.Println("Try to recover the panic.")
+		if p := recover(); p != nil {
+			fmt.Printf("Recovered the panic(%#v).\n", p)
+		}
+	}()
+	var mutex sync.Mutex
+	fmt.Println("Lock the lock")
+	mutex.Lock()
+	fmt.Println("The lock is locked.")
+	fmt.Println("Unlock the lock.")
+	mutex.Unlock()
+	fmt.Println("The lock is unlocked.")
+	fmt.Println("Unlock the lock again.")
+	mutex.Unlock()
+}
