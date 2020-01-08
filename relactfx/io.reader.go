@@ -25,6 +25,7 @@ func fxUse() {
 	app.Start(context.Background())
 	defer app.Stop(context.Background())
 
+	fmt.Printf("%T\n",reader)
 	// 使用
 	// reader变量已与fx.Provide注入的实现类关联了
 	bs, err := ioutil.ReadAll(reader)

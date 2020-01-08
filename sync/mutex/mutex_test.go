@@ -165,11 +165,17 @@ func TestMutexSort(t *testing.T) {
 			fmt.Printf("The lock is locked. (g%d)\n", i)
 		}(i)
 	}
+	// 休眠允许goroutine能够执行，
 	time.Sleep(time.Second)
 	fmt.Println("Unlock the lock. (main)")
+
+	// 解锁之后，唤醒三个goroutine进行竞争,
 	mutex.Unlock()
 	fmt.Println("The lock is unlocked. (main)")
-	time.Sleep(time.Second * 2)
+	
+	// 休眠 允许goroutine打印出结果
+	// time.Sleep(time.Second * 2)
+	time.Sleep(time.Second )
 }
 
 func TestMultiLock(t *testing.T) {

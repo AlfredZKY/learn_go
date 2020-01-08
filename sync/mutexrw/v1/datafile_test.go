@@ -82,7 +82,7 @@ func (df *myDataFile) Write(d Data) (wsn int64, err error) {
 	var offset int64
 	df.wmutex.Lock()
 	offset = df.woffset
-	df.woffset += int64(df.woffset)
+	df.woffset += int64(df.dataLen)
 	df.wmutex.Unlock()
 
 	// 写入一个数据块
