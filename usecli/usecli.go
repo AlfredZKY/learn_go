@@ -70,10 +70,16 @@ func cliflagdes(){
 		Flags :[]cli.Flag{
 			&cli.StringFlag{
 				Name:"lang",
-				Value:"english",
+				//Value:"",
 				Aliases: []string{"l"},
 				Usage:"language for the freeting",
 				Destination:&language,
+			},
+			&cli.BoolFlag{
+				Name:  "genesis-miner",
+				Usage: "enable genesis mining (DON'T USE ON BOOTSTRAPPED NETWORK)",
+				Hidden:	true,
+				//Value:true,
 			},
 		},
 		Action:func(c*cli.Context)error{
@@ -81,7 +87,11 @@ func cliflagdes(){
 			if c.NArg()>0{
 				name = c.Args().Get(0)
 			}
-			fmt.Println(c.String("lang"))
+			if c.Bool("genesis-miner"){
+				fmt.Println(c.Bool("genesis-miner"))
+				fmt.Println("genesis-miner")
+			}
+			// fmt.Println(c.String("lang"))
 			if language == "spanish"{
 				fmt.Println("hola",name)
 			}else{
