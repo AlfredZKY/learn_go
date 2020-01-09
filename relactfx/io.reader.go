@@ -10,7 +10,7 @@ import (
 
 	"go.uber.org/fx"
 )
-
+//nolint:golint
 func fxUse() {
 	var reader io.Reader
 
@@ -25,7 +25,7 @@ func fxUse() {
 	app.Start(context.Background())
 	defer app.Stop(context.Background())
 
-	fmt.Printf("%T\n",reader)
+	fmt.Printf("%T\n", reader)
 	// 使用
 	// reader变量已与fx.Provide注入的实现类关联了
 	bs, err := ioutil.ReadAll(reader)
@@ -65,7 +65,43 @@ func fxComplexUse() {
 	fmt.Printf("The result is %v, %v\n", v1.Name, v2.Age)
 }
 
+func fxComplexUseGroup() {
+	type t3 struct {
+		Name string
+	}
+
+	// 使用group标签
+	type result struct {
+		fx.Out
+		V1 *t3 `group:"g"`
+		V2 *t3 `group:"g"`
+	}
+
+	targets := struct {
+		fx.In
+		Group []*t3 `group:"g"`
+	}{}
+
+	app := fx.New(
+		fx.Provide(func() result {
+			return result{
+				V1: &t3{"hello-000"},
+				V2: &t3{"world-www"},
+			}
+		}),
+		fx.Populate(&targets),
+	)
+	
+	app.Start(context.Background())
+	defer app.Stop(context.Background())
+	for _, t := range targets.Group {
+		fmt.Printf("the result is %v\n", t.Name)
+	}
+
+}
+
 func main() {
 	fxUse()
 	fxComplexUse()
+	fxComplexUseGroup()
 }

@@ -19,64 +19,29 @@
     "cSpell.ignoreWords": [
         "wait"
     ],
+    "workbench.statusBar.visible": true,
+    "editor.tabSize": 4,
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#3d40dda9",
+        "editorGutter.background": "#c0e683b6",
+        "editorCursor.foreground": "#d41313",
+    },
+    "editor.rulers":[120],
+    "highlight-icemode.borderColor": "red",
+    "files.autoSave": "afterDelay",
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+
+    "remote.SSH.showLoginTerminal": true,
+
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.openExplorerOnEnd": true,
+
     "go.coverOnTestPackage": false,
     "go.autocompleteUnimportedPackages": true,
     "go.docsTool": "gogetdoc",
     "go.formatTool": "goimports",
     "go.testFlags": ["-v","-count=1"],
-    "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 1,
-    "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": true,
-    "editor.accessibilitySupport": "on",
-    "[nim]": {},
-    "editor.tabSize": 4,
-    "workbench.colorCustomizations": {
-        "editorLineNumber.foreground": "#17a346",
-        "editorGutter.background": "#020230",
-        "editorCursor.foreground": "#d41313",
-    },
-    "terminal.integrated.cursorBlinking": true,
-    "editor.occurrencesHighlight": false,
-    "editor.selectionHighlight": false,
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
-    "editor.cursorWidth": 3,
-    "editor.parameterHints.enabled":false,
-    "editor.rulers":[120],
-    "highlight-icemode.borderColor": "red",
-    "files.autoSave": "afterDelay",
-    "editor.mouseWheelZoom": true,
-    "editor.minimap.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    
-    "git.ignoreMissingGitWarning": true,
-    "git.confirmSync": false,
-    "search.location": "sidebar",
-    "workbench.editor.enablePreview": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "debug.allowBreakpointsEverywhere": true,
-    "debug.openExplorerOnEnd": true,
-    "window.openFoldersInNewWindow": "off",
-    "explorer.confirmDelete": false,
-    "remote.SSH.showLoginTerminal": true,
-    "terminal.integrated.shell.linux": "/bin/bash",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "editor.renderLineHighlight": "all",
-    "editor.renderWhitespace": "all",
-    "workbench.colorTheme": "Monokai",
-    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
-    "bracket-pair-colorizer-2.highlightActiveScope": true,
-    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
-    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
-    "bracket-pair-colorizer-2.colors": [
-        "red",
-    ],
 }
 
 
