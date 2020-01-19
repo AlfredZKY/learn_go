@@ -19,4 +19,8 @@ func main() {
 	fmt.Println(b, c)
 	fmt.Println(c / 1024 / 1024 / 1024)
 	fmt.Println(strings.HasSuffix("NLT_abc", "abc"))
+	res := 32 << 30
+	fmt.Println(res)
+	iArr := [5]int{1, 2, 3, 4}
+	fmt.Println(iArr)
 }

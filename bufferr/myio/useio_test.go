@@ -4,10 +4,15 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
+	"math/rand"
+	"os"
 	"strings"
 	"sync"
 	"testing"
 	"time"
+
+	"golang.org/x/xerrors"
 )
 
 func TestIo(t *testing.T) {
@@ -235,4 +240,58 @@ func TestIoFunc3(t *testing.T) {
 	_ = interface{}(pReader).(io.Closer)
 	_ = interface{}(pWriter).(io.Writer)
 	_ = interface{}(pWriter).(io.Closer)
+}
+
+func toReadableFile(r io.Reader, n int64) (*os.File, func() error, error) {
+	f, ok := r.(*os.File)
+	if ok {
+		return f, func() error { return nil }, nil
+	}
+
+	var w *os.File
+
+	f, w, err := os.Pipe()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	var wait sync.Mutex
+	var werr error
+
+	wait.Lock()
+	go func() {
+		defer wait.Unlock()
+
+		var copied int64
+		copied, werr = io.CopyN(w, r, n)
+		if werr != nil {
+			log.Printf("toReadableFile: copy error: %+v", werr)
+		}
+
+		err := w.Close()
+		if werr == nil && err != nil {
+			werr = err
+			log.Printf("toReadableFile: close error: %+v", err)
+			return
+		}
+		if copied != n {
+			log.Printf("copied different amount than expected: %d != %d", copied, n)
+			werr = xerrors.Errorf("copied different amount than expected: %d != %d", copied, n)
+		}
+	}()
+
+	return f, func() error {
+		wait.Lock()
+		return werr
+	}, nil
+}
+
+func TestCopy(t *testing.T) {
+	dlen := 34359738368
+	sid := 32
+	r := io.LimitReader(rand.New(rand.NewSource(42+int64(sid))), int64(dlen))
+	f, werr, err := toReadableFile(r, int64(dlen))
+	_ = werr()
+	_ = err 
+	t.Log(f)
 }
