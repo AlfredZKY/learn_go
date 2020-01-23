@@ -50,7 +50,7 @@ func count(c *counter) {
 
 		for j := 1; j <= 5; j++ {
 			time.Sleep(time.Millisecond * 300)
-			log.Printf("The number in counter:%d [%d-%d]", c.number(), 1, j)
+			log.Printf("The number is counter:%d [%d-%d]", c.number(), 1, j)
 		}
 	}()
 
