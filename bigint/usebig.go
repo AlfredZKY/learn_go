@@ -4,16 +4,8 @@ import (
 	"fmt"
 	"math"
 	"math/big"
-	"math/rand"
-	"io"
 )
 
-func testmultiArgs(sizes ...uint64){
-	for i,size := range sizes{
-		fmt.Println(i,size)
-	}
-	fmt.Println(len(sizes))
-}
 
 func main() {
 	den := big.NewRat(1, 1024)
@@ -32,18 +24,22 @@ func main() {
 
 	ret.Mul(io1, ip)
 	fmt.Printf("Big Int mul is : %v\n", ret)
+
+	fmt.Println("----------------------------------------")
+	ip.Mul(im, in)
+	fmt.Printf("Big Int: %v\n", ip)
+	ip.Mul(im, in).Add(ip, im)
+	fmt.Printf("Big Int: %v\n", ip)
 	ip.Mul(im, in).Add(ip, im).Div(ip, io1)
 	fmt.Printf("Big Int: %v\n", ip)
+	fmt.Println("----------------------------------------")
 	byt := new(big.Rat).SetInt(big.NewInt(0).SetUint64(20971520))
 	//byt := big.NewInt(1).SetUint64(1048576)
+	fmt.Printf("byt is %v\n", byt)
 	byt.Mul(byt, den)
+	fmt.Printf("byt is %v\n", byt)
 	byt.Mul(byt, den)
 	f, _ := byt.Float64()
 	fmt.Printf("byt is %v\n", f)
 
-	fmt.Println("----------------------------------------------")
-	sizes := uint64(10245455)
-	testmultiArgs(sizes)
-
-	fmt.Println(io.LimitReader(rand.New(rand.NewSource(42)), int64(sizes)))
 }
