@@ -26,7 +26,7 @@ func TestAtomic(t *testing.T) {
 	t.Logf("the uintNum is %d\n", uintNum)
 
 	// -3的补码
-	t.Logf("The two's complement of %d: %b\n", delta, uint32(delta))
+	t.Logf("The two's complement of %d: %b\n", delta, uint32(int32(delta)))
 	t.Logf("The equivalent:%b\n", ^uint32(-(-3)-1))
 }
 

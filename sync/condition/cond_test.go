@@ -20,7 +20,7 @@ func TestCondition(t*testing.T){
 
 	// sign 用于传递显示完成的信号
 	sign := make(chan struct {},3)
-	max := 5
+	max := 3
 
 	// 发信
 	go func(max int){

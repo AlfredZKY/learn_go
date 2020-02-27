@@ -83,13 +83,13 @@ func TestMutexRW(t *testing.T) {
 	// 数据读取配置
 	readingConfig := handlerConfig{
 		handler:  genReader(&buffer),
-		goNum:    10,
+		goNum:    5,
 		number:   4,
 		interval: time.Millisecond * 100,
 	}
 
 	// sign 代表信号的通道
-	sign := make(chan struct{}, writingConfig.goNum+readingConfig.goNum)
+	sign := make(chan struct{}, writingConfig.goNum + readingConfig.goNum)
 
 	// 启用多个goroutine 对缓冲区进行多次数据写入
 	for i := 1; i <= writingConfig.goNum; i++ {
@@ -172,13 +172,13 @@ func TestMutexSort(t *testing.T) {
 	// 解锁之后，唤醒三个goroutine进行竞争,
 	mutex.Unlock()
 	fmt.Println("The lock is unlocked. (main)")
-	
+
 	// 休眠 允许goroutine打印出结果
 	// time.Sleep(time.Second * 2)
-	time.Sleep(time.Second )
+	time.Sleep(time.Second)
 }
 
-func TestMultiLock(t *testing.T) {
+func TestMultiUnLock(t *testing.T) {
 	// 恢复在之前低版本是可以恢复的
 	defer func() {
 		fmt.Println("Try to recover the panic.")
@@ -194,5 +194,6 @@ func TestMultiLock(t *testing.T) {
 	mutex.Unlock()
 	fmt.Println("The lock is unlocked.")
 	fmt.Println("Unlock the lock again.")
+	// 重复对同一个互斥锁解锁会引发一个运行恐慌，且不可恢复。
 	mutex.Unlock()
 }

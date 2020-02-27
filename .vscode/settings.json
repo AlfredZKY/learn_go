@@ -19,6 +19,7 @@
     "cSpell.ignoreWords": [
         "wait"
     ],
+    "workbench.editor.enablePreview":false,
     "workbench.statusBar.visible": true,
     "editor.tabSize": 4,
     "workbench.colorCustomizations": {
