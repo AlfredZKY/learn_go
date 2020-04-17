@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73de9ae0-b44a-4a8d-a194-db6727a0b9d8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="my_leveldb" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
+              <folding>
+                <element signature="n#!!block;n#isWinLin#0" />
+                <element signature="n#!!block;n#RemoveAllFile#0" />
+                <element signature="n#!!block;n#RecursiveDeleteDic#0" />
+                <element signature="n#!!block;n#get_args#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/os/file.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22">
+              <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myleveldb/leveldb_operator.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!block;n#removeallfile#0" />
+                <element signature="n#!!block;n#Byte2int#0" />
+                <element signature="n#!!block;n#Int2byte#0" />
+                <element signature="n#!!block;n#GetCurrentDirectory#0" />
+                <element signature="n#!!block;n#PathExists#0" />
+                <element signature="n#!!block;n#IsFileExist#0" />
+                <element signature="n#!!block;n#isWinLin#0" />
+                <element signature="n#!!block;n#BatchWriteData#0" />
+                <element signature="n#!!block;n#sendMsgDing#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myleveldb/leveldb_operator_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!block;n#TestKeyValue_BatchWriteData#0" />
+                <element signature="n#!!block;n#TestKeyValue_WriteData#0" />
+                <element signature="n#!!block;n#TestKeyValue_SearchData#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layerswallet/wallet.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#22#56#0" expanded="true" />
+                <element signature="n#!!block;n#SearchWalletDB#0" />
+                <element signature="n#!!block;n#DeleteWalletDb#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layerswallet/wallet_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Sprintf</find>
+      <find>walletDb</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>F:\gopath\src\my_leveldb\testnet\LevelDb.db</dir>
+    </dirStrings>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/leveldb_operator.go" />
+        <option value="$PROJECT_DIR$/test.go" />
+        <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/test1/re/dsada" />
+        <option value="$PROJECT_DIR$/test1/re/dsadaa" />
+        <option value="$PROJECT_DIR$/test1/rew/dsada/dsadaaa/dsadsadsa" />
+        <option value="$PROJECT_DIR$/my_level_db/leveldb_operator.go" />
+        <option value="$PROJECT_DIR$/conf/config.go" />
+        <option value="$PROJECT_DIR$/myleveldb/leveldb_operator_test.go" />
+        <option value="$PROJECT_DIR$/myleveldb/leveldb_operator.go" />
+        <option value="$PROJECT_DIR$/layerswallet/wallet_test.go" />
+        <option value="$PROJECT_DIR$/layerswallet/wallet.go" />
+        <option value="$PROJECT_DIR$/src/test/arc/dsad.go" />
+        <option value="$PROJECT_DIR$/src/test/arc/sadad" />
+        <option value="$PROJECT_DIR$/main.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="883" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="my_leveldb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_leveldb" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github.com/huqin/chain_tendermint_out" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="go" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\gopath\src\my_leveldb" />
+      <recent name="F:\gopath\src\my_leveldb\myleveldb" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\gopath\src\my_leveldb\my_level_db" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build config.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="my_leveldb" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/conf/config.go" />
+      <package value="my_leveldb" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build leveldb_operator.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="my_leveldb" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/my_level_db/leveldb_operator.go" />
+      <package value="my_leveldb" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="my_leveldb" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="my_leveldb" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/test.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build wallet.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="my_leveldb" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/layerswallet/wallet.go" />
+      <package value="my_leveldb" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build config.go" />
+        <item itemvalue="Go Build.go build wallet.go" />
+        <item itemvalue="Go Build.go build leveldb_operator.go" />
+        <item itemvalue="Go Build.go build test.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9154616" visible="true" weight="0.124200426" />
+      <window_info id="Structure" order="1" sideWeight="0.08453838" side_tool="true" visible="true" weight="0.124200426" />
+      <window_info id="Favorites" order="2" sideWeight="0.11269841" side_tool="true" weight="0.12526652" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.38487208" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35595107" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933258" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32925472" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29922137" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gossip.db/000001.log" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000005.ldb" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/CURRENT" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/LOG" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/MANIFEST-000000" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000003.log" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000011.ldb" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000002.ldb" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000012.log" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/CURRENT.bak" />
+    <entry file="file://$PROJECT_DIR$/gossip.db/000293.ldb" />
+    <entry file="file://$PROJECT_DIR$/testnet/LevelDb.db/000004.ldb" />
+    <entry file="file://$PROJECT_DIR$/../github.com/syndtr/goleveldb/leveldb/db_write.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="370" column="14" selection-start-line="370" selection-start-column="14" selection-end-line="370" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testnet/LevelDb.db/000002.ldb" />
+    <entry file="file://$PROJECT_DIR$/testnet/LevelDb.db/000005.ldb" />
+    <entry file="file://$PROJECT_DIR$/testnet/LevelDb.db/000254.ldb" />
+    <entry file="file://C:/Go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1/re/dsadaa" />
+    <entry file="file://$PROJECT_DIR$/test1/re/dsada" />
+    <entry file="file://$PROJECT_DIR$/test1/rew/dsada/dsadaaa/dsadsadsa" />
+    <entry file="file://$PROJECT_DIR$/config.ini" />
+    <entry file="file://$PROJECT_DIR$/conf/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myleveldb/leveldb_operator.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#removeallfile#0" />
+            <element signature="n#!!block;n#Byte2int#0" />
+            <element signature="n#!!block;n#Int2byte#0" />
+            <element signature="n#!!block;n#GetCurrentDirectory#0" />
+            <element signature="n#!!block;n#PathExists#0" />
+            <element signature="n#!!block;n#IsFileExist#0" />
+            <element signature="n#!!block;n#isWinLin#0" />
+            <element signature="n#!!block;n#BatchWriteData#0" />
+            <element signature="n#!!block;n#sendMsgDing#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myleveldb/leveldb_operator_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!block;n#TestKeyValue_BatchWriteData#0" />
+            <element signature="n#!!block;n#TestKeyValue_WriteData#0" />
+            <element signature="n#!!block;n#TestKeyValue_SearchData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layerswallet/wallet_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layerswallet/wallet.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+            <element signature="n#!!block;n#SearchWalletDB#0" />
+            <element signature="n#!!block;n#DeleteWalletDb#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/os/file.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/arc/sadad">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/arc/dsad.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="n#!!block;n#isWinLin#0" />
+            <element signature="n#!!block;n#RemoveAllFile#0" />
+            <element signature="n#!!block;n#RecursiveDeleteDic#0" />
+            <element signature="n#!!block;n#get_args#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

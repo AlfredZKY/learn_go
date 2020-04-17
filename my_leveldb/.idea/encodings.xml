@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gossip.db/000001.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gossip.db/000002.ldb" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gossip.db/000005.ldb" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gossip.db/MANIFEST-000000" charset="US-ASCII" />
+  </component>
+</project>

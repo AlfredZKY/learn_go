@@ -1,0 +1,43 @@
+=============== Dec 2, 2019 (CST) ===============
+10:05:18.404979 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:05:18.457076 db@open opening
+10:05:18.461085 version@stat F·[] S·0B[] Sc·[]
+10:05:18.485170 db@janitor F·2 G·0
+10:05:18.485170 db@open done T·28.0943ms
+10:05:18.486177 db@close closing
+10:05:18.486177 db@close done T·0s
+=============== Dec 2, 2019 (CST) ===============
+10:05:18.487180 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:05:18.487180 version@stat F·[] S·0B[] Sc·[]
+10:05:18.487180 db@open opening
+10:05:18.487180 journal@recovery F·1
+10:05:18.488182 journal@recovery recovering @1
+10:05:18.514279 memdb@flush created L0@2 N·1 S·123B "hello,v1":"hello,v1"
+10:05:18.517259 version@stat F·[1] S·123B[123B] Sc·[0.25]
+10:05:18.625611 db@janitor F·3 G·0
+10:05:18.625611 db@open done T·138.4313ms
+10:05:18.625611 db@close closing
+10:05:18.625611 db@close done T·0s
+=============== Dec 2, 2019 (CST) ===============
+10:05:18.626613 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:05:18.626613 version@stat F·[1] S·123B[123B] Sc·[0.25]
+10:05:18.626613 db@open opening
+10:05:18.626613 journal@recovery F·1
+10:05:18.628645 journal@recovery recovering @3
+10:05:18.629622 version@stat F·[1] S·123B[123B] Sc·[0.25]
+10:05:18.665716 db@janitor F·3 G·0
+10:05:18.665716 db@open done T·39.1035ms
+10:05:18.665716 db@close closing
+10:05:18.666720 db@close done T·1.0036ms
+=============== Dec 2, 2019 (CST) ===============
+10:05:18.666720 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:05:18.667723 version@stat F·[1] S·123B[123B] Sc·[0.25]
+10:05:18.667723 db@open opening
+10:05:18.667723 journal@recovery F·1
+10:05:18.667723 journal@recovery recovering @5
+10:05:18.684772 memdb@flush created L0@7 N·2 S·134B "hello,v4":"hello,d3"
+10:05:18.685769 version@stat F·[2] S·257B[257B] Sc·[0.50]
+10:05:18.723871 db@janitor F·4 G·0
+10:05:18.723871 db@open done T·56.1486ms
+10:05:18.723871 db@close closing
+10:05:18.723871 db@close done T·0s
