@@ -8,7 +8,7 @@ import (
 
 
 // func GetArrayLen
-func GetArrayLen(){
+func TestGetArrayLen(t* testing.T){
 	s1 := make([]int,5)
 	fmt.Printf("The length of s1:%d\n",len(s1))
 	fmt.Printf("The capacity of s1:%d\n",cap(s1))
@@ -27,8 +27,11 @@ func GetArrayLen(){
 	s4 := s3[2:4]
 	fmt.Printf("The length of s4:%d\n",len(s4))
 	fmt.Printf("The capacity of s4:%d\n",cap(s4))
-	fmt.Printf("The value of s4:%d\n",s4)
+	fmt.Printf("The value of s4:%d\n",s4[0:3])
+	fmt.Printf("The most value of s4:%d\n",s4[0:cap(s4)])
 }
+
+
 
 // func Testsliceparam
 func Testsliceparam(complexArray [3][]string)[3][]string{

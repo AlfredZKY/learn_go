@@ -2,6 +2,7 @@ package slice
 
 import "testing"
 
+
 func TestSliceInit(t *testing.T) {
 	var s0 []int
 	t.Log(len(s0), cap(s0))
@@ -29,7 +30,7 @@ func TestSliceInit(t *testing.T) {
 
 func TestSliceGrowing(t *testing.T){
 	s := []int{} 
-	for i:=0;i<10;i++{
+	for i:=0;i<1025;i++{
 		s = append(s,i)
 		t.Log(len(s),cap(s))
 	}

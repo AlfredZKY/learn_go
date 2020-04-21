@@ -5,8 +5,11 @@ import (
 	"log"
 	"os"
 	"flag"
-	"gopkg.in/urfave/cli.v2"
+	// "gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli"
 )
+
+
 
 func clifirst() {
 	app := cli.NewApp()
@@ -87,6 +90,7 @@ func cliflagdes(){
 			if c.NArg()>0{
 				name = c.Args().Get(0)
 			}
+			// go run usecli.go  -genesis-miner 12 23 
 			if c.Bool("genesis-miner"){
 				fmt.Println(c.Bool("genesis-miner"))
 				fmt.Println("genesis-miner")
@@ -107,10 +111,60 @@ func cliflagdes(){
 }
 
 
+var nameclass string
+var cliFlag int 
+
+func init(){
+	flag.IntVar(&cliFlag,"flagname",1234,"Just for demo")
+	flag.StringVar(&nameclass, "nameclass", "everyone", "The greeting object.")
+
+	// flag.CommandLine = flag.NewFlagSet("",flag.ExitOnError)
+	flag.CommandLine = flag.NewFlagSet("",flag.PanicOnError)
+	flag.CommandLine.Usage=func(){
+		fmt.Fprintf(os.Stderr,"Usage of %s:\n","question")
+		flag.PrintDefaults()
+	}
+}
+
+// 命令行的使用
+func useFlag(){
+	// 参数地址 参数名 参数的默认值 参数的含义(简短的说明)
+	// flag.StringVar(&name, "name", "everyone", "The greeting object.") 对应的是地址
+	var cliName = flag.String("name","nick","Input Your Name")
+	var cliAge = flag.Int("age",28,"Input Your Age")
+	var cliGender = flag.String("gender","male","Input Your Gender")
+
+	// 使无参或者自定义参数 对flag.Usage重新赋值,flag.Usage的类型是func(),即一种无参数声明且无结果声明的函数类型
+	// flag.Usage = func(){
+	// 	fmt.Fprintf(os.Stderr,"Usage of %s:\n","question")
+	// 	flag.PrintDefaults()
+	// }
+
+
+	// 把用户传递的命令行参数解析为对应变量的值
+	flag.Parse()
+
+	fmt.Printf("Hello, %s\n",nameclass)
+	fmt.Println("name=",*cliName)
+	fmt.Println("age=",*cliAge)
+	fmt.Println("gender=",*cliGender)
+}
+
+
+
+
+
+// -isbool    (一个 - 符号，布尔类型该写法等同于 -isbool=true)
+// -age=x     (一个 - 符号，使用等号)
+// -age x     (一个 - 符号，使用空格)
+// --age=x    (两个 - 符号，使用等号)
+// --age x    (两个 - 符号，使用空格)
+
 func main() {
 	// cli.NewApp().Run(os.Args)
 	//clifirst()
 	// clisecond()
 	// cliflag()
-	cliflagdes()
+	//cliflagdes()
+	useFlag()
 }
