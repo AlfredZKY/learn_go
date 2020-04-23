@@ -56,7 +56,7 @@ func TestMapForSet(t *testing.T) {
 		t.Logf("%d is not existing", n)
 	}
 	mySet[3] = true
-	t.Log(mySet,1)
+	t.Log(mySet, 1)
 
 	n = 1
 	if mySet[n] {
@@ -64,4 +64,16 @@ func TestMapForSet(t *testing.T) {
 	} else {
 		t.Logf("%d is not existing", n)
 	}
+}
+
+func TestMapfuncvalue(t *testing.T) {
+	Mapfuncvalue()
+}
+
+func TestMapvaluenil(t*testing.T){
+	Mapvaluenil()
+}
+
+func TestMapvaluenil1(t*testing.T){
+	Mapvaluenil1()
 }

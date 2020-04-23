@@ -2,6 +2,7 @@ package slice
 
 // 数组类型的值（以下简称数组）的长度是固定的，而切片类型的值（以下简称切片）是可变长的。
 import (
+	"reflect"
 	"fmt"
 	"testing"
 )
@@ -51,4 +52,14 @@ func TestArraySection(t *testing.T){
 	a := [...]int{1,2,3,4}
 	arrSec := a[:]
 	t.Log(arrSec)
+}
+
+
+func TestArrayType(t *testing.T){
+	arrayA := [...]int{1,2,3} 
+	arrayB := [...]int{1,2,3,4} 
+
+	fmt.Println(reflect.TypeOf(arrayA) == reflect.TypeOf(arrayB))
+	fmt.Println(reflect.TypeOf(arrayA))
+	fmt.Println(reflect.TypeOf(arrayB))
 }
