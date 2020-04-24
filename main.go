@@ -1,12 +1,44 @@
 package main
 
 import (
+	// "time"
 	"fmt"
 	"learn_go/algorithm"
+	"learn_go/highConcurrency/channels"
+	"learn_go/highConcurrency/useselect"
+	"learn_go/learnfunc"
 )
+
+func f1(){
+	for{
+		fmt.Println("call f1...")
+	}
+}
+
+func f2(){
+	fmt.Println("call f2...")
+}
+
 
 func main(){
 	nums := []int{-1,0,1,2,-1,-4}
-	res := algorithm.ThreeSum(nums)
+	res := algorithm.ThreadNums(nums)
 	fmt.Println(res)
+
+	channels.UseChannelPanic()
+
+	// // go f1()
+	// go f2()
+	// ch := make(chan int)
+	// <- ch
+	channels.UseChanSelect()
+	channels.DetermineChanClose()
+	channels.GetSumArray()
+	useselect.CalcFiboni()
+
+	var p learnfunc.Printer
+
+	p = learnfunc.PrintToStd
+	p("something")
+
 }

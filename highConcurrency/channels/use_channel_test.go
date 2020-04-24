@@ -1,4 +1,4 @@
-package mygoroutine
+package channels
 
 import (
 	"fmt"
