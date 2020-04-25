@@ -7,6 +7,7 @@ import (
 	"learn_go/highConcurrency/channels"
 	"learn_go/highConcurrency/useselect"
 	"learn_go/learnfunc"
+
 )
 
 func f1(){
@@ -19,6 +20,8 @@ func f2(){
 	fmt.Println("call f2...")
 }
 
+
+type operate func(x int,y int)int
 
 func main(){
 	nums := []int{-1,0,1,2,-1,-4}
@@ -41,4 +44,14 @@ func main(){
 	p = learnfunc.PrintToStd
 	p("something")
 
+	op := func(x, y int) int {
+		return x + y
+	}
+	
+	a,b := 1,4
+	result,err := learnfunc.Calculate(a,b,op)
+	if err == nil{
+		fmt.Println(result)
+	}
+	
 }

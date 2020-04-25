@@ -70,3 +70,4 @@ func Sum(ops ...int)int{
 	}
 	return res
 }
+
