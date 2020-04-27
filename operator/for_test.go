@@ -5,11 +5,12 @@ import (
 )
 
 func TestForStatement(t *testing.T) {
-	number := []int{1, 2, 3, 4, 5, 6}
+	number := []int{11, 12, 13, 14, 15, 16}
 	for i := range number {
 		if i == 3 {
 			number[i] |= i
 		}
+		t.Log(i)
 	}
 	t.Log(number)
 }
@@ -28,9 +29,9 @@ func TestForStatement1(t *testing.T) {
 		}else{
 			number[i+1] +=e
 		}
-		t.Log(number)
+		
 	}
-
+	t.Log(number)
 	number1 := []int{1, 2, 3, 4, 5, 6}
 	maxIndex1 := len(number1) -1
 	t.Log(number1)
@@ -41,7 +42,7 @@ func TestForStatement1(t *testing.T) {
 		}else{
 			number1[i+1] +=e
 		}
-		t.Log(number1)
+		
 	}
-
+	t.Log(number1)
 }

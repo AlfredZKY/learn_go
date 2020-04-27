@@ -1,20 +1,24 @@
 package operator
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestSwitchStatement(t *testing.T) {
-	// value := [...]int8{0, 1, 2, 3, 4, 5, 6}
+	// value := [...]int8{0, 1, 2, 3, 4, 5, 6,7}
 	value := [...]int{0, 1, 2, 3, 4, 5, 6}
 	// switch 表达式 会进行类型判断 1+3 隐式为int
-	switch 1+3{
+	// switch 1+3{
+	switch value[6]{
 	case value[0],value[1]:
 		t.Log("0 or 1")
 	case value[2],value[3]:
 		t.Log("2 or 3")
 	case value[4],value[4],value[5]:
 		t.Log("4 or 5 or 6")
+	case 6:
+		t.Log("6")
 	}
 
 	value1 := [...]int8{0, 1, 2, 3, 4, 5, 6}
@@ -39,15 +43,6 @@ func TestSwitchStatement(t *testing.T) {
 	default:
 		t.Logf("unsupported type: %T", t1)
 	}
-	// value2 :=interface{}(byte(127))
-	// switch t:= value2.(type){
-	// case uint8,uint16:
-	// 	t.Log("uint8 or uint16")
-	// case byte:
-	// 	t.Log("byte")
-	// default:
-	// 	t.Logf("unsupported type:%T",t)
-	// }
 }
 
 func TestSwitchMultiCase(t *testing.T){
@@ -73,5 +68,18 @@ func TestSwitchCaseCondition(t *testing.T){
 		default:
 			t.Log("it is not 0-3")
 		}
+	}
+}
+
+
+func TestSitchType(t *testing.T){
+	value2 :=interface{}(byte(127))
+	switch t:= value2.(type){
+	case uint8,uint16:
+		fmt.Println("uint8 or uint16")
+	case uint32:
+		fmt.Println("byte")
+	default:
+		fmt.Printf("unsupported type:%T",t)
 	}
 }
