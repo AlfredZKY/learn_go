@@ -9,19 +9,58 @@ import (
 	"testing"
 )
 
-func echo(request string) (response string, err error) {
-	if request == "" {
-		err = errors.New("empty request")
-		return
+
+func TestEcho(t*testing.T){
+	Echo("")
+}
+
+func TestErrorType(t *testing.T) {
+	var err error
+	_, err = exec.LookPath(os.DevNull)
+	fmt.Printf("error: %s\n", err)
+	if execErr,ok:=err.(*exec.Error);ok{
+		execErr.Name = os.TempDir()
+		execErr.Err = os.ErrNotExist
 	}
-	response = fmt.Sprintf("echo: %s", request)
-	return
+	fmt.Printf("error: %s\n", err)
+
+	err = os.ErrPermission
+	if os.IsPermission(err){
+		fmt.Printf("error(permission):%s\n",err)
+	}else{
+		fmt.Printf("error(other):%s\n",err)
+	}
+
+	os.ErrPermission = os.ErrExist
+	// 上面这行代码修改了os包中已定义的错误值
+	// 这样做会导致下面判断的结果不正确，并且，这会影响当前go程序中所有的此类判断
+	// 所有，一定要避免这样做
+	if os.IsPermission(err){
+		fmt.Printf("error(permission):%s\n",err)
+	}else{
+		fmt.Printf("error(other):%s\n",err)
+	}
+
+	const(
+		ERR0 = Errno(0)
+		ERR1 = Errno(1)
+		ERR2 = Errno(2)
+	)
+	var myErr error = Errno(2)
+	switch myErr{
+	case ERR0:
+		fmt.Println("ERR0")
+	case ERR1:
+		fmt.Println("ERR1")
+	case ERR2:
+		fmt.Println("ERR2")
+	}
 }
 
 func TestUserErrorFirst(t *testing.T) {
 	for _, req := range []string{"", "hello"} {
 		//t.Logf("request:%s\n",req)
-		resp, err := echo(req)
+		resp, err := Echo(req)
 		if err != nil {
 			t.Logf("error: %s\n", err)
 		} else {
@@ -37,20 +76,6 @@ func TestUserErrorFirst(t *testing.T) {
 	}
 }
 
-// underlyingError 会返回已知的操作系统相关错误的潜在错误值
-func underlyingError(err error) error {
-	switch err := err.(type) {
-	case *os.PathError:
-		return err.Err
-	case *os.LinkError:
-		return err.Err
-	case *os.SyscallError:
-		return err.Err
-	case *exec.Error:
-		return err.Err
-	}
-	return err
-}
 
 func TestOsError(t *testing.T) {
 	r, w, err := os.Pipe()
