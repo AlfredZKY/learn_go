@@ -18,23 +18,3 @@ func DobulePointer(nums []int) int {
 
 	return slow + 1
 }
-
-// DobulePointer1 双指针
-func DobulePointer1(nums []int) int {
-	n := len(nums)
-	if n < 2 {
-		return n
-	}
-
-	slow :=  0
-	for i := 1; i < n;  {
-		if nums[slow] < nums[i] {
-			slow++
-			nums[slow] = nums[i]
-		
-		}
-		i++
-	}
-
-	return slow + 1
-}
