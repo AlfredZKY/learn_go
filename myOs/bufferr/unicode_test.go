@@ -1,4 +1,4 @@
-package other
+package myos
 
 import (
 	"fmt"
