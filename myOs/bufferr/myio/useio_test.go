@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 	"log"
-	"math/rand"
+	//"math/rand"
 	"os"
 	"strings"
 	"sync"
@@ -15,7 +15,7 @@ import (
 	"golang.org/x/xerrors"
 )
 
-func TestIo(t *testing.T) {
+func TestIoCopyN(t *testing.T) {
 	src := strings.NewReader("CopyN copies n bytes (or until an error) from src to dst. " +
 		"It returns the number of bytes copied and " + "the earliest error encountered while copying.")
 
@@ -286,12 +286,4 @@ func toReadableFile(r io.Reader, n int64) (*os.File, func() error, error) {
 	}, nil
 }
 
-func TestCopy(t *testing.T) {
-	dlen := 34359738368
-	sid := 32
-	r := io.LimitReader(rand.New(rand.NewSource(42+int64(sid))), int64(dlen))
-	f, werr, err := toReadableFile(r, int64(dlen))
-	_ = werr()
-	_ = err 
-	t.Log(f)
-}
+

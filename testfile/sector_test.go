@@ -55,3 +55,14 @@ func TestArrayAppend(t*testing.T){
 		}
 	}
 }
+
+
+func TestCopy(t *testing.T) {
+	dlen := 34359738368
+	sid := 32
+	r := io.LimitReader(rand.New(rand.NewSource(42+int64(sid))), int64(dlen))
+	f, werr, err := toReadableFile(r, int64(dlen))
+	_ = werr()
+	_ = err 
+	t.Log(f)
+}
