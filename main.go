@@ -3,29 +3,27 @@ package main
 import (
 	// "time"
 	"fmt"
-	"learn_go/algorithm"
+	"learn_go/algorithm/proarray"
 	"learn_go/highConcurrency/channels"
 	"learn_go/highConcurrency/useselect"
 	"learn_go/learnfunc"
-
 )
 
-func f1(){
-	for{
+func f1() {
+	for {
 		fmt.Println("call f1...")
 	}
 }
 
-func f2(){
+func f2() {
 	fmt.Println("call f2...")
 }
 
+type operate func(x int, y int) int
 
-type operate func(x int,y int)int
-
-func main(){
-	nums := []int{-1,0,1,2,-1,-4}
-	res := algorithm.ThreadNums(nums)
+func main() {
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	res := proarray.ThreadNums(nums)
 	fmt.Println(res)
 
 	channels.UseChannelPanic()
@@ -47,11 +45,11 @@ func main(){
 	op := func(x, y int) int {
 		return x + y
 	}
-	
-	a,b := 1,4
-	result,err := learnfunc.Calculate(a,b,op)
-	if err == nil{
+
+	a, b := 1, 4
+	result, err := learnfunc.Calculate(a, b, op)
+	if err == nil {
 		fmt.Println(result)
 	}
-	
+
 }

@@ -1,4 +1,4 @@
-package main
+package useos
 
 import (
 	"bytes"
@@ -36,7 +36,8 @@ var ioTypes = []reflect.Type{
 	reflect.TypeOf((*io.ReadWriteCloser)(nil)).Elem(),
 }
 
-func isdeteminerinterface() {
+// IsDetemInerinterface 判断接口类型
+func IsDetemInerinterface() {
 	// 实例1
 	file1 := (*os.File)(nil)
 	fileType := reflect.TypeOf(file1)
@@ -55,7 +56,8 @@ func isdeteminerinterface() {
 	fmt.Printf("%s\n", output)
 }
 
-func useFilefunc() {
+// UseFileFunc 使用file接口
+func UseFileFunc() {
 	fileName1 := "something1.txt"
 	filePath1 := filepath.Join(os.TempDir(), fileName1)
 	var paths []string
@@ -135,7 +137,8 @@ type flagDesc struct {
 	desc string
 }
 
-func createFileFunc() {
+// CreateFileFunc 使用创建文件函数
+func CreateFileFunc() {
 	filename1 := "something2.txt"
 	filePath1 := filepath.Join(os.TempDir(), filename1)
 	fmt.Printf("The file path:%s\n", filePath1)
@@ -196,59 +199,53 @@ func createFileFunc() {
 	fmt.Printf("error:%v\n", err)
 }
 
-type argsDesc struct{
+type argsDesc struct {
 	action string
-	flag int
-	perm os.FileMode
+	flag   int
+	perm   os.FileMode
 }
 
-func osFunc(){
-	fmt.Printf("The mode for dir:\n%32b\n",os.ModeDir)
-	fmt.Printf("The mode for named pipe:\n%32b\n",os.ModeNamedPipe)
-	fmt.Printf("The mode for all of the irregular files:\n%32b\n",os.ModeType)
-	fmt.Printf("The mode for permissions:\n%32b\n",os.ModePerm)
+// FileOsFunc files 
+func FileOsFunc() {
+	fmt.Printf("The mode for dir:\n%32b\n", os.ModeDir)
+	fmt.Printf("The mode for named pipe:\n%32b\n", os.ModeNamedPipe)
+	fmt.Printf("The mode for all of the irregular files:\n%32b\n", os.ModeType)
+	fmt.Printf("The mode for permissions:\n%32b\n", os.ModePerm)
 
-	filename1:="something3.txt"
-	filepath1:=filepath.Join(os.TempDir(),filename1)
-	fmt.Printf("The file path: %s\n",filepath1)
+	filename1 := "something3.txt"
+	filepath1 := filepath.Join(os.TempDir(), filename1)
+	fmt.Printf("The file path: %s\n", filepath1)
 
 	argsDescList := []argsDesc{
 		{
 			"Create",
-			os.O_RDWR|os.O_CREATE,
+			os.O_RDWR | os.O_CREATE,
 			0644,
 		},
 		{
 			"Reuse",
-			os.O_RDWR|os.O_TRUNC,
+			os.O_RDWR | os.O_TRUNC,
 			0666,
 		},
 		{
 			"Open",
-			os.O_RDWR|os.O_APPEND,
+			os.O_RDWR | os.O_APPEND,
 			0777,
 		},
 	}
 	defer os.Remove(filepath1)
-	for _,v := range argsDescList{
-		fmt.Printf("%s the file with perm %o ...\n",v.action,v.perm)
-		file1,err := os.OpenFile(filepath1,v.flag,v.perm)
-		if err != nil{
-			fmt.Printf("error:%v\n",err)
+	for _, v := range argsDescList {
+		fmt.Printf("%s the file with perm %o ...\n", v.action, v.perm)
+		file1, err := os.OpenFile(filepath1, v.flag, v.perm)
+		if err != nil {
+			fmt.Printf("error:%v\n", err)
 			continue
 		}
-		info1,err:=file1.Stat()
-		if err != nil{
-			fmt.Printf("error:%v\n",err)
+		info1, err := file1.Stat()
+		if err != nil {
+			fmt.Printf("error:%v\n", err)
 			continue
 		}
-		fmt.Printf("The file permission:%o\n",info1.Mode().Perm())
+		fmt.Printf("The file permission:%o\n", info1.Mode().Perm())
 	}
-}
-
-func main() {
-	isdeteminerinterface()
-	useFilefunc()
-	createFileFunc()
-	osFunc()
 }
