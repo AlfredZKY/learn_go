@@ -1,7 +1,7 @@
 package layerswallet
 
 import (
-	"my_leveldb/myleveldb"
+	"learn_go/my_leveldb/myleveldb"
 )
 
 type WalletDbOperator interface {

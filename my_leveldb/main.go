@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"my_leveldb/layerswallet"
-	"my_leveldb/myleveldb"
+	"learn_go/my_leveldb/layerswallet"
+	"learn_go/my_leveldb/myleveldb"
 	"os"
 	"runtime"
 	"strings"
@@ -27,6 +27,7 @@ func isWinLin() string{
 	return res
 }
 
+// RemoveAllFile 读取所有文件
 func RemoveAllFile(pathname string,flag string) error {
 	rd, err := ioutil.ReadDir(pathname)
 	for _, fi := range rd {
@@ -66,6 +67,7 @@ func RemoveAllFile(pathname string,flag string) error {
 	return err
 }
 
+// RecursiveDeleteDic 递归删除所有文件
 func RecursiveDeleteDic(path string){
 	res := isWinLin()
 	// res := "linux"

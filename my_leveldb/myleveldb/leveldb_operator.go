@@ -6,7 +6,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb"
 	"io/ioutil"
 	"log"
-	"my_leveldb/conf"
+	"learn_go/my_leveldb/conf"
 	"net/http"
 	"os"
 	"path/filepath"

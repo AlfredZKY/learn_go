@@ -3,7 +3,7 @@ package main
 import (
 	// "time"
 	"fmt"
-	"learn_go/algorithm/proarray"
+	"learn_go/algorithm/proarrays"
 	"learn_go/highConcurrency/channels"
 	"learn_go/highConcurrency/useselect"
 	"learn_go/learnfunc"
@@ -23,7 +23,7 @@ type operate func(x int, y int) int
 
 func main() {
 	nums := []int{-1, 0, 1, 2, -1, -4}
-	res := proarray.ThreadNums(nums)
+	res := proarrays.ThreadNums(nums)
 	fmt.Println(res)
 
 	channels.UseChannelPanic()

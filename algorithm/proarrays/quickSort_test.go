@@ -1,4 +1,4 @@
-package proarray
+package proarrays
 
 
 import (

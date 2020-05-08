@@ -44,25 +44,24 @@ func TestMultiArgs(t *testing.T) {
 	t.Log(io.LimitReader(rand.New(rand.NewSource(42)), int64(sizes)))
 }
 
-
-func TestArrayAppend(t*testing.T){
-	nums := []int{1,1,1,4,2,6,7,6}
-	for i:=len(nums)-1;i>0;i--{
-		if nums[i] == nums[i-1]{
-			t.Log(nums,i)
-			nums = append(nums[:i],nums[i+1:]...)
-			t.Log(nums,i)
+func TestArrayAppend(t *testing.T) {
+	nums := []int{1, 1, 1, 4, 2, 6, 7, 6}
+	for i := len(nums) - 1; i > 0; i-- {
+		if nums[i] == nums[i-1] {
+			t.Log(nums, i)
+			nums = append(nums[:i], nums[i+1:]...)
+			t.Log(nums, i)
 		}
 	}
 }
-
 
 func TestCopy(t *testing.T) {
 	dlen := 34359738368
 	sid := 32
 	r := io.LimitReader(rand.New(rand.NewSource(42+int64(sid))), int64(dlen))
-	f, werr, err := toReadableFile(r, int64(dlen))
-	_ = werr()
-	_ = err 
-	t.Log(f)
+	// f, werr, err := io.toReadableFile(r, int64(dlen))
+	// _ = werr()
+	// _ = err
+	_ = r
+	// t.Log(f)
 }
