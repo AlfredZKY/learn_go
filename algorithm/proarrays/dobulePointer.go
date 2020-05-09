@@ -1,4 +1,4 @@
-package algorithm
+package proarrays
 
 // DobulePointer 双指针
 func DobulePointer(nums []int) int {

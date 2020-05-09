@@ -1,7 +1,7 @@
 package layerswallet
 
 import (
-	"myleveldb/myleveldb"
+	"learn_go/my_leveldb/myleveldb"
 	"testing"
 )
 

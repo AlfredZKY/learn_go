@@ -1,4 +1,4 @@
-package algorithm
+package proarrays
 
 // 快速排序法
 // 快速排序（Quicksort）是对冒泡排序的一种改进。由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，
@@ -148,8 +148,8 @@ func TreadSums(nums []int) [][]int {
 				length--
 			} else if nums[i]+nums[j]+nums[length] < 0 {
 				j++
-			}else{
-				ret = append(ret,[]int{nums[i],nums[j],nums[length]})
+			} else {
+				ret = append(ret, []int{nums[i], nums[j], nums[length]})
 				j++
 				length--
 			}
