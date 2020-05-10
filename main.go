@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	// "time"
 	"fmt"
@@ -8,6 +7,7 @@ import (
 	"learn_go/highConcurrency/channels"
 	"learn_go/highConcurrency/useselect"
 	"learn_go/learnfunc"
+	"learn_go/ppro/common/opp"
 )
 
 func f1() {
@@ -28,11 +28,6 @@ func main() {
 	fmt.Println(res)
 
 	channels.UseChannelPanic()
-
-	// // go f1()
-	// go f2()
-	// ch := make(chan int)
-	// <- ch
 	channels.UseChanSelect()
 	channels.DetermineChanClose()
 	channels.GetSumArray()
@@ -53,5 +48,6 @@ func main() {
 		fmt.Println(result)
 	}
 
-}
+	opp.BlockProFile()
 
+}
