@@ -7,7 +7,7 @@ import (
 )
 
 func TestAtomic(t *testing.T) {
-
+	// 原子操作的第一个参数，是被操作的值 因为原子操作函数需要是被操作值得指针，而不是这个值本身，被传入函数的参数值都会被复制
 	// 原子操作加法函数做原子减法操作 有符号类型
 	num := int32(18)
 	t.Logf("the num is %d\n", num)
@@ -31,6 +31,7 @@ func TestAtomic(t *testing.T) {
 }
 
 func TestForAndCAS1(t *testing.T) {
+	// 原子交换自旋锁
 	sign := make(chan struct{}, 2)
 	num := int32(0)
 	t.Logf("The number:%d\n", num)
@@ -65,12 +66,14 @@ func TestForAndCAS1(t *testing.T) {
 			time.Sleep(time.Millisecond * 500)
 		}
 	}()
-
+	
 	<-sign
 	<-sign
+	t.Logf("The number has been swaped to :%d\n", num)
 }
 
 func TestForAndCAS2(t *testing.T) {
+	// 原子交换的互斥锁,
 	sign := make(chan struct{}, 2)
 	num := int32(0)
 	t.Logf("The number:%d\n", num)
@@ -113,7 +116,7 @@ func TestForAndCAS2(t *testing.T) {
 			if atomic.CompareAndSwapInt32(&num, curNum, newNum) {
 				t.Logf("The number:%d [%d-%d]\n", newNum, id, j)
 			} else {
-				t.Logf("The CAS operation failed.%d [%d-%d]\n", newNum, id, j)
+				t.Logf("The CAS operation failed. [%d-%d]\n",  id, j)
 			}
 		}
 	}(2, max)

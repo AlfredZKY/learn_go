@@ -153,7 +153,7 @@ func TestMutexRW(t *testing.T) {
 	}
 }
 
-func TestMutexSort(t *testing.T) {
+func TestMutexSortRand(t *testing.T) {
 	var mutex sync.Mutex
 	fmt.Println("Lock the lock. (main)")
 	mutex.Lock()

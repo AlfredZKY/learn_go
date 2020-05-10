@@ -16,7 +16,8 @@ func TestCondition(t*testing.T){
 	
 	// sendCond 代表专用于发信的条件变量 recvCond代表专用于收信的条件变量
 	sendCond :=sync.NewCond(&lock)
-	recvCond := sync.NewCond(lock.RLocker()) 	//底层本来就是指针
+
+	recvCond := sync.NewCond(lock.RLocker()) 	//底层本来就是指针 读写锁中读锁的联用
 
 	// sign 用于传递显示完成的信号
 	sign := make(chan struct {},3)
@@ -29,15 +30,15 @@ func TestCondition(t*testing.T){
 		}()
 		for i:=0; i < max; i++{
 			time.Sleep(time.Millisecond*500)
-			lock.Lock()  // 不是锁上锁，而是有打开锁的权利
+			lock.Lock()  // 持有信箱上的锁，并且有打开锁的权利，而不是锁上这个锁，
 			for mailbox == 1{
 				// 等待被唤醒
 				sendCond.Wait()
 			}
 			log.Printf("sender [%d]: the mailbox is empty.",i)
-			mailbox = 1
+			mailbox = 1 // 放上数据
 			log.Printf("sender [%d]: the letter has been sent.",i)
-			lock.Unlock()
+			lock.Unlock() // 关闭信箱，并关上锁
 
 			// 主动单向唤醒
 			recvCond.Signal()

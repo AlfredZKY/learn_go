@@ -15,6 +15,7 @@ type atomicValue struct {
 	t reflect.Type
 }
 
+// NewAtomicValue 新申请一个原子值 可以存储任意类型的值 指针
 func NewAtomicValue(example interface{}) (*atomicValue, error) {
 	if example == nil {
 		return nil, errors.New("atomic value:nil example")
@@ -26,6 +27,9 @@ func NewAtomicValue(example interface{}) (*atomicValue, error) {
 }
 
 func (av *atomicValue) Store(v interface{}) error {
+	// 存储值 会产生一个完全分离的新值，相当于被复制那个值的快照，两者是相互不影响的
+	// 1.不能用原子值存储nil,否则就会引发panic
+	// 2.向原子值存储的第一个值，决定了今后只能存储这个类型的值
 	if v == nil {
 		return errors.New("atomic value:nil value")
 	}
@@ -53,6 +57,7 @@ func TestAtomicOther(t *testing.T) {
 	var box atomic.Value
 	fmt.Println("Copy box to box2")
 	box2 := box
+	box3 := box2
 	v1 := [...]int{1, 2, 3}
 	fmt.Printf("Store %v to box.\n", v1)
 	box.Store(v1)
@@ -69,12 +74,16 @@ func TestAtomicOther(t *testing.T) {
 
 	// 实例3
 	fmt.Println("Copy box to box3")
-	box3 := box //原子值在真正使用后不应该被复制
+	// box3 = box //原子值在真正使用后不应该被复制
 	fmt.Printf("The value load from box3 is %v.\n", box3.Load())
 	v3 := 123
 	fmt.Printf("Store %d to box2.\n", v3)
-	// box3.Store(v3)	// 引发一个panic 此时atomic.Value的类型改变了
+	box3.Store(v3)	// 引发一个panic 此时atomic.Value的类型改变了
 
+	
+}
+
+func TestAtomicOther2(t*testing.T){
 	// 实例4
 	var box4 atomic.Value
 	v4 := errors.New("something wrong")
@@ -109,23 +118,23 @@ func TestAtomicOther(t *testing.T) {
 
 	// 实例6
 	var box6 atomic.Value
-	v6 := []int{1,2,3}
+	v6 := []int{1, 2, 3}
 	fmt.Printf("Store %v to box6.\n", v6)
 	box6.Store(v6)
 	v6[1] = 4 // 注意，此处的操作并不是并发安全的
-	fmt.Printf("The value load from box6 is %v.\n",box6.Load())
+	fmt.Printf("The value load from box6 is %v.\n", box6.Load())
 
 	// 正确的做法下
-	v6 = []int{1,2,3}
-	store := func(v []int){
-		replica :=make([]int,len(v))
-		copy(replica,v)
+	v6 = []int{1, 2, 3}
+	store := func(v []int) {
+		replica := make([]int, len(v))
+		copy(replica, v)
 		box6.Store(replica)
 	}
 
-	fmt.Printf("Store %v to box6.\n",v6)
+	fmt.Printf("Store %v to box6.\n", v6)
 	store(v6)
-	v6[2] = 5	//此处是安全的
+	v6[2] = 5 //此处是安全的
 	fmt.Printf("The value load from box6 is %v.\n", box6.Load())
 	fmt.Printf("v6 is %v.\n", v6)
 }
