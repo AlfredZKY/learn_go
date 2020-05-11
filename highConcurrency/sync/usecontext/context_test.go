@@ -48,7 +48,6 @@ func TestCoordinateWithWaitGroup(t *testing.T) {
 	fmt.Printf("End.")
 }
 
-
 func work(ctx context.Context) error {
 	defer wg.Done()
 
@@ -86,7 +85,7 @@ func TestWithDeadline(t *testing.T) {
 	case <-time.After(2 * time.Second):
 		fmt.Println("oversleep")
 	case <-ctx.Done():
-		fmt.Println(ctx.Err())
+		fmt.Println(ctx.Err()) // 打印出错误的原因 定时器到期 context deadline exceeded
 	}
 }
 
@@ -106,12 +105,74 @@ func TestWithTimeout1(t *testing.T) {
 	go handle(ctx, 1500*time.Millisecond)
 
 	select {
-		// ctx.Done() 返回的节点管道关闭而终止，也就是上下文超时
-		// 多个goroutine同时订阅ctx.Done()管道中的消息，
-		// 一旦接收到取消信号就停止当前正在执行的工作并提前返回
+	// ctx.Done() 返回的节点管道关闭而终止，也就是上下文超时
+	// 多个goroutine同时订阅ctx.Done()管道中的消息，
+	// 一旦接收到取消信号就停止当前正在执行的工作并提前返回
 	case <-ctx.Done():
 		fmt.Println("main", ctx.Err())
 	}
 }
 
-// 传值很少用到 
+func monitor(ctx context.Context, num int) {
+	for {
+		select {
+		case v := <-ctx.Done(): // 不断的判断 <-ctx.Done() 是否可读，如果可读，则证明该goroutine可以取消
+			fmt.Printf("监控器%v,接受的通道值为:%d,监控结束。\n", num, v)
+			return
+		default:
+			fmt.Printf("监控器%v,正在监控中...\n", num)
+			time.Sleep(2 * time.Second)
+		}
+	}
+}
+
+func TestWithCancel(t *testing.T) {
+	// 以 context.Background()为parent context定义一个可取消的context
+	ctx, cancel := context.WithCancel(context.Background())
+
+	for i := 1; i <= 5; i++ {
+		go monitor(ctx, i)
+	}
+
+	time.Sleep(1 * time.Second)
+
+	// 关闭所有的通道
+	cancel()
+
+	time.Sleep(5 * time.Second)
+	fmt.Printf("主程序退出")
+}
+
+// 传值很少用到
+func monitorValue(ctx context.Context, num int) {
+	for {
+		select {
+		case v := <-ctx.Done(): // 不断的判断 <-ctx.Done() 是否可读，如果可读，则证明该goroutine可以取消
+			fmt.Printf("监控器%v,接受的通道值为:%d,监控结束。\n", num, v)
+			return
+		default:
+			value := ctx.Value("item")
+			fmt.Printf("监控器%v,正在监控 %v...\n", num,value)
+			time.Sleep(2 * time.Second)
+		}
+	}
+}
+
+func TestContextWithValue(t*testing.T){
+	ctx01,cancel := context.WithCancel(context.Background())
+	ctx02,cancel2 := context.WithTimeout(ctx01,1*time.Second)
+	ctx03 := context.WithValue(ctx02,"item","cpu")
+
+	defer cancel()
+	defer cancel2()
+
+	for i :=1 ; i <=5;i++{
+		go monitorValue(ctx03,i)
+	}
+
+	time.Sleep(5*time.Second)
+	if ctx02.Err() != nil{
+		fmt.Println("监控取消的原因: ",ctx02.Err())
+	}
+	fmt.Printf("主程序退出")
+}
