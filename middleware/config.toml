@@ -1,0 +1,5 @@
+# Default config:
+[MonitorUnit]
+  LocalIP = "127.0.0.1"
+  Timeout = "30s"
+
