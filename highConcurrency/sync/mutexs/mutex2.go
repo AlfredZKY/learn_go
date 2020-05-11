@@ -84,3 +84,66 @@ func MutexChannel() {
 	}
 	log.Printf("The contents:\n%s", data)
 }
+
+
+// MutexChannelBuffer 互斥锁和信道
+func MutexChannelBuffer(){
+	flag.Parse()
+
+	const(
+		max1 = 5 	// 设置goroutine的最大数量
+		max2 = 10 	// 设置每个goroutine需要写入的数据块的数量
+		max3 = 10   // 代表每个数据块中写入多少个重复的数字
+	)
+
+	// 设置chann 用于gorotine 的通信
+	singFlag := make(chan struct{},max1)
+
+	// 设置buffer 用于数据的接受
+	var buff bytes.Buffer
+
+	// 设置互斥锁，保证每个goroutine能够单独对数据块进行操作
+	var mu sync.Mutex
+
+	for i:=1 ;i <= max1;i++{
+		go func(id int,writer io.Writer){
+			defer func(){
+				singFlag <- struct{}{}
+			}()
+			for j:=1;j<max3;j++{
+				if protecting > 0{
+					mu.Lock()
+				}
+				// 准备数据 "\n[id:%d,iteration:%d]", id, j)
+				head := fmt.Sprintf("\n[id:%d,iteration:%d]",id,j)
+				data := fmt.Sprintf("\t%d\t",j*id)
+				_,err := writer.Write([]byte(head))
+				if err != nil{
+					log.Printf("error:%s id:%d",err,id)
+				}
+				for k:=0;k<max3;k++{
+					_,err := writer.Write([]byte(data))
+					if err != nil{
+						log.Printf("error:%s id:%d",err,id)
+					}
+				}
+
+				if protecting > 0 {
+					mu.Unlock()
+				}
+			}
+			
+		}(i,&buff)
+	}
+
+	for i:=0;i<max1;i++{
+		<- singFlag
+	}
+
+	// 从buff中读取数据
+	data,err := ioutil.ReadAll(&buff)
+	if err != nil{
+		log.Printf("The error is %s\n",err)
+	}
+	log.Printf("The contents:\n %s",data)
+}
