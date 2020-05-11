@@ -11,6 +11,7 @@ import (
 
 func addNum(numP *int32, id, max int32, deferFunc func()) {
 	defer func() {
+		// 不能忘记调用
 		deferFunc()
 	}()
 
@@ -56,10 +57,10 @@ func TestWaitingGroup(t *testing.T) {
 	fmt.Printf("the number: %d [with sync.WaitGroup]\n", num)
 	max := int32(10)
 
-	go addNum(&num, 3, max, wg.Done)
-	go addNum(&num, 4, max, wg.Done)
+	go addNum(&num, 1, max, wg.Done)
+	go addNum(&num, 2, max, wg.Done)
 
-	// 等待其他goroutine执行完毕
+	// 等待其他goroutine执行完毕 杜塞goroutine
 	wg.Wait()
 }
 
@@ -116,9 +117,9 @@ func TestWaitGroupMisuse(t *testing.T) {
 		wg.Done()
 	}()
 
-	// go func(){
-	// 	wg.Done()
-	// }()
+	go func(){
+		wg.Done()
+	}()
 
 	t.Fatal("Should panic")
 }
@@ -237,7 +238,7 @@ func addNum1(numP *int32, id int, deferFunc func()) {
 			fmt.Printf("The number:%d [%d-%d]\n", numP, id, i)
 			break
 		} else {
-			// fmt.Printf("The CAS operation failed. [%d-%d]\n", id, i)
+			fmt.Printf("The CAS operation failed. [%d-%d]\n", id, i)
 		}
 	}
 }

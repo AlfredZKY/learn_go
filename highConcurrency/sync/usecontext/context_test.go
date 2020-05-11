@@ -9,6 +9,10 @@ import (
 	"time"
 )
 
+var (
+	wg sync.WaitGroup
+)
+
 func addNum(numP *int32, id int, deferFunc func()) {
 	defer func() {
 		deferFunc()
@@ -44,9 +48,6 @@ func TestCoordinateWithWaitGroup(t *testing.T) {
 	fmt.Printf("End.")
 }
 
-var (
-	wg sync.WaitGroup
-)
 
 func work(ctx context.Context) error {
 	defer wg.Done()
