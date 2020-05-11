@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"middleware/jiankong"
-	"middleware/readconfig"
+	"learn_go/middleware/jiankong"
+	"learn_go/middleware/readconfig"
 )
 
 // CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
