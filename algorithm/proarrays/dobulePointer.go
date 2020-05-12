@@ -1,5 +1,7 @@
 package proarrays
 
+import "fmt"
+
 // 题目
 // 给你 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
 // 说明：你不能倾斜容器，且 n 的值至少为 2。
@@ -48,7 +50,7 @@ func MoveZeroesSentry(nums []int) {
 			j = i
 		}
 
-		// 如果当前数非0 就与前面的0000第一个0交换，也就是j的位置
+		// 如果当前数非0 就与前面的0000第一个0交换，也就是j的位置,然后j++ 用于继续记录0的位置
 		if nums[i] != 0 && j >= 0 {
 			nums[i], nums[j] = nums[j], nums[i]
 			j++
@@ -62,7 +64,7 @@ func MoveZeroesCount(nums []int) {
 	for i := 0; i < len(nums); i++ {
 		if nums[i] == 0 {
 			count++
-		}else if count >= 0 {
+		} else if count >= 0 {
 			temp := nums[i]
 			nums[i] = nums[i-count]
 			nums[i-count] = temp
@@ -70,21 +72,20 @@ func MoveZeroesCount(nums []int) {
 	}
 }
 
-
 // 题目
 // 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 // 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
 // 给定 nums = [2, 7, 11, 15], target = 9
-// 方法1. 采用map存储 value和index 
+// 方法1. 采用map存储 value和index
 
 // TwoNumsSum nums 和一个目标值 target
-func TwoNumsSum(nums []int,target int)[]int{
+func TwoNumsSum(nums []int, target int) []int {
 	res := []int{}
 	dic := make(map[int]int)
-	for index,value := range nums{
-		if value,exist := dic[target - value];exist{
-			res = append(res,value)
-			res = append(res,index)
+	for index, value := range nums {
+		if value, exist := dic[target-value]; exist {
+			res = append(res, value)
+			res = append(res, index)
 		}
 		dic[value] = index
 	}
@@ -97,10 +98,10 @@ func TwoNumsSum(nums []int,target int)[]int{
 // 删除重复数组中重复的元素，并返回修改后数组的长度
 
 // RemoveDuplicates1 方法1 后面往前走，因为已排序，所以不再考虑大小 方法2 采用双指针
-func RemoveDuplicates1(nums []int)int{
-	for length := len(nums)-1;length > 0 ;length--{
-		if nums[length] == nums[length-1]{
-			nums = append(nums[:length],nums[length+1:]...)
+func RemoveDuplicates1(nums []int) int {
+	for length := len(nums) - 1; length > 0; length-- {
+		if nums[length] == nums[length-1] {
+			nums = append(nums[:length], nums[length+1:]...)
 		}
 	}
 	return len(nums)
@@ -125,13 +126,13 @@ func RemoveDuplicates2(nums []int) int {
 }
 
 // RemoveDuplicates3 前后下标对比
-func RemoveDuplicates3(nums []int)int{
-	if len(nums) == 0{
+func RemoveDuplicates3(nums []int) int {
+	if len(nums) == 0 {
 		return 0
 	}
-	j:=0
-	for i:=1;i < len(nums);i++{
-		if nums[i] != nums[j]{
+	j := 0
+	for i := 1; i < len(nums); i++ {
+		if nums[i] != nums[j] {
 			j++
 			nums[j] = nums[i]
 		}
@@ -144,24 +145,27 @@ func RemoveDuplicates3(nums []int)int{
 // 输入: [1,2,3,4,5,6,7] 和 k = 3
 
 // Rotate1 旋转数组 方法1 copy 取余元素交换
-func Rotate1(nums []int,k int)[]int{
+func Rotate1(nums []int, k int) []int {
 	n := len(nums)
 	k = k % n
-	copy(nums,append(nums[len(nums)-k:],nums[:len(nums)-k]...))
+	copy(nums, append(nums[len(nums)-k:], nums[:len(nums)-k]...))
 	return nums
 }
 
-// Rotate2 旋转数组 方法2 采用临时元素交换
-func Rotate2(nums []int,k int)[]int{
+// Rotate2 旋转数组 方法2 先整体反转，再在小数组中局部反转,需要反转三次
+func Rotate2(nums []int, k int) []int {
+	fmt.Println(nums)
 	reverse(nums)
+	fmt.Println(nums)
 	reverse(nums[:k%len(nums)])
+	fmt.Println(nums)
 	reverse(nums[k%len(nums):])
+	fmt.Println(nums)
 	return nums
 }
 
-func reverse(nums []int){
-	for i := 0;i<len(nums)/2;i++{ 
-		nums[i],nums[len(nums)-i-1] = nums[len(nums)-i-1],nums[i]
+func reverse(nums []int) {
+	for i := 0; i < len(nums)/2; i++ {
+		nums[i], nums[len(nums)-i-1] = nums[len(nums)-i-1], nums[i]
 	}
 }
-

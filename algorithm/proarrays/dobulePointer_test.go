@@ -3,6 +3,14 @@ package proarrays
 import "testing"
 
 
+
+func TestDobulePointerArea(t*testing.T){
+	nums := []int{1,8,6,2,5,4,8,3,7}
+	res := DobulePointerArea(nums)
+	t.Log(res)
+}
+
+
 func TestDobulePointer(t *testing.T){
 	nums := []int{-1,0,1,2,-1,-4}
 	t.Log(nums)
@@ -12,12 +20,6 @@ func TestDobulePointer(t *testing.T){
 	t.Log(res)
 }
 
-
-func TestDobulePointerArea(t*testing.T){
-	nums := []int{1,8,6,2,5,4,8,3,7}
-	res := DobulePointerArea(nums)
-	t.Log(res)
-}
 
 func TestMoveZeroesSentry(t*testing.T){
 	nums := []int{0,1,0,3,12}
@@ -36,7 +38,7 @@ func TestMoveZeroesCount(t*testing.T){
 
 func TestTwoNumsSum(t*testing.T){
 	nums := []int{2, 7, 11, 15}
-	target := 26
+	target := 9
 	res := TwoNumsSum(nums,target)
 	t.Log(res)
 }
