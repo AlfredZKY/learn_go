@@ -1,6 +1,9 @@
 package proarrays
 
-import "fmt"
+import (
+	"fmt"
+	"learn_go/algorithm/sortfunc"
+)
 
 // 题目
 // 给你 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
@@ -168,4 +171,99 @@ func reverse(nums []int) {
 	for i := 0; i < len(nums)/2; i++ {
 		nums[i], nums[len(nums)-i-1] = nums[len(nums)-i-1], nums[i]
 	}
+}
+
+// 求取三数之和
+//
+
+// ThreadNums get nums
+func ThreadNums(nums []int) [][]int {
+	ret := make([][]int, 0, 0)
+	if len(nums) < 3 {
+		return ret
+	}
+	sortfunc.QuickSortArrays(nums)
+
+	for i := 0; i < len(nums)-1; i++ {
+		j, length := i+1, len(nums)-1
+		if nums[i] > 0 || nums[j]+nums[i] > 0 {
+			break
+		}
+
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+
+		for j < length {
+			if j > i+1 && nums[j] == nums[j-1] {
+				j++
+				continue
+			}
+			if length < len(nums)-2 && nums[length] == nums[length+1] {
+				length--
+				continue
+			}
+
+			if nums[i]+nums[j]+nums[length] > 0 {
+				length--
+			} else if nums[i]+nums[j]+nums[length] < 0 {
+				j++
+			} else {
+				ret = append(ret, []int{nums[i], nums[j], nums[length]})
+				length--
+				j++
+			}
+		}
+	}
+
+	return ret
+}
+
+// TreadSums get thread nums sums
+func TreadSums(nums []int) [][]int {
+	ret := make([][]int, 0, 0)
+	if len(nums) < 3 {
+		return ret
+	}
+	// 思路：采用先对数据进行排序，然后用下一个元素和最后一个元素求和，双边紧逼的方法 当前后索引相等时，即可完成所有的元素的求和
+	// 先排序
+	sortfunc.QuickSortArrays(nums)
+
+	for i := 0; i < len(nums); i++ {
+		// 判断元素只要大于0,就跳出循环，因为已经排序了，不可能存在三数之和等于0的情况
+		j, length := i+1, len(nums)-1
+		if nums[i] > 0 || nums[j]+nums[i] > 0 {
+			break
+		}
+
+		// i 必须大于0的情况下 去重
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+		for j < length {
+
+			// 前元素去重
+			if j > i+1 && nums[j] == nums[j+1] {
+				j++
+				continue
+			}
+
+			// 后边元素也要去重
+			if length < len(nums)-2 && nums[length] == nums[length+1] {
+				length--
+				continue
+			}
+			if nums[i]+nums[j]+nums[length] > 0 {
+				length--
+			} else if nums[i]+nums[j]+nums[length] < 0 {
+				j++
+			} else {
+				ret = append(ret, []int{nums[i], nums[j], nums[length]})
+				j++
+				length--
+			}
+		}
+
+	}
+	return ret
 }
