@@ -3,6 +3,7 @@ package proarrays
 import (
 	"sort"
 	"testing"
+	"learn_go/algorithm/sortfunc"
 )
 
 func TestDobulePointerArea(t *testing.T) {
@@ -14,7 +15,7 @@ func TestDobulePointerArea(t *testing.T) {
 func TestDobulePointer(t *testing.T) {
 	nums := []int{-1, 0, 1, 2, -1, -4}
 	t.Log(nums)
-	QuickSort(nums)
+	sortfunc.QuickSortArrays(nums)
 	t.Log(nums)
 	res := RemoveDuplicates2(nums)
 	t.Log(res)
@@ -93,4 +94,9 @@ func TestTreadSums(t *testing.T) {
 	nums := []int{-1, 0, 1, 2, -1, -4}
 	ret := ThreadNums(nums)
 	t.Log(ret)
+}
+
+func TestClimbStairs(t*testing.T){
+	res := ClimbStairs(5)
+	t.Log(res)
 }

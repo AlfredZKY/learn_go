@@ -10,8 +10,8 @@ type Elem int
 
 // LinkNode link elements
 type LinkNode struct {
-	val  Elem
-	next *LinkNode
+	Val  Elem
+	Next *LinkNode
 }
 
 // New 初始化头节点
@@ -24,7 +24,7 @@ func (head *LinkNode) Insert(i int, e Elem) bool {
 	p := head
 	j := 1
 	for nil != p && j < i {
-		p = p.next
+		p = p.Next
 		j++
 	}
 	if nil == p || j > i {
@@ -32,9 +32,9 @@ func (head *LinkNode) Insert(i int, e Elem) bool {
 		return false
 	}
 	// 构造节点
-	s := &LinkNode{val: e}
-	s.next = p.next
-	p.next = s
+	s := &LinkNode{Val: e}
+	s.Next = p.Next
+	p.Next = s
 	return true
 }
 
@@ -42,47 +42,47 @@ func (head *LinkNode) Insert(i int, e Elem) bool {
 func (head *LinkNode) Append(e Elem) {
 	p := head
 	// 不能指到尾节点，尾节点的上一个节点
-	for p.next != nil {
-		p = p.next
+	for p.Next != nil {
+		p = p.Next
 	}
-	newNode := &LinkNode{val: e}
-	p.next = newNode
+	newNode := &LinkNode{Val: e}
+	p.Next = newNode
 }
 
 // Traverse 遍历链表
 func (head *LinkNode) Traverse() {
 	point := head
 	for point != nil {
-		fmt.Printf("%d\t", point.val)
-		point = point.next
+		fmt.Printf("%d\t", point.Val)
+		point = point.Next
 	}
 	fmt.Println("\n--------done--------")
 }
 
 // Delete 删除指定位置元素
 func (head *LinkNode) Delete(i int) bool {
-	p := head.next
+	p := head.Next
 	j := 1
 	for nil != p && j < i {
-		p = p.next
+		p = p.Next
 		j++
 	}
 	if nil == p || j > i {
 		fmt.Println("pls check i:", i)
 		return false
 	}
-	p.next = p.next.next
+	p.Next = p.Next.Next
 	return true
 }
 
 // DeleteTail 删除元素
 func (head *LinkNode) DeleteTail() {
 	p := head
-	for nil != p.next.next {
-		p = p.next
+	for nil != p.Next.Next {
+		p = p.Next
 
 	}
-	p.next = p.next.next
+	p.Next = p.Next.Next
 }
 
 // Get 获取指定位置的值
@@ -95,9 +95,9 @@ func (head *LinkNode) Get(i int) (Elem, error) {
 		if nil == p {
 			return -1, errors.New("not find")
 		}
-		p = p.next
+		p = p.Next
 	}
-	return p.val, nil
+	return p.Val, nil
 }
 
 // Loop 新建一个循环链表
@@ -108,11 +108,11 @@ func (head *LinkNode) Loop() *LinkNode {
 	linkList3 := New(4)
 	linkList4 := New(5)
 	linkList5 := New(6)
-	linkList.next = linkList1
-	linkList1.next = linkList2
-	linkList2.next = linkList3
-	linkList3.next = linkList4
-	linkList4.next = linkList5
-	linkList5.next = linkList3
+	linkList.Next = linkList1
+	linkList1.Next = linkList2
+	linkList2.Next = linkList3
+	linkList3.Next = linkList4
+	linkList4.Next = linkList5
+	linkList5.Next = linkList3
 	return linkList
 }
