@@ -17,6 +17,13 @@ func CreateSingleLink() *linkstruct.LinkNode {
 	return head
 }
 
+// CreateCycle 创建一个新链表
+func CreateCycle() *linkstruct.LinkNode {
+	head := linkstruct.New(0)
+	Cycle := head.Loop()
+	return Cycle
+}
+
 // 题目
 // 反转一个单链表。
 // 示例:
@@ -46,8 +53,8 @@ func ReverserSignleListIter(head *linkstruct.LinkNode) *linkstruct.LinkNode {
 	return pre
 }
 
-// ReverserSignleListReceive 翻转单链表 方法2 采用递归的方法
-func ReverserSignleListReceive(head *linkstruct.LinkNode) *linkstruct.LinkNode {
+// ReverserSignleListRecursive 翻转单链表 方法2 采用递归的方法
+func ReverserSignleListRecursive(head *linkstruct.LinkNode) *linkstruct.LinkNode {
 	return reverse(nil, head)
 }
 
@@ -84,7 +91,183 @@ func SwapPairsyOne(head *linkstruct.LinkNode) *linkstruct.LinkNode {
 	// 给了prev是一跳，其实是两跳，因为1和2换了位置，我们又跳到了1，所以是两跳
 
 	for prev.Next != nil && prev.Next.Next != nil {
+		// prev.Next.Next.Next, prev.Next.Next, prev.Next, prev = prev.Next, prev.Next.Next.Next, prev.Next.Next, prev.Next
 		prev.Next.Next.Next, prev.Next.Next, prev.Next, prev = prev.Next, prev.Next.Next.Next, prev.Next.Next, prev.Next
 	}
 	return hint.Next
+}
+
+// SwapPairsyTwo 两两进行节点交换
+func SwapPairsyTwo(head *linkstruct.LinkNode) *linkstruct.LinkNode {
+	// 申请一个空节点
+	p := new(linkstruct.LinkNode)
+	q := p
+
+	for head != nil && head.Next != nil {
+		nextHead := head.Next.Next
+		p.Next = head.Next
+		head.Next = nil
+		p.Next.Next = head
+		p = p.Next.Next
+		head = nextHead
+	}
+
+	if head != nil {
+		p.Next = head
+	}
+
+	return q.Next
+}
+
+// SwapPairsyThree 递归交换
+func SwapPairsyThree(head *linkstruct.LinkNode) *linkstruct.LinkNode {
+	// 1.终止条件:当前没有节点或者只有一个节点，肯定就不需要交换了
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	// 2 节点交换 两个挨着的节点用于交换 head 和 head.Next
+	firstNode, secondNode := head, head.Next
+	firstNode.Next = SwapPairsyThree(secondNode.Next)
+	secondNode.Next = firstNode
+	return secondNode
+}
+
+// 题目
+// 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
+// k 是一个正整数，它的值小于或等于链表的长度。
+// 如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。 方法 有迭代 递归 栈等解决
+
+//ReverseGroup 翻转指定个数的链表节点
+func ReverseGroup(head *linkstruct.LinkNode, k int) *linkstruct.LinkNode {
+	// 设置前驱节点
+	dummy := &linkstruct.LinkNode{Val: -1, Next: head}
+	prev := dummy
+	cur := prev.Next
+
+	for {
+		// 先判断链表的节点是否满足要求
+		n := k
+		nextPart := cur
+		for nextPart != nil && n > 0 {
+			nextPart = nextPart.Next
+			n--
+		}
+
+		if n > 0 {
+			break
+		} else {
+			n = k
+		}
+		// 保存下一个pre节点
+		nextPre := cur
+		for n > 0 {
+			// 保存下一跳元素
+			temp := cur.Next
+
+			// 斩断前尘
+			cur.Next = nextPart
+
+			// 下个头为当前元素
+			nextPart = cur
+			cur = temp
+			n--
+		}
+		// n次翻转完毕
+		prev.Next = nextPart
+
+		// 设置下一个prev
+		prev = nextPre
+		cur = prev.Next
+	}
+	return dummy.Next
+}
+
+// ReverseGroupRecursive 递归
+func ReverseGroupRecursive(head *linkstruct.LinkNode, k int) *linkstruct.LinkNode {
+	cur := head
+	count := 0
+	for count != k && cur != nil {
+		cur = cur.Next
+		count++
+	}
+	if count == k {
+		cur = ReverseGroupRecursive(cur, k)
+		for count > 0 {
+
+		}
+	}
+	return nil
+}
+
+// ReverseGroupStack 用栈
+func ReverseGroupStack(head *linkstruct.LinkNode, k int) *linkstruct.LinkNode {
+	dummy := &linkstruct.LinkNode{Val: -1, Next: nil}
+	// p := dummy
+
+	// for {
+	// 	count := k
+	// 	stack := [...]*linkstruct.LinkNode{}
+	// 	tmp := head
+	// 	for count >0 && tmp != nil {
+	// 		stack = append(stack,tmp)
+	// 	}
+
+	// }
+	return dummy.Next
+}
+
+// 题目
+// 给定一个链表，判断链表中是否有环。
+// 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+
+// HasCyclePointer 判断一个指针是否有环 
+func HasCyclePointer(head *linkstruct.LinkNode) bool {
+	if head == nil {
+		return false
+	}
+	quick, slow := head, head
+
+	for quick != nil && quick.Next != nil {
+		if quick == slow {
+			return true
+		}
+		quick = quick.Next.Next
+		slow = slow.Next
+	}
+	return false
+}
+
+// HasCycleMap 利用哈希表存储
+func HasCycleMap(head *linkstruct.LinkNode) bool {
+	if head == nil {
+		return false
+	}
+
+	hash := make(map[* linkstruct.LinkNode]linkstruct.Elem)
+
+	for head != nil {
+		if _,exist := hash[head];exist{
+			return true
+		}
+		hash[head] = head.Val
+		head = head.Next
+	}
+	return false
+}
+
+// HasCycleSomeVal 把链表中节点的值全部置为全部一样值
+func HasCycleSomeVal(head *linkstruct.LinkNode) bool {
+	if head == nil {
+		return false
+	}
+
+	for head != nil {
+		if head.Val == 9999999{
+			return true
+		}
+		head.Val = 9999999
+		head = head.Next
+	}
+	return false
 }

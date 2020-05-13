@@ -14,18 +14,56 @@ func TestReverserSignleListIter(t *testing.T) {
 	res.Traverse()
 }
 
-func TestReverserSignleListReceive(t*testing.T){
+func TestReverserSignleListRecursive(t *testing.T) {
 	head := CreateSingleLink()
 	head.Traverse()
-	res := ReverserSignleListReceive(head)
+	res := ReverserSignleListRecursive(head)
 	res.Traverse()
 }
 
-func TestSwapPairs(t*testing.T){
+func TestSwapPairs1(t *testing.T) {
 	head := CreateSingleLink()
 	head.Traverse()
 	res := SwapPairsyOne(head)
 	res.Traverse()
 }
 
+func TestSwapPairs2(t *testing.T) {
+	head := CreateSingleLink()
+	head.Traverse()
+	res := SwapPairsyTwo(head)
+	res.Traverse()
+}
 
+func TestSwapPairs3(t *testing.T) {
+	head := CreateSingleLink()
+	head.Traverse()
+	res := SwapPairsyThree(head)
+	res.Traverse()
+}
+
+func TestReverseGroup(t *testing.T) {
+	head := CreateSingleLink()
+	head.Traverse()
+	res := ReverseGroup(head, 3)
+	res.Traverse()
+}
+
+
+func TestHasCycle(t*testing.T){
+	head := CreateCycle()
+	res := HasCyclePointer(head)
+	t.Log(res)
+}
+
+func TestHasCycleMap(t*testing.T){
+	head := CreateCycle()
+	res := HasCycleMap(head)
+	t.Log(res)
+}
+
+func TestHasCycleSomeVal(t*testing.T){
+	head := CreateCycle()
+	res := HasCycleSomeVal(head)
+	t.Log(res)
+}
