@@ -49,20 +49,27 @@ func TestReverseGroup(t *testing.T) {
 	res.Traverse()
 }
 
+func TestReverseGroup1(t *testing.T) {
+	head := CreateSingleLink()
+	head.Traverse()
+	res := ReverseGroupStack(head, 3)
+	res.Traverse()
+}
 
-func TestHasCycle(t*testing.T){
+
+func TestHasCycle(t *testing.T) {
 	head := CreateCycle()
 	res := HasCyclePointer(head)
 	t.Log(res)
 }
 
-func TestHasCycleMap(t*testing.T){
+func TestHasCycleMap(t *testing.T) {
 	head := CreateCycle()
 	res := HasCycleMap(head)
 	t.Log(res)
 }
 
-func TestHasCycleSomeVal(t*testing.T){
+func TestHasCycleSomeVal(t *testing.T) {
 	head := CreateCycle()
 	res := HasCycleSomeVal(head)
 	t.Log(res)

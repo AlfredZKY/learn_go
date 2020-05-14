@@ -100,3 +100,10 @@ func TestClimbStairs(t*testing.T){
 	res := ClimbStairs(5)
 	t.Log(res)
 }
+
+func TestPlusOne(t*testing.T){
+	// nums := []int{ 1, 9, 9}
+	nums := []int{0}
+	res := PlusOne(nums)
+	t.Log(res)
+}

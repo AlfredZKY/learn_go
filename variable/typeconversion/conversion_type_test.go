@@ -59,3 +59,25 @@ func typeCast(param interface{}) {
 		fmt.Println("unkown type")
 	}
 }
+
+func TestConvertTypes(t*testing.T){
+	// 当类型不兼容时，是无法转换的
+	var var1 int = 7
+	t.Logf("%T->%v\n",var1,var1)
+
+	var2 := float32(var1)
+	var3 := int64(var1)
+	t.Logf("%T->%v\n",var2,var2)
+	t.Logf("%T->%v\n",var3,var3)
+
+	// 类型不兼容
+	// var4 := []int(var1)
+	// var5 := []int64(var1)
+	// t.Logf("%T->%v\n",var4,var4)
+	// t.Logf("%T->%v\n",var5,var5)
+
+	var6 := new(int32)
+	t.Logf("%T->%v\n",var6,var6)
+	var7 := (*int32)(var6)
+	t.Logf("%T->%v\n",var7,var7)
+}

@@ -1,6 +1,9 @@
 package processlink
 
-import "learn_go/dataStruct/linkstruct"
+import (
+	"learn_go/dataStruct/linkstruct"
+	"learn_go/datastruct/stacks"
+)
 
 var (
 	head = linkstruct.New(0)
@@ -41,13 +44,15 @@ func ReverserSignleListIter(head *linkstruct.LinkNode) *linkstruct.LinkNode {
 		// 保存下一跳的指针
 		temp := cur.Next
 
-		// 起初是斩断前程，后面就是指向前节点
+		cur.Next = nil
+
+		// 斩断当前的节点的连接
 		cur.Next = pre
 
 		// 更新前驱指针
 		pre = cur
 
-		// 更新下一跳的指针，方便访问下一个指针,也就是恢复头指针
+		// 更新当前节点
 		cur = temp
 	}
 	return pre
@@ -63,7 +68,10 @@ func reverse(prev, cur *linkstruct.LinkNode) *linkstruct.LinkNode {
 	if cur == nil {
 		return prev
 	}
+
 	head := reverse(cur, cur.Next)
+
+	// cur.Next这时候是尾节点 prev是前一个节点 相当于前后节点互换了指针方向
 	cur.Next = prev
 	return head
 }
@@ -203,17 +211,45 @@ func ReverseGroupRecursive(head *linkstruct.LinkNode, k int) *linkstruct.LinkNod
 // ReverseGroupStack 用栈
 func ReverseGroupStack(head *linkstruct.LinkNode, k int) *linkstruct.LinkNode {
 	dummy := &linkstruct.LinkNode{Val: -1, Next: nil}
-	// p := dummy
+	p := dummy
+	_ = p
+	tmp := head
+	flagBool := false
+	var stack stacks.Stack
+	var temp *linkstruct.LinkNode
+	for head != nil{
+		count := k
+		temp = tmp
+		for count != 0 && tmp != nil {
+			if tmp == nil && count > 0{
+				flagBool = true
+				break
+			}
+			value := &linkstruct.LinkNode{Val: -1, Next: nil}
+			value.Val = tmp.Val
+			stack.Push(value)
+			tmp = tmp.Next
+			head = head.Next
+			count--
+		}
 
-	// for {
-	// 	count := k
-	// 	stack := [...]*linkstruct.LinkNode{}
-	// 	tmp := head
-	// 	for count >0 && tmp != nil {
-	// 		stack = append(stack,tmp)
-	// 	}
+		if flagBool {
+			break
+		}
 
-	// }
+		if count == 0 {
+			for stack.Len() != 0 {
+				value,_:= stack.Pop()
+				// p.Next = interface{}(value).(*linkstruct.LinkNode)
+				p.Next = value.(*linkstruct.LinkNode)
+				p = p.Next
+			}
+		}
+		
+	}
+	if tmp != nil {
+		p.Next = temp
+	}
 	return dummy.Next
 }
 
@@ -221,7 +257,7 @@ func ReverseGroupStack(head *linkstruct.LinkNode, k int) *linkstruct.LinkNode {
 // 给定一个链表，判断链表中是否有环。
 // 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
 
-// HasCyclePointer 判断一个指针是否有环 
+// HasCyclePointer 判断一个指针是否有环
 func HasCyclePointer(head *linkstruct.LinkNode) bool {
 	if head == nil {
 		return false
@@ -244,10 +280,10 @@ func HasCycleMap(head *linkstruct.LinkNode) bool {
 		return false
 	}
 
-	hash := make(map[* linkstruct.LinkNode]linkstruct.Elem)
+	hash := make(map[*linkstruct.LinkNode]linkstruct.Elem)
 
 	for head != nil {
-		if _,exist := hash[head];exist{
+		if _, exist := hash[head]; exist {
 			return true
 		}
 		hash[head] = head.Val
@@ -263,7 +299,7 @@ func HasCycleSomeVal(head *linkstruct.LinkNode) bool {
 	}
 
 	for head != nil {
-		if head.Val == 9999999{
+		if head.Val == 9999999 {
 			return true
 		}
 		head.Val = 9999999
