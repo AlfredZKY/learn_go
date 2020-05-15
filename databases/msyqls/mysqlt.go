@@ -60,7 +60,7 @@ func init() {
 // MysqlInsert insert data in to database
 func MysqlInsert() bool {
 	// 开启事务
-	tx, err := DB.Begin()
+	// tx, err := DB.Begin()
 	if err != nil {
 		fmt.Println("tx fail")
 		return false
