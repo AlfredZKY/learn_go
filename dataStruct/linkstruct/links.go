@@ -86,12 +86,13 @@ func (head *LinkNode) DeleteTail() {
 }
 
 // Get 获取指定位置的值
-func (head *LinkNode) Get(i int) (Elem, error) {
+func (head *LinkNode) Get(i Elem) (Elem, error) {
 	p := head
 	if i < 0 {
 		return -2, errors.New("not find")
 	}
-	for j := 1; j < i; j++ {
+	var j Elem = 1
+	for ; j < i; j++ {
 		if nil == p {
 			return -1, errors.New("not find")
 		}

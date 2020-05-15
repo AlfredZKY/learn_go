@@ -56,7 +56,6 @@ func TestReverseGroup1(t *testing.T) {
 	res.Traverse()
 }
 
-
 func TestHasCycle(t *testing.T) {
 	head := CreateCycle()
 	res := HasCyclePointer(head)
@@ -73,4 +72,19 @@ func TestHasCycleSomeVal(t *testing.T) {
 	head := CreateCycle()
 	res := HasCycleSomeVal(head)
 	t.Log(res)
+}
+
+func TestDetectCycle(t*testing.T){
+	head := CreateCycle()
+	res := DetectCycle(head)
+	if res == nil {
+		t.Error("no cycle link")
+	}
+	t.Log(res.Val)
+	val,err := head.Get(res.Val)
+	if err == nil {
+		t.Log("find a element ", val)
+	}else{
+		t.Error(err)
+	}
 }
