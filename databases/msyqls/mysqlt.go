@@ -58,22 +58,22 @@ func init() {
 }
 
 // MysqlInsert insert data in to database
-func MysqlInsert() bool {
-	// 开启事务
-	// tx, err := DB.Begin()
-	if err != nil {
-		fmt.Println("tx fail")
-		return false
-	}
+// func MysqlInsert() bool {
+// 	// 开启事务
+// 	// tx, err := DB.Begin()
+// 	if err != nil {
+// 		fmt.Println("tx fail")
+// 		return false
+// 	}
 
-	// 准备sql语句
-	stmt, err := tx.Prepare("INSERT INTO nk_user (`name`,`password`) VALUES (?,?)")
-	if err != nil {
-		fmt.Println("Prepare fail")
-		return false
-	}
-	_ = stmt
-	// // 设置参数以及执行sql语句
-	// res,err := stmt.Exec()
-	return false
-}
+// 	// 准备sql语句
+// 	stmt, err := tx.Prepare("INSERT INTO nk_user (`name`,`password`) VALUES (?,?)")
+// 	if err != nil {
+// 		fmt.Println("Prepare fail")
+// 		return false
+// 	}
+// 	_ = stmt
+// 	// // 设置参数以及执行sql语句
+// 	// res,err := stmt.Exec()
+// 	return false
+// }
