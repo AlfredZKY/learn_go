@@ -1,5 +1,5 @@
 package readconfig
-
+// 
 import (
 	"fmt"
 	"encoding/json"

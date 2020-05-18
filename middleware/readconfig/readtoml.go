@@ -1,5 +1,6 @@
 package readconfig
 
+// go get github.com/BurntSushi/toml
 import (
 	"fmt"
 	"io/ioutil"
