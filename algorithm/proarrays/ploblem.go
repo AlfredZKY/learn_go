@@ -18,15 +18,14 @@ func DobulePointerArea(nums []int) int {
 
 	// 设置头尾下标
 	maxRes := 0
-	for font, tail := 0, len(nums)-1; font < len(nums); {
-		if nums[font] <= nums[tail] {
-			maxRes = max(maxRes, (tail-font)*nums[font])
-			font++
-		} else {
-			maxRes = max(maxRes, (tail-font)*nums[tail])
+	for front, tail := 0, len(nums)-1; front < tail; {
+		if nums[front] >= nums[tail] {
+			maxRes = max(maxRes, nums[tail]*(tail-front))
 			tail--
+		} else {
+			maxRes = max(maxRes, nums[front]*(tail-front))
+			front++
 		}
-
 	}
 	return maxRes
 }
@@ -44,16 +43,15 @@ func max(a, b int) int {
 // 必须在原数组上操作，不能拷贝额外的数组。
 // 尽量减少操作次数。
 
-// MoveZeroesSentry 移动0，解题1.采用map存储的方式  解题2.采用数组计数的方法
+// MoveZeroesSentry 移动0，解题1.采用map存储的方式  解题2.采用数组下标计数的方法
 func MoveZeroesSentry(nums []int) {
-	j := -1 // j代表当前第一个0元素 -1代表没0
+	// 用一个下标代表元素0的位置
+	j := -1
+
 	for i := 0; i < len(nums); i++ {
-		// 找到并初始化第一个0的位置
 		if nums[i] == 0 && j == -1 {
 			j = i
 		}
-
-		// 如果当前数非0 就与前面的0000第一个0交换，也就是j的位置,然后j++ 用于继续记录0的位置
 		if nums[i] != 0 && j >= 0 {
 			nums[i], nums[j] = nums[j], nums[i]
 			j++
@@ -64,10 +62,11 @@ func MoveZeroesSentry(nums []int) {
 // MoveZeroesCount 解题2.采用数组计数的方法
 func MoveZeroesCount(nums []int) {
 	count := 0
+
 	for i := 0; i < len(nums); i++ {
 		if nums[i] == 0 {
 			count++
-		} else if count >= 0 {
+		} else if count > 0 {
 			temp := nums[i]
 			nums[i] = nums[i-count]
 			nums[i-count] = temp
@@ -119,7 +118,7 @@ func RemoveDuplicates2(nums []int) int {
 
 	slow, quick := 0, 1
 	for quick < n {
-		if nums[slow] < nums[quick] {
+		if nums[slow] != nums[quick] {
 			slow++
 			nums[slow] = nums[quick]
 		}
@@ -299,12 +298,12 @@ func ClimbStairs(n int) int {
 
 // PlusOne add one operator
 func PlusOne(digits []int) []int {
-	for tail :=len(digits)-1;tail >= 0;tail--{
+	for tail := len(digits) - 1; tail >= 0; tail-- {
 		if digits[tail] < 9 {
 			digits[tail]++
 			return digits
 		}
-		digits[tail] = 0 
+		digits[tail] = 0
 	}
-	return digits
+	return append([]int{1}, digits...)
 }

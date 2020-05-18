@@ -1,23 +1,14 @@
 package proarrays
 
 import (
+	"learn_go/algorithm/sortfunc"
 	"sort"
 	"testing"
-	"learn_go/algorithm/sortfunc"
 )
 
 func TestDobulePointerArea(t *testing.T) {
 	nums := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
 	res := DobulePointerArea(nums)
-	t.Log(res)
-}
-
-func TestDobulePointer(t *testing.T) {
-	nums := []int{-1, 0, 1, 2, -1, -4}
-	t.Log(nums)
-	sortfunc.QuickSortArrays(nums)
-	t.Log(nums)
-	res := RemoveDuplicates2(nums)
 	t.Log(res)
 }
 
@@ -29,7 +20,7 @@ func TestMoveZeroesSentry(t *testing.T) {
 }
 
 func TestMoveZeroesCount(t *testing.T) {
-	nums := []int{0, 1, 0, 3, 12}
+	nums := []int{0, 0, 1, 0, 3, 12}
 	t.Log(nums)
 	MoveZeroesCount(nums)
 	t.Log(nums)
@@ -39,6 +30,15 @@ func TestTwoNumsSum(t *testing.T) {
 	nums := []int{2, 7, 11, 15}
 	target := 9
 	res := TwoNumsSum(nums, target)
+	t.Log(res)
+}
+
+func TestDobulePointer(t *testing.T) {
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	t.Log(nums)
+	sortfunc.QuickSortArrays(nums)
+	t.Log(nums)
+	res := RemoveDuplicates2(nums)
 	t.Log(res)
 }
 
@@ -96,14 +96,14 @@ func TestTreadSums(t *testing.T) {
 	t.Log(ret)
 }
 
-func TestClimbStairs(t*testing.T){
-	res := ClimbStairs(5)
+func TestClimbStairs(t *testing.T) {
+	res := ClimbStairs(6)
 	t.Log(res)
 }
 
-func TestPlusOne(t*testing.T){
+func TestPlusOne(t *testing.T) {
 	// nums := []int{ 1, 9, 9}
-	nums := []int{0}
+	nums := []int{9}
 	res := PlusOne(nums)
 	t.Log(res)
 }

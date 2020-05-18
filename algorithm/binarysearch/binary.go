@@ -11,7 +11,11 @@ import (
 //BinarySearch 二分查找
 func BinarySearch(nums []int, target int) {
 	n := len(nums)
+
+	// 取余表示怕数组不够长
 	target = target % n
+
+	// 旋转数组
 	copy(nums, append(nums[len(nums)-target:], nums[:len(nums)-target]...))
 	fmt.Println(nums)
 	left, right := 0, len(nums)-1

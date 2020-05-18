@@ -21,7 +21,6 @@ import (
 
 // QuickSortArrays 对切片数组快速排序
 func QuickSortArrays(nums []int) error {
-	fmt.Println(nums)
 	n := len(nums)
 	if n < 2 {
 		return errors.New("array elements number is too little")
@@ -30,18 +29,19 @@ func QuickSortArrays(nums []int) error {
 	// 设置哨兵元素，默认左边的第一个元素开始
 	sentry := nums[0]
 	i, length := 0, len(nums)-1
-	for k := 1; k <= length; {
-		if nums[k] < sentry {
+	for k:=1;k<=length;{
+		if nums[k] < sentry{
 			nums[k],nums[i] = nums[i],nums[k]
 			k++
 			i++
 		}else{
-			nums[k],nums[length] = nums[length],nums[k]
+			nums[k],nums[length]= nums[length],nums[k]
 			length--
 		}
+		fmt.Println(nums,length)
 	}
+	// fmt.Println(length)
 	QuickSortArrays(nums[:length])
 	QuickSortArrays(nums[length+1:])
-
 	return nil
 }
