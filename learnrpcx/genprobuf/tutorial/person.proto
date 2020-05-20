@@ -1,13 +1,15 @@
-syntax = "proto3";
+syntax = "proto3";  // 指定proto的版本
 
 package tutorial;
 import "google/protobuf/timestamp.proto";
 
+// message 相当于go中的字面量
 message Person {
     string name = 1;
-    int32 id = 2;  // Unique ID number for this person.
+    int32 id = 2;  // 2 Unique ID number for this person. 优先用1-15的编号 一个字节
     string email = 3;
 
+    // 枚举类型
     enum PhoneType {
         MOBILE = 0;
         HOME = 1;
@@ -19,8 +21,11 @@ message Person {
         PhoneType type = 2;
     }
 
+    // repeated slice
     repeated PhoneNumber phones = 4;
 
+    // 时间戳
+    // google.protobuf.Timestamp TimeStamp = 2;
     google.protobuf.Timestamp last_updated = 5;
 }
 

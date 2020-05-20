@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-option go_package = "helloword";
-
 package helloword;
+// 在proto文件中.会被替换成_
+// 替代上面的go包名，生成的个go文件的包名为hw
+option go_package = "helloword";
 
 service Greet{
     rpc SayHello(HelloRequest)returns(HelloReply){} 
