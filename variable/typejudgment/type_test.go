@@ -1,6 +1,7 @@
 package typejudgment
 
 import (
+	"reflect"
 	"fmt"
 	"testing"
 )
@@ -136,6 +137,13 @@ func TestTypeJudgement(t*testing.T){
 		t.Log("err is ",err)
 	}
 	t.Logf("%T->%v\n",j,j)
-	
 }
 
+func TestMakeNewType(t*testing.T){
+	var i *int = new(int) 
+	*i = 10
+	t.Log(*i,"\t",reflect.TypeOf(i))
+
+	var j = make([]int,7)
+	t.Log(j,"\t",reflect.TypeOf(j))
+}
