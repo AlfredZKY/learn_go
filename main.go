@@ -50,7 +50,7 @@ func dbQuery(query int, pool *resource.Pool) {
 
 	// 模拟查询
 	time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
-	log.Printf("第%d个查询，使用的是ID为%d的数据库连接"，query,conn.(*dbConnect).ID))
+	log.Printf("第%d个查询，使用的是ID为%d的数据库连接", query, conn.(*dbConnection).ID)
 }
 
 type dbConnection struct {
