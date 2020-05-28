@@ -118,7 +118,23 @@ func TestStructNull(t *testing.T) {
 	t.Logf("s address is %p s1 address is %p, s or s1 compare %v", &s, &s1, &s == &s1)
 
 	test := Variable{}
-	test.Internal.a=3
-	test.b=3
+	test.Internal.a = 3
+	test.b = 3
 	fmt.Println(test)
+}
+
+type user struct {
+	Name string
+}
+
+type Admin struct {
+	user
+}
+
+func TestStructauth(t *testing.T) {
+	// 初始化方法不能用字面量user了，因为它是不能再保外被访问的
+	var ad Admin
+	// Name是user内部的字段，但是确实可以导出的，所以外部可以直接访问
+	ad.Name = "张三"
+	t.Log(ad.Name)
 }
