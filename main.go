@@ -12,7 +12,7 @@ import (
 
 const (
 	// 模拟最大的goroutine
-	maxGoroutine = 4
+	maxGoroutine = 6
 	// 资源池的大小
 	poolRes = 2
 )
