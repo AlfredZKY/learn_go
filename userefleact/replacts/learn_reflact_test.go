@@ -1,4 +1,4 @@
-package replacts
+package replact
 
 import "testing"
 
