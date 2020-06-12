@@ -2,7 +2,7 @@ package encode
 
 import "testing"
 
-func TestBinaryReadParctice(t* testing.T){
+func TestBinaryReadParctice(t *testing.T) {
 	BinaryReadParctice()
 }
 
