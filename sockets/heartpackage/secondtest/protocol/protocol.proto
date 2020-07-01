@@ -1,0 +1,41 @@
+// 该协议使用probuf3 
+syntax = "proto3";
+
+// 定义包名，方便给自己的go模块调用
+package protocol;
+
+// 从miner向主miner发送的心跳，及其携带的信息
+message MainInfo{
+    int32 weight = 1;  // 从miner的权重
+    bool status = 2;   // 从miner的状态，如果为true则代表是主miner,false统一为从miner
+    string ip = 3;     // 从miner自生的ip
+    int32 port = 4;
+    //string api = 4;    // 从miner如果转正时，需要给worker集群自己的api数据
+    //string token=5;    // 同上，给worker集群自己的token
+    //string reserfile=6; // 保留字段，看看还需要传递什么字段
+}
+
+// 主miner把收集到的从miner的数据后更新后广播出去,保证从miner的数据一致性
+message MainTable{
+    // 每当有从miner连接到主miner后，主miner把表更新后，广播给所有在线的从miner,
+    repeated MainInfo maintable = 1;   
+}
+
+// 从miner之间的心跳包，及其携带的信息
+message SubInfo {
+    string ip = 1;          // 从miner的Ip
+    int64 rounds = 2;       // 从miner间心跳包对应的轮数
+    bool status = 3;        // 从之间相互心跳之间的状态，true在线 false不在线
+}
+
+// 当发生选举时，从miner要相互广播出自己的在从miner间的状态结果并会汇总后，选举中最新的主miner
+message SubTable{
+    repeated SubInfo subinfo = 1;   // 携带所有的从miner的状态信息
+}
+
+// 问题：
+// 1.其中新选举出来的主miner在向worker集群发送通知报文时，需要不要等待回复？(如果等待，worker返回多少比例算是完成)
+// 2.worker集群在向主miner发送通知报文时，需不需要等待回复？(如果等待，返回比例，或者网络闭塞如何通知到老主miner)
+// 3.从miner变成主miner启动的时机，老主miner如果没关闭？(如何关闭？)
+// 4.这个心跳报文之间发送的间隔时间？
+
