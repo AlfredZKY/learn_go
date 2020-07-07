@@ -11,6 +11,10 @@ import (
 	"time"
 )
 
+var (
+	lock sync.Mutex
+)
+
 // singleHandler 代表单次处理函数的类型
 type singleHandler func() (data string, n int, err error)
 
@@ -89,7 +93,7 @@ func TestMutexRW(t *testing.T) {
 	}
 
 	// sign 代表信号的通道
-	sign := make(chan struct{}, writingConfig.goNum + readingConfig.goNum)
+	sign := make(chan struct{}, writingConfig.goNum+readingConfig.goNum)
 
 	// 启用多个goroutine 对缓冲区进行多次数据写入
 	for i := 1; i <= writingConfig.goNum; i++ {
@@ -196,4 +200,28 @@ func TestMultiUnLock(t *testing.T) {
 	fmt.Println("Unlock the lock again.")
 	// 重复对同一个互斥锁解锁会引发一个运行恐慌，且不可恢复。
 	mutex.Unlock()
+}
+
+func TestTestLock(t *testing.T) {
+	lock.Lock()
+
+	defer lock.Unlock()
+
+	_ = assin()
+	_ = assin()
+	_ = assin()
+	
+	return
+
+}
+
+
+func assin() bool {
+	go func(){
+		time.Sleep(115)
+		lock.Lock()
+		fmt.Println("runing")
+		lock.Unlock()
+	}()
+	return true
 }

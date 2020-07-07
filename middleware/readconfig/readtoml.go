@@ -13,7 +13,8 @@ import (
 var LocalIP string
 
 func init() {
-	p, err := ReadConfToml("../config.toml")
+	fmt.Println(os.Getwd())
+	p, err := ReadConfToml("/home/zky/go/src/learn_go/middleware/config.toml")
 	if err != nil {
 		fmt.Printf("%v", err)
 	}

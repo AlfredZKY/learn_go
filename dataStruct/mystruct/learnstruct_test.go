@@ -86,6 +86,7 @@ func TestStructOperations(t *testing.T) {
 
 	// cat cat* 打印出地址的结果可见最好采用cat*方式封装
 	cat.String()
+
 }
 
 // GetName get the value of the variable
@@ -137,4 +138,15 @@ func TestStructauth(t *testing.T) {
 	// Name是user内部的字段，但是确实可以导出的，所以外部可以直接访问
 	ad.Name = "张三"
 	t.Log(ad.Name)
+}
+
+type tstruct struct {
+	a string
+}
+
+func TestTestStruct(t *testing.T) {
+	// p := &tstruct{a: "zky"}
+	// t.Log(p.a)
+	var p *tstruct
+	t.Log(p)
 }
