@@ -26,6 +26,22 @@
         "editorLineNumber.foreground": "#3d40dda9",
         "editorGutter.background": "#c0e683b6",
         "editorCursor.foreground": "#d41313",
+        "activityBar.activeBackground": "#3399ff",
+        "activityBar.activeBorder": "#bf0060",
+        "activityBar.background": "#3399ff",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#bf0060",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#007fff",
+        "statusBar.border": "#007fff",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#3399ff",
+        "titleBar.activeBackground": "#007fff",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.border": "#007fff",
+        "titleBar.inactiveBackground": "#007fff99",
+        "titleBar.inactiveForeground": "#e7e7e799"
     },
     "editor.rulers":[120],
     "highlight-icemode.borderColor": "red",
@@ -42,7 +58,11 @@
     "go.autocompleteUnimportedPackages": true,
     "go.docsTool": "gogetdoc",
     "go.formatTool": "goimports",
-    "go.testFlags": ["-v","-count=1"],
+    "go.testFlags": [
+        "-v",
+        "-count=1"
+    ],
+    "peacock.color": "#007fff",
 }
 
 

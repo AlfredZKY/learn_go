@@ -1,5 +1,34 @@
-lockstatus = false
-mainminercount = 66
+lockstatus = 
+mainminercount = 0
 newminerip = ""
-normalboot = false
-subminercount = 0
+
+[api]
+  listenaddress = "/ip4/192.168.0.54/tcp/s/http\u0013"
+  remotelistenaddress = "192.168.0.54/tcp/s/http"
+
+[dealmaking]
+  considerofflineretrievaldeals = true
+  considerofflinestoragedeals = true
+  consideronlineretrievaldeals = true
+  consideronlinestoragedeals = true
+  piececidblocklist = []
+
+[libp2p]
+  announceaddresses = []
+  connmgrgrace = "20s"
+  connmgrhigh = 180
+  connmgrlow = 150
+  listenaddresses = ["/ip4/0.0.0.0/tcp/0","/ip6/::/tcp/0"]
+  noannounceaddresses = []
+
+[pubsub]
+  bootstrapper = false
+  remotetracer = "/ip4/147.75.67.199/tcp/4001/p2p/QmTd6UvR47vUidRNZ1ZKXHrAFhqTJAD27rKL9XYghEKgKX"
+
+[storage]
+  allowaddpiece = true
+  allowcommit1 = true
+  allowcommit2 = true
+  allowprecommit1 = true
+  allowprecommit2 = true
+  allowunseal = true

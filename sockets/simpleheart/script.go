@@ -10,18 +10,21 @@ import (
 	"os/exec"
 	"time"
 
+	dingtalk_robot "github.com/JetBlink/dingtalk-notify-go-sdk"
 	"github.com/spf13/viper"
+	"github.com/fsnotify/fsnotify"
 )
 
 var (
 	mainminercount    string = "mainminercount"
 	globalcount       int64  = 0
+	newminerip        string = "newminerip"
 	lockstatus        string = "lockstatus"
 	lastCOunt         int64
 	flags             bool
 	lockFilePath      string = "/home/zky/go/src/learn_go/sockets/simpleheart/test.txt"
-	lotusStorageMiner string = "/home/zky/project/testlearn/lotus/lotus-storage-miner"
-	configPath        string = "/home/zky/go/src/learn_go/sockets/simpleheart/"
+	lotusStorageMiner string = "/home/zky/go/src/learn_go/sockets/simpleheart"
+	configPath        string = "/home/zky/go/src/learn_go/sockets/simpleheart"
 	configName        string = "config"
 	configType        string = "toml"
 )
@@ -42,8 +45,10 @@ func modifyVariableConfig(key string, value interface{}) {
 		}
 	case string:
 		{
+
 			log.Println("string v is:", v)
 			viper.Set(key, v)
+
 		}
 	case int64:
 		{
@@ -51,7 +56,6 @@ func modifyVariableConfig(key string, value interface{}) {
 			viper.Set(key, v)
 		}
 	}
-
 	err := viper.WriteConfigAs(configPath + configName + "." + configType) //写入文件
 	if err != nil {                                                        // Handle errors reading the config file
 		log.Fatalf("%s \n", err)
@@ -62,11 +66,13 @@ func modifyVariableConfig(key string, value interface{}) {
 func closeMinerProcess() error {
 	args := []string{lotusStorageMiner, " stop"}
 	cmd := exec.Command("bash", args...)
-	_, err := cmd.Output()
+	err := cmd.Start()
+
 	if err != nil {
 		return err
 	}
-	return nil
+	err = cmd.Wait()
+	return err
 }
 
 // 实际上就是删除锁文件
@@ -77,13 +83,15 @@ func removefile() error {
 		log.Printf("%s has not exist!\n", lockFilePath)
 		return nil
 	}
-	args := []string{"/bin/rm", " -rf ", lockFilePath}
-	cmd := exec.Command("bash", args...)
-	_, err = cmd.Output()
+	args := []string{" -rf ", lockFilePath}
+	cmd := exec.Command("rm", args...)
+	err = cmd.Start()
 	if err != nil {
 		return err
 	}
-	return nil
+	err = cmd.Wait()
+	log.Println(err)
+	return err
 }
 
 func checkMainIP() string {
@@ -94,8 +102,8 @@ func checkMainIP() string {
 	if err != nil {             // Handle errors reading the config file
 		log.Println(fmt.Errorf("Fatal read error config file: %s", err))
 	}
-	newminerip := viper.GetString("newminerip")
-	return newminerip
+	newminerips := viper.GetString(newminerip)
+	return newminerips
 }
 
 // 检测配置文件中新主IP的产生，如果产生，正常关闭lotus-storage-miner进程
@@ -105,7 +113,7 @@ func checkNewMinerIP() {
 		// 执行正常的关闭动作，否则继续检测
 		for {
 			err := closeMinerProcess()
-			if err == nil {
+			if err != nil {
 				log.Println("lotus-storage-miner has been close success!!!")
 				break
 			} else {
@@ -118,7 +126,7 @@ func checkNewMinerIP() {
 		// 正常关闭后，更新锁状态，此时就无锁了，从miner可以启动了。
 		for {
 			err := removefile()
-			if err == nil {
+			if err != nil {
 				log.Println("lock file has been del")
 				break
 			}
@@ -217,8 +225,96 @@ func useFlag() {
 
 }
 
+var (
+	apiFile string = "/home/zky/go/src/learn_go/sockets/simpleheart/api"
+)
+
+// 修改api文件
+func modifyAPI() {
+	//OpenFile指定文件打开方式，只读，只写，读写和权限
+	file4, err7 := os.OpenFile(apiFile, os.O_RDWR, 0666)
+	defer file4.Close()
+	if err7 != nil {
+		log.Fatal(file4)
+	}
+	//向文件写入数据
+	localIP, _ := externalIP()
+	log.Println("local ip", localIP.String())
+
+	api := "/ip4/" + localIP.String() + "/tcp/2345/http"
+	file4.Write([]byte(api))
+	time.Sleep(time.Second * 20)
+}
+
+// Send is to send some messages
+func Send(LocalIP, messages string) {
+	msg := map[string]interface{}{
+		"msgtype": "text",
+		"text": map[string]string{
+			"content": LocalIP + messages,
+		},
+		"at": map[string]interface{}{
+			"atMobiles": []string{},
+			"isAtAll":   false,
+		},
+	}
+	// https://oapi.dingtalk.com/robot/send?access_token=a15a0c483228898166cbad1a07c475fc9bab5891bf069adc8d1db3db9d87235f
+	robot := dingtalk_robot.NewRobot("a15a0c483228898166cbad1a07c475fc9bab5891bf069adc8d1db3db9d87235f", "SEC8229ba11fe5487a3579d37321d88c0dc1ee5621afd0b34583956745e7fe66156")
+
+	if err := robot.SendMessage(msg); err != nil {
+		fmt.Println(err)
+	}
+}
+
+// TimeWrite 定时更新轮数
+func TimeWrite() {
+	c := time.Tick(time.Second * 15)
+	for {
+		<-c
+		globalcount++
+		log.Println(time.Now().Format("2006-01-02 15:04:05"), globalcount)
+		writeConfigs(globalcount)
+	}
+}
+
+func writeConfigs(count int64) {
+	viper.SetConfigName(configName)
+	viper.AddConfigPath(configPath)
+	viper.SetConfigType(configType)
+	viper.ReadInConfig()
+	localIP, _ := externalIP()
+	ListenAddress := "/ip4/" + localIP.String() + "/tcp/s/http" 
+	RemoteListenAddress := localIP.String() + "/tcp/s/http"
+	viper.Set("API.ListenAddress", ListenAddress)
+	viper.Set("API.RemoteListenAddress", RemoteListenAddress)
+	err := viper.WriteConfig() //写入文件
+	if err != nil {            // Handle errors reading the config file
+		panic(fmt.Errorf("Fatal error config file: %s \n", err))
+	}
+}
+
+func watchConfig() {
+    viper.WatchConfig()
+    viper.OnConfigChange(func(e fsnotify.Event) {
+        fmt.Printf("Config file changed: %sn", e.Name)
+    })
+}
+
 func main() {
-	useFlag()
-	go setHeartCount()
-	time.Sleep(time.Second * 10000000)
+	// go TimeWrite()
+	// useFlag()
+	// go setHeartCount()
+	// err := removefile()
+	// if err != nil {
+	// 	log.Println("normal delete")
+	// }
+	// time.Sleep(time.Second * 315360000)
+	viper.SetConfigName(configName)
+	viper.AddConfigPath(configPath)
+	viper.SetConfigType(configType)
+	viper.ReadInConfig()
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	log.Println(viper.GetBool("lockstatus"))
 }

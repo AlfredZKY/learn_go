@@ -22,12 +22,12 @@ var (
 	faultcount     int32
 	globalcount    int64
 
-	lockFilePath string = "/home/zky/go/src/learn_go/sockets/simpleheart/test.txt"
-	configPath   string = "/home/zky/go/src/learn_go/sockets/simpleheart/"
-	configName   string = "config"
+	lockFilePath string = "/mnt/data/.lotusstorage/repo.lock"
+	configPath   string = "/mnt/data/"
+	configName   string = "hotback"
 	configType   string = "toml"
 
-	apiFile string = "/home/zky/go/src/learn_go/sockets/simpleheart/api"
+	apiFile string = "/mnt/data/.lotusstorage/api"
 )
 
 func modifyConfig(key string, value interface{}) {
