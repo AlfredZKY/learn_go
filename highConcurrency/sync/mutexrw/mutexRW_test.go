@@ -3,6 +3,8 @@ package mutexrw
 import (
 	"fmt"
 	"log"
+	"math/rand"
+	"runtime"
 	"sync"
 	"testing"
 	"time"
@@ -113,3 +115,4 @@ func TestRWLock(t *testing.T) {
 	rwm.Lock()
 	fmt.Printf("Locked for writing.")
 }
+
