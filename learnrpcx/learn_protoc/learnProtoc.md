@@ -21,7 +21,7 @@
     go get github.com/golang/protobuf/protoc-gen-go
 
 ## 生成go文件
-- ‵protoc --go_out=. .*proto‵
+- ‵protoc --go_out=. *.proto‵
     - .:生成的.pb.go后缀所在的路径为当前路径
     - *.*proto:自己写的protoc文件
 
@@ -49,6 +49,7 @@
 # 问题
 ## 1.下载好的protoc文件路径问题
 -  如果选择的是linux平台，请把下载好的elf文件放入环境变量中，切记所带的include文件夹中的内容也要放入到环境变量中，这样就可以使用protoc命令了
+-  sudo cp -r ~/Downloads/protoc/include/* .  
 
 ## 2.--go_out: protoc-gen-go: Plugin failed with status code 1.
 - go get -u github.com/golang/protobuf/protoc-gen-go

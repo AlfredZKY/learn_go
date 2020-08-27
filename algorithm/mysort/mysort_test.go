@@ -2,6 +2,7 @@ package mysort
 
 import (
 	"fmt"
+	"math/rand"
 	"sort"
 	"testing"
 )
@@ -37,22 +38,34 @@ func TestSortSlices(t *testing.T) {
 	// fmt.Println("从小到大排序的结果")
 	// fmt.Println(s)
 
+	// 打乱
+	rand.Shuffle(len(s), func(i, j int) {
+		s[i], s[j] = s[j], s[i]
+	})
+	fmt.Println("打乱的结果")
+	fmt.Println(s)
 	// 从小到大稳定排序
-	sort.SliceStable(s,func(i,j int)bool{
-		if s[i].value < s[j].value {
-			return true
+	sort.SliceStable(s, func(i, j int) bool {
+		if s[i] == s[j] {
+			fmt.Println("==")
+			return s[i].value == s[j].value
+		} else if s[i].value < s[j].value {
+			fmt.Println("<")
+			// return true
+			return s[i].value < s[j].value
 		}
+		// return s[i].value > s[j].value
 		return false
 	})
 	fmt.Println("从小到大排序的结果")
 	fmt.Println(s)
 
 	// 判断数组是否已排序
-	bless := sort.SliceIsSorted(s,func(i,j int)bool{
+	bless := sort.SliceIsSorted(s, func(i, j int) bool {
 		if s[i].value < s[j].value {
 			return true
 		}
 		return false
 	})
-	fmt.Printf("S 是否已完成排序 %v\n",bless)
+	fmt.Printf("S 是否已完成排序 %v\n", bless)
 }

@@ -83,9 +83,9 @@ var (
 func main() {
 
 	log.Println(maxIndexBits, maxHeight, width, widthBits)
-	const SectorsMax = 32 << 20
-	fmt.Println(SectorsMax * 32 / 1024 / 1024)
-
+	const SectorsMax = 1 << 40
+	// fmt.Println(SectorsMax / 1024 / 1024 / 1024)
+	fmt.Println(SectorsMax)
 	log.Println(MaxIndex)
 
 	val := "fool"
