@@ -69,10 +69,10 @@ func main() {
 	// fmt.Println(monitor)
 
 	// viper.SetConfigFile("/home/zky/go/src/learn_go/middleware/hello2.toml")
-	// // viper.SetConfigFile("$GOPATH/src/learn_go/middleware/hello2.toml")
-	// viper.SetDefault("MonitorUnit.Address", "0.0.0.0:9090")
-	// viper.Set("Address", "0.0.0.0:9090") //统一把Key处理成小写 Address->address
-	// viper.SetDefault("notifyList", []string{"xiaohong", "xiaoli", "xiaowang"})
+	viper.SetConfigFile("$GOPATH/src/learn_go/middleware/hello2.toml")
+	viper.SetDefault("MonitorUnit.Address", "0.0.0.0:9090")
+	viper.Set("Address", "0.0.0.0:9090") //统一把Key处理成小写 Address->address
+	viper.SetDefault("notifyList", []string{"xiaohong", "xiaoli", "xiaowang"})
 	// err = viper.WriteConfig() //写入文件
 	// if err != nil {           // Handle errors reading the config file
 	// 	panic(fmt.Errorf("Fatal error config file: %s \n", err))

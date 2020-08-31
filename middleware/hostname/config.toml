@@ -1,31 +1,26 @@
-[monitorunit]
-  notifylist = ["xiaohong","xiaoli","xiaowang"]
-  value = [5,6,7]
-  default = false
-
 [ap]
   notifylist = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
-  default = false
+  default = -1
 
 
 [pc1]
   notifylist = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
-  default = false
+  default = -1
 
 
 [pc2]
   notifylist = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
-  default = false
+  default = -1
 
 [c1]
   notifylist = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
-  default = false
+  default = -1
 
 [c2]
   notifylist = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
-  default = false
+  default = -1
