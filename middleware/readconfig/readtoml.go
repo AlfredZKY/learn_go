@@ -13,8 +13,7 @@ import (
 var LocalIP string
 
 func init() {
-	fmt.Println(os.Getwd())
-	p, err := ReadConfToml("/home/zky/go/src/learn_go/middleware/config.toml")
+	p, err := ReadConfToml("/home/zky/project/myproject/learn_go/middleware/config.toml")
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
@@ -34,7 +33,11 @@ type Friends struct {
 
 // MonitorUnit get Local IP from config file
 type MonitorUnit struct {
-	LocalIP string
+	Address    string
+	LocalIP    string
+	notifyList []string
+	Timeout    string
+	
 }
 
 // ReadConfToml read the config file

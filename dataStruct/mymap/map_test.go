@@ -1,6 +1,9 @@
 package mymap
 
 import (
+	"fmt"
+	"strconv"
+	"sync"
 	"testing"
 )
 
@@ -70,10 +73,70 @@ func TestMapfuncvalue(t *testing.T) {
 	Mapfuncvalue()
 }
 
-func TestMapvaluenil(t*testing.T){
+func TestMapvaluenil(t *testing.T) {
 	Mapvaluenil()
 }
 
-func TestMapvaluenil1(t*testing.T){
+func TestMapvaluenil1(t *testing.T) {
 	Mapvaluenil1()
+}
+
+func TestNonConcurrentMap(t *testing.T) {
+
+	// fatal error: concurrent map read and map write
+	m := make(map[int]int)
+
+	go func() {
+		for {
+			m[1] = 1
+		}
+	}()
+
+	go func() {
+		for {
+			_ = m[1]
+		}
+	}()
+
+	for {
+
+	}
+}
+
+func TestConcurrentMap(t *testing.T) {
+	var scene sync.Map
+	i := 0
+	for i < 1000 {
+		scene.Store("creece"+strconv.Itoa(i), i)
+		// scene.Store("creece", 98)
+		// scene.Store("egypt", 200)
+		// scene.Store("London", 201)
+
+		// if count, ok := scene.Load("London"); ok {
+		// 	newCount := fmt.Sprintf("%d", count)
+		// 	counts, _ := strconv.Atoi(newCount)
+		// 	t.Log(ok, counts-1, reflect.TypeOf(count))
+		// }
+		counts := ParseSyncMap(&scene, "London")
+		if counts > 0 {
+			t.Log(counts)
+		}
+		// scene.Delete("London")
+		// scene.Store("London", 201)
+		scene.Range(func(k, v interface{}) bool {
+			fmt.Printf("iterator: %v %v\n", k, v)
+			return true
+		})
+		i++
+	}
+
+}
+
+func ParseSyncMap(p *sync.Map, key string) int {
+	if count, ok := p.Load(key); ok {
+		newCount := fmt.Sprintf("%d", count)
+		counts, _ := strconv.Atoi(newCount)
+		return counts
+	}
+	return 0
 }

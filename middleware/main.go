@@ -2,10 +2,8 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"sync"
-	"time"
 
 	// "learn_go/middleware/jiankong"
 	// "learn_go/middleware/readconfig"
@@ -18,6 +16,23 @@ var (
 	global int32
 )
 
+// MonitorUnit 监控
+type MonitorUnit struct {
+	Ap AP    
+	Pc1 PC1
+}
+
+// AP record some hostname
+type AP struct {
+	hostnameValuePair map[string]int
+}
+
+// PC1  record some hostname
+type PC1 struct {
+	hostnameValuePair map[string]int
+}
+
+
 // CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
 func main() {
 	// p,err := readconfig.ReadConf("/home/zky/go/src/middleware/config.toml")
@@ -27,15 +42,6 @@ func main() {
 	// fmt.Printf("Person %s\n",p.MonitorUnit.LocalIP)
 	//LocalIP := p.MonitorUnit.LocalIP
 
-	// jiankong.Send(readconfig.LocalIP, "this is a messgae for testing")
-	// allocated, ubytes := 123, 456"github.com/spf13/viper"
-	// newValue := fmt.Sprintf("too much data in sector: %d > %d", allocated, ubytes)
-	// fmt.Println(newValue)
-
-	type MonitorUnit struct {
-		LocalIP string
-		Timeout string
-	}
 	// 使用环境变量
 	// useEnvViper()
 	v := viper.New()
@@ -46,19 +52,21 @@ func main() {
 	if err := v.ReadInConfig(); err != nil { // 搜索路径，并读取配置数据
 		panic(fmt.Errorf("Fatal error config file: %s \n", err))
 	}
-	subv := v.Sub("MonitorUnit")
-	fmt.Println(subv.Get("LocalIP"), subv.Get("Timeout"))
-	v.SetDefault("Address", "0.0.0.0:9090")
-	err := v.WriteConfig() //写入文件
-	if err != nil {        // Handle errors reading the config file
-		panic(fmt.Errorf("Fatal error config file: %s \n", err))
-	}
-	var monitor MonitorUnit
-	if err := subv.Unmarshal(&monitor); err != nil {
-		fmt.Printf("err:%s", err)
-	}
+	// subv := v.Sub("MonitorUnit")
+	subAp := v.Sub("Ap")
+	fmt.Println(subAp.Get("notifylist"), subAp.Get("value"))
+	// fmt.Println(subv.Get("LocalIP"), subv.Get("Timeout"))
+	// v.SetDefault("Address", "0.0.0.0:9090")
+	// err := v.WriteConfig() //写入文件
+	// if err != nil {        // Handle errors reading the config file
+	// 	panic(fmt.Errorf("Fatal error config file: %s \n", err))
+	// }
+	// var monitor MonitorUnit
+	// if err := subv.Unmarshal(&monitor); err != nil {
+	// 	fmt.Printf("err:%s", err)
+	// }
 
-	fmt.Println(monitor)
+	// fmt.Println(monitor)
 
 	// viper.SetConfigFile("/home/zky/go/src/learn_go/middleware/hello2.toml")
 	// // viper.SetConfigFile("$GOPATH/src/learn_go/middleware/hello2.toml")
@@ -69,27 +77,26 @@ func main() {
 	// if err != nil {           // Handle errors reading the config file
 	// 	panic(fmt.Errorf("Fatal error config file: %s \n", err))
 	// }
-	for {
-		viper.SetConfigFile("/home/zky/go/src/learn_go/middleware/hello2.toml")
-		err = viper.ReadInConfig() // 会查找和读取配置文件
-		if err != nil {            // Handle errors reading the config file
-			panic(fmt.Errorf("Fatal error config file: %s \n", err))
-		}
-		Address := viper.GetString("Address")
-		log.Println("address is ", Address)
-		if Address == "" {
-			time.Sleep(time.Second * 2)
-			continue
-		} else {
-			fmt.Println(Address)
-			break
-		}
-		//key取Address或者address都能取到值，反正viper转成小写处理
-	}
+
+	// for {
+	// 	viper.SetConfigFile("./hello2.toml")
+	// 	err := viper.ReadInConfig() // 会查找和读取配置文件
+	// 	if err != nil {            // Handle errors reading the config file
+	// 		panic(fmt.Errorf("Fatal error config file: %s \n", err))
+	// 	}
+	// 	Address := viper.GetString("Address")~~~~~
+	// 	log.Println("address is ", Address)
+	// 	if Address == "" {
+	// 		time.Sleep(time.Second * 2)
+	// 		continue
+	// 	} else {
+	// 		fmt.Println(Address)
+	// 		break
+	// 	}
+	// 	//key取Address或者address都能取到值，反正viper转成小写处理
+	// }
 
 	fmt.Println("=========================================================")
-	// go useNameVipers()
-	// go useNameViper()
 }
 
 func useEnvViper() {

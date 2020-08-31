@@ -2,13 +2,14 @@ package timeo
 
 import (
 	"fmt"
+	"learn_go/logger"
 	"testing"
 	"time"
 )
 
 func TestTimer1(t *testing.T) {
-	timer := time.NewTimer(2 * time.Second)
-	fmt.Printf("Present time: %v.\n", time.Now())
+	timer := time.NewTimer(10 * time.Second)
+	fmt.Printf("Present time: %v.\n", time.Now().Format("2006-01-02 15:04:05"))
 	expirationTime := <-timer.C
 	fmt.Printf("Expiration time: %v.\n", expirationTime)
 	fmt.Printf("Stop timer:%v\n", timer.Stop())
@@ -86,4 +87,9 @@ func TestTicker(t *testing.T) {
 	}
 	ticker.Stop()
 	fmt.Println("End. [receiver]")
+}
+
+func TestLoggerTime(t *testing.T) {
+	start := time.Now().Format("2006-01-02 15:04:05 ")
+	logger.DebugWithFilePath("./logger.log", "%v\n", start)
 }

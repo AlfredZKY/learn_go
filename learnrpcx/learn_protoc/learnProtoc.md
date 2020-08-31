@@ -105,3 +105,6 @@ protoc --gofast_out=plugins=rpcx:. helloworld.proto
 protoc --gogofast_out=plugins=rpcx:. helloworld.proto
 protoc --gogofaster_out=plugins=rpcx:. helloworld.proto
 protoc --gogoslick_out=plugins=rpcx:. helloworld.proto
+
+
+protoc --gofast_out=plugins=grpc:. *.proto
