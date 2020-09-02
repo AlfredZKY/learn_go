@@ -3,38 +3,66 @@ package main
 import (
 	"fmt"
 	"learn_go/logger"
+	"os"
 	"reflect"
 	"strconv"
+	"sync"
 
 	"github.com/spf13/viper"
 )
 
 var (
-	apTaskBak  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	pc1TaskBak taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	pc2TaskBak taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	c1TaskBak  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	c2TaskBak  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
+	apTaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc1TaskBak taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc2TaskBak taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c1TaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c2TaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 
-	apTask  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	pc1Task taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	pc2Task taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	c1Task  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
-	c2Task  taskPair = taskPair{hostnameValuePair: make(map[string]int, 50)}
+	apTask  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc1Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc2Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c1Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c2Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 
-	SchedLogPath  = "/opt/ns"
-	taskTypesBack = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}
+	SchedLogPath = "/opt/ns"
 
-	taskTypes    = map[string]taskPair{"ap": apTask, "pc1": pc1Task, "pc2": pc2Task, "c1": c1Task, "c2": c2Task}
+	taskWorkerRecord = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}
+
+	taskTypes = map[string]taskPair{"ap": apTask, "pc1": pc1Task, "pc2": pc2Task, "c1": c1Task, "c2": c2Task}
+
 	scheduleTask = map[string]taskPair{"seal/v0/addpiece": apTask, "seal/v0/precommit/1": pc1Task, "seal/v0/precommit/2": pc2Task, "seal/v0/commit/1": c1Task, "seal/v0/commit/2": c2Task}
+
+	scheduleTaskMaps = make(map[string]sync.Map, 1000)
+)
+
+type TaskType string
+
+const (
+	TTAddPiece   TaskType = "seal/v0/addpiece"
+	TTPreCommit1 TaskType = "seal/v0/precommit/1"
+	TTPreCommit2 TaskType = "seal/v0/precommit/2"
+	TTCommit1    TaskType = "seal/v0/commit/1" // NOTE: We use this to transfer the sector into miner-local storage for now; Don't use on workers!
+	TTCommit2    TaskType = "seal/v0/commit/2"
+
+	TTFinalize TaskType = "seal/v0/finalize"
+
+	TTFetch        TaskType = "seal/v0/fetch"
+	TTUnseal       TaskType = "seal/v0/unseal"
+	TTReadUnsealed TaskType = "seal/v0/unsealread"
 )
 
 type taskPair struct {
-	hostnameValuePair map[string]int
+	workerRemainingMap map[string]int
 }
 
 // LOTUS_MINER_PATH config path
-const LOTUS_MINER_PATH = "/home/qh/zhou_project/"
+// const LOTUS_MINER_PATH = "/home/qh/zhou_project"
+
+func getSysPathEnv() string {
+	var LotusMinerPath string
+	LotusMinerPath = os.Getenv("TEST_MINER")
+	return LotusMinerPath
+}
 
 func init() {
 	initConfig()
@@ -42,13 +70,13 @@ func init() {
 
 func initConfig() {
 	v := viper.New()
-	v.SetConfigFile(LOTUS_MINER_PATH + "worker_task_config.toml")
+	v.SetConfigFile(getSysPathEnv() + "/worker_task_config.toml")
 
 	if err := v.ReadInConfig(); err != nil { // 搜索路径，并读取配置数据
 		// TODO 读取配置文件错误
 		logger.DebugWithFilePath(SchedLogPath+"/read_conifg_err.log", "Fatal error config file: %s \n", err)
 	} else {
-		for taskName, taskType := range taskTypesBack {
+		for taskName, taskType := range taskWorkerRecord {
 			parseConfigToml(taskName, v, &taskType)
 		}
 	}
@@ -70,9 +98,9 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 			if defaultVaule < 0 {
 				numberTmp := fmt.Sprintf("%v", valueList.Index(i))
 				number, _ := strconv.Atoi(numberTmp)
-				taskType.hostnameValuePair[hostname] = number
+				taskType.workerRemainingMap[hostname] = number
 			} else {
-				taskType.hostnameValuePair[hostname] = defaultVaule
+				taskType.workerRemainingMap[hostname] = defaultVaule
 			}
 		}
 	case reflect.String:
@@ -85,57 +113,100 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 	}
 }
 
-func removeWorkerFromTaskWorkerMap(hostname string) {
-	logger.DebugWithFilePath(SchedLogPath+"/remove_worker.log", "removing worker to map: %v\n", hostname)
-	for taskname, taskPairs := range taskTypesBack {
-		for hostnameexist := range taskPairs.hostnameValuePair {
-			if hostnameexist == hostname {
-				delete(taskTypes[taskname].hostnameValuePair, hostname)
+func updateWorkerFromTaskWorkerMap(tasktype, hostname string, number int) {
+	logger.DebugWithFilePath(SchedLogPath+"/update_worker.log", "removing worker to map: %v\n", hostname)
+	for taskname, taskPairs := range taskTypes {
+		if taskname == tasktype {
+			for hostnameexist := range taskPairs.workerRemainingMap {
+				if hostnameexist == hostname {
+					taskTypes[tasktype].workerRemainingMap[hostname] += number
+				}
 			}
 		}
 	}
 }
 
-func addWorkerFromTaskWorkerMap(hostname string) {
+func removeWorkerFromTaskWorkerMap(hostname string) {
+	logger.DebugWithFilePath(SchedLogPath+"/remove_worker.log", "removing worker to map: %v\n", hostname)
+	taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
+	for i := 0; i < len(taskTypeList); i++ {
+		var securityMap sync.Map
+		securityMap = scheduleTaskMaps[taskTypeList[i]]
+		securityMap.Delete(hostname)
+	}
+}
+
+func addWorkerToTaskWorkerRemaining(hostname string) {
 	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker: %v\n", hostname)
 	var exist = false
-	for _, taskPairs := range taskTypesBack {
-		for hostnameexist := range taskPairs.hostnameValuePair {
-			if hostnameexist == hostname {
-				exist = true
-			}
+	for _, taskPairs := range taskWorkerRecord {
+		if taskPairs.workerRemainingMap[hostname] > 0 {
+			exist = true
 		}
 	}
+
 	if !exist {
 		logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "%v is not in current record, re-initializing record from config file...\n", hostname)
 		initConfig()
 	}
 
 	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker to map: %v\n", hostname)
-
-	for taskname, taskPairs := range taskTypesBack {
-		for hostnameexist, value := range taskPairs.hostnameValuePair {
-			if hostnameexist == hostname {
-				taskTypes[taskname].hostnameValuePair[hostnameexist] = value
-				logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "this worker can do: %v %v\n", taskname, value)
+	for tasktype, taskWorkerPair := range taskWorkerRecord {
+		var securityMap sync.Map
+		srcValue := taskWorkerPair.workerRemainingMap[hostname]
+		if tasktype == "ap" {
+			if srcValue > 0 {
+				securityMap.Store(hostname, srcValue)
+				scheduleTaskMaps["seal/v0/addpiece"] = securityMap
+			}
+		} else if tasktype == "pc1" {
+			if srcValue > 0 {
+				securityMap.Store(hostname, srcValue)
+				scheduleTaskMaps["seal/v0/precommit/1"] = securityMap
+			}
+		} else if tasktype == "pc2" {
+			if srcValue > 0 {
+				securityMap.Store(hostname, srcValue)
+				scheduleTaskMaps["seal/v0/precommit/2"] = securityMap
+			}
+		} else if tasktype == "c1" {
+			if srcValue > 0 {
+				securityMap.Store(hostname, srcValue)
+				scheduleTaskMaps["seal/v0/commit/1"] = securityMap
+			}
+		} else {
+			if srcValue > 0 {
+				securityMap.Store(hostname, srcValue)
+				scheduleTaskMaps["seal/v0/commit/2"] = securityMap
 			}
 		}
 	}
 }
 
+func parseSyncMap(key, hostname string) int {
+	var securityMap sync.Map
+	securityMap = scheduleTaskMaps[key]
+	if temptask, ok := securityMap.Load(hostname); ok {
+		currentVaule := temptask.(int)
+		// currentVaule := taskHostPair[hostname]
+		if currentVaule > 0 {
+			return currentVaule
+		}
+	}
+	return -1
+}
+
 func main() {
-	addWorkerFromTaskWorkerMap("idc21")
-	fmt.Println("======================================")
-	for _, taskPairs := range taskTypes {
-		for hostname, value := range taskPairs.hostnameValuePair {
-			fmt.Println(hostname, " ", value)
-		}
-	}
-	removeWorkerFromTaskWorkerMap("idc23")
-	fmt.Println("======================================")
-	for _, taskPairs := range taskTypes {
-		for hostname, value := range taskPairs.hostnameValuePair {
-			fmt.Println(hostname, " ", value)
-		}
-	}
+	fmt.Println(taskWorkerRecord)
+	addWorkerToTaskWorkerRemaining("idc24")
+	addWorkerToTaskWorkerRemaining("idc25")
+	fmt.Println(scheduleTaskMaps)
+	currentValue := parseSyncMap("seal/v0/commit/1", "idc24")
+	fmt.Println(currentValue)
+	currentValue1 := parseSyncMap("seal/v0/precommit/1", "idc25")
+	fmt.Println(currentValue1)
+	removeWorkerFromTaskWorkerMap("idc24")
+	currentValue2 := parseSyncMap("seal/v0/commit/1", "idc24")
+	fmt.Println(currentValue2)
+	fmt.Println(scheduleTaskMaps)
 }
