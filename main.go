@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"sync"
 
 	//"learn_go/highConcurrency/resource"
 	"log"
@@ -80,6 +81,10 @@ var (
 	MaxIndex     = uint64(1<<maxIndexBits) - 1
 )
 
+func myadd(a, b int) bool {
+	return true
+}
+
 func main() {
 
 	log.Println(maxIndexBits, maxHeight, width, widthBits)
@@ -95,4 +100,16 @@ func main() {
 	// var b = []byte{'b','m','l','z','a','G','F','u','Z','w','=','='}
 	var b = []byte{0xf4}
 	log.Println(b)
+	a, c := 0, 1
+	log.Println(myadd(a, c))
+
+	var syncMap sync.Map
+	m1 := make(map[string]sync.Map, 1000)
+	syncMap.Store("w1", 1)
+	m1["ap"] = syncMap
+
+	tempSyncMap := m1["p1"]
+	tempSyncMap.Store("w2", 5)
+	fmt.Println(tempSyncMap)
+
 }

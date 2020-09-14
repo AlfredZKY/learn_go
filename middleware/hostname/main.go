@@ -12,21 +12,15 @@ import (
 )
 
 var (
-	"apTaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"pc1TaskBak taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"pc2TaskBak taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"c1TaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"c2TaskBak  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-
-	"apTask  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"pc1Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"pc2Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"c1Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
-	"c2Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}",
+	apTask  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc1Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc2Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c1Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c2Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 
 	SchedLogPath = "/opt/ns"
 
-	"taskWorkerRecord = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}",
+	//taskWorkerRecord = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}
 
 	taskTypes = map[string]taskPair{"ap": apTask, "pc1": pc1Task, "pc2": pc2Task, "c1": c1Task, "c2": c2Task}
 
@@ -35,24 +29,8 @@ var (
 	scheduleTaskMaps = make(map[string]sync.Map, 1000)
 )
 
-type TaskType string
-
-const (
-	TTAddPiece   TaskType = "seal/v0/addpiece"
-	TTPreCommit1 TaskType = "seal/v0/precommit/1"
-	TTPreCommit2 TaskType = "seal/v0/precommit/2"
-	"TTCommit1    TaskType = "seal/v0/commit/1" // NOTE: We use this to transfer the sector into miner-local storage for now; Don't use on workers!",
-	TTCommit2    TaskType = "seal/v0/commit/2"
-
-	TTFinalize TaskType = "seal/v0/finalize"
-
-	TTFetch        TaskType = "seal/v0/fetch"
-	TTUnseal       TaskType = "seal/v0/unseal"
-	TTReadUnsealed TaskType = "seal/v0/unsealread"
-)
-
 type taskPair struct {
-	"workerRemainingMap map[string]int",
+	workerRemainingMap map[string]int
 }
 
 // LOTUS_MINER_PATH config path
@@ -70,13 +48,13 @@ func init() {
 
 func initConfig() {
 	v := viper.New()
-	"v.SetConfigFile(getSysPathEnv() + "/worker_task_config.toml")",
+	//"v.SetConfigFile(getSysPathEnv() + "/worker_task_config.toml")",
 
 	if err := v.ReadInConfig(); err != nil { // 搜索路径，并读取配置数据
 		// TODO 读取配置文件错误
 		logger.DebugWithFilePath(SchedLogPath+"/read_conifg_err.log", "Fatal error config file: %s \n", err)
 	} else {
-		"for taskName, taskType := range taskWorkerRecord {",
+		for taskName, taskType := range taskTypes {
 			parseConfigToml(taskName, v, &taskType)
 		}
 	}
@@ -98,9 +76,9 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 			if defaultVaule < 0 {
 				numberTmp := fmt.Sprintf("%v", valueList.Index(i))
 				number, _ := strconv.Atoi(numberTmp)
-				"taskType.workerRemainingMap[hostname] = number",
+				taskType.workerRemainingMap[hostname] = number
 			} else {
-				"taskType.workerRemainingMap[hostname] = defaultVaule",
+				taskType.workerRemainingMap[hostname] = defaultVaule
 			}
 		}
 	case reflect.String:
@@ -113,21 +91,21 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 	}
 }
 
-"func updateWorkerFromTaskWorkerMap(tasktype, hostname string, number int) {",
-	"logger.DebugWithFilePath(SchedLogPath+"/update_worker.log", "removing worker to map: %v\n", hostname)",
+func updateWorkerFromTaskWorkerMap(tasktype, hostname string, number int) {
+	logger.DebugWithFilePath(SchedLogPath+"/update_worker.log", "removing worker to map: %v\n", hostname)
 	for taskname, taskPairs := range taskTypes {
 		if taskname == tasktype {
-			"for hostnameexist := range taskPairs.workerRemainingMap {",
+			for hostnameexist := range taskPairs.workerRemainingMap {
 				if hostnameexist == hostname {
-					"taskTypes[tasktype].workerRemainingMap[hostname] += number",
+					taskTypes[tasktype].workerRemainingMap[hostname] += number
 				}
 			}
 		}
 	}
 }
 
-"func removeWorkerFromTaskWorkerMap(hostname string) {",
-	"logger.DebugWithFilePath(SchedLogPath+"/remove_worker.log", "removing worker to map: %v\n", hostname)",
+func removeWorkerFromTaskWorkerMap(hostname string) {
+	logger.DebugWithFilePath(SchedLogPath+"/remove_worker.log", "removing worker to map: %v\n", hostname)
 	taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
 	for i := 0; i < len(taskTypeList); i++ {
 		var securityMap sync.Map
@@ -136,24 +114,24 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 	}
 }
 
-"func addWorkerToTaskWorkerRemaining(hostname string) {",
-	"logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker: %v\n", hostname)",
+func addWorkerToTaskWorkerRemaining(hostname string) {
+	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker: %v\n", hostname)
 	var exist = false
-	"for _, taskPairs := range taskWorkerRecord {",
-		"if taskPairs.workerRemainingMap[hostname] > 0 {",
+	for _, taskPairs := range taskTypes {
+		if taskPairs.workerRemainingMap[hostname] > 0 {
 			exist = true
 		}
 	}
 
 	if !exist {
-		"logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "%v is not in current record, re-initializing record from config file...\n", hostname)",
+		logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "%v is not in current record, re-initializing record from config file...\n", hostname)
 		initConfig()
 	}
 
-	"logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker to map: %v\n", hostname)",
-	"for tasktype, taskWorkerPair := range taskWorkerRecord {",
+	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker to map: %v\n", hostname)
+	for tasktype, taskWorkerPair := range taskTypes {
 		var securityMap sync.Map
-		"srcValue := taskWorkerPair.workerRemainingMap[hostname]",
+		srcValue := taskWorkerPair.workerRemainingMap[hostname]
 		if tasktype == "ap" {
 			if srcValue > 0 {
 				securityMap.Store(hostname, srcValue)
@@ -197,37 +175,35 @@ func parseSyncMap(key, hostname string) int {
 }
 
 func main() {
-	"fmt.Println(taskWorkerRecord)",
-	"addWorkerToTaskWorkerRemaining("idc24")",
-	"addWorkerToTaskWorkerRemaining("idc25")",
+	addWorkerToTaskWorkerRemaining("idc24")
+	addWorkerToTaskWorkerRemaining("idc25")
 	fmt.Println(scheduleTaskMaps)
 	currentValue := parseSyncMap("seal/v0/commit/1", "idc24")
 	fmt.Println(currentValue)
 	currentValue1 := parseSyncMap("seal/v0/precommit/1", "idc25")
 	fmt.Println(currentValue1)
-	"removeWorkerFromTaskWorkerMap("idc24")",
+	removeWorkerFromTaskWorkerMap("idc24")
 	currentValue2 := parseSyncMap("seal/v0/commit/1", "idc24")
 	fmt.Println(currentValue2)
 	fmt.Println(scheduleTaskMaps)
 
 	fmt.Println("===========================")
-	ss :=make(map[string]sync.Map,100)
+	ss := make(map[string]sync.Map, 100)
 	var s1 sync.Map
-	s1.Store("hello",0)
+	s1.Store("hello", 0)
 	ss["ap"] = s1
 	s2 := ss["pc1"]
-	if val ,ok :=s2.Load("sssss");ok{
+	if val, ok := s2.Load("sssss"); ok {
 		fmt.Println(val)
 	}
 	fmt.Println(reflect.TypeOf(s2))
 
-
-	taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
-	hostnamelist := []string{"worker-1-148-gpu","worker-1-147-gpu","worker-2-56","worker-2-57","worker_0_198_gpu","worker_0_199_gpu","worker_0_200_gpu","worker_0_201_gpu","worker_0_202_gpu","worker-31-2-gpu"}
-	for i:=0;i<len(taskTypeList);i++{
-		tempMap := ss[taskTypeList[i]]
-		for i := 0; i < len(hostList);i++{
-			if value,ok := tempMap.Load()
-		}
-	}
+	//taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
+	//hostnamelist := []string{"worker-1-148-gpu","worker-1-147-gpu","worker-2-56","worker-2-57","worker_0_198_gpu","worker_0_199_gpu","worker_0_200_gpu","worker_0_201_gpu","worker_0_202_gpu","worker-31-2-gpu"}
+	//for i:=0;i<len(taskTypeList);i++{
+	//	tempMap := ss[taskTypeList[i]]
+	//	for i := 0; i < len(hostnamelist);i++{
+	//		if value,ok := tempMap.Load()
+	//	}
+	//}
 }
