@@ -7,7 +7,9 @@ import (
 	"reflect"
 	"strconv"
 	"sync"
+	"time"
 
+	//"github.com/filecoin-project/go-state-types/dline"
 	"github.com/spf13/viper"
 )
 
@@ -18,7 +20,7 @@ var (
 	c1Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 	c2Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 
-	SchedLogPath = "/opt/ns"
+	SchedLogPath = "./logs/sectors_declare"
 
 	//taskWorkerRecord = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}
 
@@ -174,6 +176,31 @@ func parseSyncMap(key, hostname string) int {
 	return -1
 }
 
+var (
+	faultLogFileName      = " fault_sectors_"
+	skipLogFileName       = " skip_sectors_"
+	recoverLogFileName    = " recovered_sectors_"
+	windowPostLogFileName = " windowpost_"
+)
+
+func sectorLog(logLevel string, sectors []int, index uint64, err error) {
+	SectorStatusLogPath := SchedLogPath + "/" + time.Now().Format("2006-01-02 15:04:05")[:10]
+	indexstr := string(strconv.Itoa(int(index)))
+	indexstr = indexstr + ".log"
+	timePrefix := time.Now().Format("2006-01-02 15:04:05")
+	if logLevel == faultLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+faultLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == skipLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+skipLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == recoverLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == windowPostLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "submitPost failed: deadline is %v and err is %+v \n", index, err)
+	} else {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+windowPostLogFileName+indexstr, "window post submit succssfully %v \n", "")
+	}
+}
+
 func main() {
 	addWorkerToTaskWorkerRemaining("idc24")
 	addWorkerToTaskWorkerRemaining("idc25")
@@ -206,4 +233,7 @@ func main() {
 	//		if value,ok := tempMap.Load()
 	//	}
 	//}
+	var temp []int
+	index := uint64(1)
+	sectorLog("", temp, index, nil)
 }
