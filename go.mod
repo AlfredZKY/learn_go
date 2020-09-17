@@ -11,6 +11,7 @@ require (
 	github.com/google/uuid v1.1.1
 	github.com/gorilla/websocket v1.4.2
 	github.com/ianlancetaylor/demangle v0.0.0-20200715173712-053cf528c12f // indirect
+	github.com/kelseyhightower/envconfig v1.4.0 // indirect
 	github.com/spf13/viper v1.7.0
 	github.com/urfave/cli v1.22.4
 	golang.org/x/net v0.0.0-20200822124328-c89045814202
