@@ -18,15 +18,15 @@ type Logger struct {
 }
 
 var ColorClose = "\033[0m"
-var logLevelColor = map[int]string {
+var logLevelColor = map[int]string{
 	DebugLevel: "\033[32m",
-	InfoLevel: "\033[33m",
+	InfoLevel:  "\033[33m",
 	ErrorLevel: "\033[31m",
 }
 
-var logLevelPrefix = map[int]string {
+var logLevelPrefix = map[int]string{
 	DebugLevel: "DEBUG",
-	InfoLevel: "INFO",
+	InfoLevel:  "INFO",
 	ErrorLevel: "ERROR",
 }
 
@@ -86,7 +86,7 @@ func (l *Logger) PrintLog(logLevel int, filePath string, format string, args ...
 	curTime := time.Now()
 	msg := fmt.Sprintf(format, args...)
 	codeFile, codeLine := GetCallerInfo()
-	logMsg :=  fmt.Sprintf("%s%s %s %d %s%s", l.getLogLevelColor(logLevel), l.getLogPrefix(logLevel, curTime), codeFile, codeLine, msg, ColorClose)
+	logMsg := fmt.Sprintf("%s%s %s %d %s%s", l.getLogLevelColor(logLevel), l.getLogPrefix(logLevel, curTime), codeFile, codeLine, msg, ColorClose)
 
 	_, _ = os.Stderr.WriteString(logMsg)
 
@@ -99,7 +99,7 @@ func (l *Logger) PrintLog(logLevel int, filePath string, format string, args ...
 func (l *Logger) WriteLogMsgToFile(filePath, loggerStr string) {
 	CheckFileDir(filePath)
 
-	file, err := os.OpenFile(filePath, os.O_WRONLY| os.O_APPEND| os.O_CREATE, 0644)
+	file, err := os.OpenFile(filePath, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
 		fmt.Printf("file open failed, file path: %v, err: %v\n", l.FilePath, err)
 	}
@@ -142,7 +142,7 @@ func GetCallerInfo() (string, int) {
 	return codeFile, codeLine
 }
 
-func PathExists(path string) (bool, error){
+func PathExists(path string) (bool, error) {
 	_, err := os.Stat(path)
 	if err == nil {
 		return true, nil
@@ -171,13 +171,13 @@ func GetFileDirPath(path string) string {
 func CheckFileDir(filePath string) {
 	dirPath := GetFileDirPath(filePath)
 
-	if len(dirPath) == 0 || strings.Compare(dirPath, "/") == 0{
+	if len(dirPath) == 0 || strings.Compare(dirPath, "/") == 0 {
 		return
 	}
 
 	ok, _ := PathExists(dirPath)
 	if !ok {
-		if err := os.Mkdir(dirPath, os.ModePerm); err != nil {
+		if err := os.MkdirAll(dirPath, os.ModePerm); err != nil {
 			fmt.Printf("create dir failed, path: %v, err: %v", dirPath, err)
 		}
 	}
