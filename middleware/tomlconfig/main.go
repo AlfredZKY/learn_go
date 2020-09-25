@@ -42,7 +42,7 @@ type clients struct {
 
 func main() {
 	var config tomlConfig
-	if _, err := toml.DecodeFile("config.toml", &config); err != nil {
+	if _, err := toml.DecodeFile("worker_task_config.toml", &config); err != nil {
 		log.Fatal(err.Error())
 	}
 

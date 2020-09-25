@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"learn_go/logger"
 	"os"
@@ -14,21 +15,27 @@ import (
 )
 
 var (
-	apTask  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
-	pc1Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
-	pc2Task taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
-	c1Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
-	c2Task  taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	faultLogFileName      = " fault_sectors_"
+	skipLogFileName       = " skip_sectors_"
+	recoverLogFileName    = " recovered_sectors_"
+	windowPostLogFileName = " windowpost_"
+)
 
-	SchedLogPath = "./logs/sectors_declare"
+var (
+	minerWorkerRecord taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	apWorkerRecord    taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc1WorkerRecord   taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	pc2WorkerRecord   taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c1WorkerRecord    taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
+	c2WorkerRecord    taskPair = taskPair{workerRemainingMap: make(map[string]int, 50)}
 
-	//taskWorkerRecord = map[string]taskPair{"ap": apTaskBak, "pc1": pc1TaskBak, "pc2": pc2TaskBak, "c1": c1TaskBak, "c2": c2TaskBak}
-
-	taskTypes = map[string]taskPair{"ap": apTask, "pc1": pc1Task, "pc2": pc2Task, "c1": c1Task, "c2": c2Task}
-
-	scheduleTask = map[string]taskPair{"seal/v0/addpiece": apTask, "seal/v0/precommit/1": pc1Task, "seal/v0/precommit/2": pc2Task, "seal/v0/commit/1": c1Task, "seal/v0/commit/2": c2Task}
-
+	SchedLogPath     = "./logs"
+	taskWorkerRecord = map[string]taskPair{"miner": minerWorkerRecord, "ap": apWorkerRecord, "pc1": pc1WorkerRecord, "pc2": pc2WorkerRecord, "c1": c1WorkerRecord, "c2": c2WorkerRecord}
+	taskNewRecord    = map[string]taskPair{"miner": minerWorkerRecord, "ap": apWorkerRecord, "pc1": pc1WorkerRecord, "pc2": pc2WorkerRecord, "c1": c1WorkerRecord, "c2": c2WorkerRecord}
 	scheduleTaskMaps = make(map[string]sync.Map, 1000)
+
+	taskNameMapping = map[string]string{"miner": "miner", "ap": "seal/v0/addpiece", "pc1": "seal/v0/precommit/1", "pc2": "seal/v0/precommit/2", "c1": "seal/v0/commit/1", "c2": "seal/v0/commit/2"}
+	Locks           sync.RWMutex
 )
 
 type taskPair struct {
@@ -38,29 +45,54 @@ type taskPair struct {
 // LOTUS_MINER_PATH config path
 // const LOTUS_MINER_PATH = "/home/qh/zhou_project"
 
+func sectorLog(logLevel string, sectors []int, index uint64, err error) {
+	SectorStatusLogPath := SchedLogPath + "/" + time.Now().Format("2006-01-02 15:04:05")[:10]
+	indexstr := string(strconv.Itoa(int(index)))
+	indexstr = indexstr + ".log"
+	timePrefix := time.Now().Format("2006-01-02 15:04:05")
+	if logLevel == faultLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+faultLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == skipLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+skipLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == recoverLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
+	} else if logLevel == windowPostLogFileName {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "submitPost failed: deadline is %v and err is %+v \n", index, err)
+	} else {
+		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+windowPostLogFileName+indexstr, "window post submit succssfully %v \n", "")
+	}
+}
+
 func getSysPathEnv() string {
 	var LotusMinerPath string
-	LotusMinerPath = os.Getenv("TEST_MINER")
+	LotusMinerPath = os.Getenv("LOTUS_MINER_PATH")
 	return LotusMinerPath
 }
 
-func init() {
-	initConfig()
-}
-
-func initConfig() {
+func loadTaskConfig(initType string) {
+	logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "Loading worker_task_config.toml %v\n", "")
 	v := viper.New()
-	//"v.SetConfigFile(getSysPathEnv() + "/worker_task_config.toml")",
+	//v.SetConfigFile(getSysPathEnv() + "./worker_task_config.toml")
+	v.SetConfigFile("./worker_task_config.toml")
 
 	if err := v.ReadInConfig(); err != nil { // 搜索路径，并读取配置数据
 		// TODO 读取配置文件错误
-		logger.DebugWithFilePath(SchedLogPath+"/read_conifg_err.log", "Fatal error config file: %s \n", err)
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "Fatal error config file: %s \n", err)
 	} else {
-		for taskName, taskType := range taskTypes {
-			parseConfigToml(taskName, v, &taskType)
+		if initType == "new" {
+			for taskName, taskType := range taskNewRecord {
+				parseConfigToml(taskName, v, &taskType)
+			}
+			logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "config content: %v\n", taskNewRecord)
+		} else {
+			for taskName, taskType := range taskWorkerRecord {
+				parseConfigToml(taskName, v, &taskType)
+			}
+			logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "config content: %v\n", taskWorkerRecord)
 		}
-	}
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "Loading worker_task_config.toml successful! %v\n", "")
 
+	}
 }
 
 func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
@@ -83,157 +115,172 @@ func parseConfigToml(key string, v *viper.Viper, taskType *taskPair) {
 				taskType.workerRemainingMap[hostname] = defaultVaule
 			}
 		}
-	case reflect.String:
-		s := reflect.ValueOf(homeList)
-		fmt.Println(s.String(), "I am a string type variable.")
-	case reflect.Int:
-		s := reflect.ValueOf(homeList)
-		t := s.Int()
-		fmt.Println(t, " I am a int type variable.")
 	}
 }
 
-func updateWorkerFromTaskWorkerMap(tasktype, hostname string, number int) {
-	logger.DebugWithFilePath(SchedLogPath+"/update_worker.log", "removing worker to map: %v\n", hostname)
-	for taskname, taskPairs := range taskTypes {
-		if taskname == tasktype {
-			for hostnameexist := range taskPairs.workerRemainingMap {
-				if hostnameexist == hostname {
-					taskTypes[tasktype].workerRemainingMap[hostname] += number
-				}
-			}
-		}
-	}
-}
-
-func removeWorkerFromTaskWorkerMap(hostname string) {
-	logger.DebugWithFilePath(SchedLogPath+"/remove_worker.log", "removing worker to map: %v\n", hostname)
+func removeWorkerFromTaskWorkerRemaining(hostname string) {
+	logger.DebugWithFilePath(SchedLogPath+"/new_schedule_remove.log", "removing worker from map: %v\n", hostname)
 	taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
 	for i := 0; i < len(taskTypeList); i++ {
 		var securityMap sync.Map
 		securityMap = scheduleTaskMaps[taskTypeList[i]]
 		securityMap.Delete(hostname)
 	}
+	logger.DebugWithFilePath(SchedLogPath+"/new_schedule_remove.log", "removing worker from map done: %v\n", hostname)
 }
 
-func addWorkerToTaskWorkerRemaining(hostname string) {
-	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker: %v\n", hostname)
+func checkWorkerExistence(hostname string) bool {
+	logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "checking worker existence: %v\n", hostname)
 	var exist = false
-	for _, taskPairs := range taskTypes {
-		if taskPairs.workerRemainingMap[hostname] > 0 {
+	for _, taskPairs := range taskWorkerRecord {
+		if taskPairs.workerRemainingMap[hostname] != 0 {
 			exist = true
 		}
 	}
-
-	if !exist {
-		logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "%v is not in current record, re-initializing record from config file...\n", hostname)
-		initConfig()
+	if exist {
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "This worker exists: %v\n", hostname)
+	} else {
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "This worker does not exist: %v\n", hostname)
 	}
-
-	logger.DebugWithFilePath(SchedLogPath+"/new_worker.log", "trying to add new worker to map: %v\n", hostname)
-	for tasktype, taskWorkerPair := range taskTypes {
-		var securityMap sync.Map
-		srcValue := taskWorkerPair.workerRemainingMap[hostname]
-		if tasktype == "ap" {
-			if srcValue > 0 {
-				securityMap.Store(hostname, srcValue)
-				scheduleTaskMaps["seal/v0/addpiece"] = securityMap
-			}
-		} else if tasktype == "pc1" {
-			if srcValue > 0 {
-				securityMap.Store(hostname, srcValue)
-				scheduleTaskMaps["seal/v0/precommit/1"] = securityMap
-			}
-		} else if tasktype == "pc2" {
-			if srcValue > 0 {
-				securityMap.Store(hostname, srcValue)
-				scheduleTaskMaps["seal/v0/precommit/2"] = securityMap
-			}
-		} else if tasktype == "c1" {
-			if srcValue > 0 {
-				securityMap.Store(hostname, srcValue)
-				scheduleTaskMaps["seal/v0/commit/1"] = securityMap
-			}
-		} else {
-			if srcValue > 0 {
-				securityMap.Store(hostname, srcValue)
-				scheduleTaskMaps["seal/v0/commit/2"] = securityMap
-			}
-		}
-	}
+	return exist
 }
 
-func parseSyncMap(key, hostname string) int {
+func addWorkerToTaskWorkerRemaining(hostname string) {
+	i := 0
+	for !checkWorkerExistence(hostname) {
+		i = i + 1
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "%v is not in current record, re-initializing record from config file...\n", hostname)
+		loadTaskConfig("")
+		logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "loading config done! %v\n", "")
+		if i > 5 {
+			logger.DebugWithFilePath(SchedLogPath+"/check_config.log", "Check config file for : %v\n", hostname)
+			break
+		}
+	}
+
+	logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "trying to add new worker to map: %v\n", hostname)
+	for tasktype, taskWorkerPair := range taskWorkerRecord {
+		//logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "\t Inside for loop: %v\n", "")
+		srcValue, _ := taskWorkerPair.workerRemainingMap[hostname]
+
+		//logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "\t source value: %v\n", srcValue)
+
+		_, ok := scheduleTaskMaps[taskNameMapping[tasktype]]
+		if !ok {
+			var tmpSyncMap sync.Map
+			tmpSyncMap.Store(123, 456)
+			scheduleTaskMaps[taskNameMapping[tasktype]] = tmpSyncMap
+
+			tmpSyncMap.Delete(123)
+		}
+
+		curSyncMap, ok := scheduleTaskMaps[taskNameMapping[tasktype]]
+		if !ok {
+			logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "\t Can not get curSyncMap for %v: %v\n", tasktype, scheduleTaskMaps)
+			return
+		}
+
+		if srcValue != 0 {
+			curSyncMap.Store(hostname, srcValue)
+		}
+	}
+
+	//logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "adding new worker to map done: %v\n", hostname)
+	//for tasktype, securityMap := range scheduleTaskMaps {
+	//	logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "Current remaining map for %v: %v\n", tasktype, stringfySyncMap(&securityMap))
+	//}
+
+}
+
+func stringfySyncMap(amap *sync.Map) string {
+	m := map[string]interface{}{}
+	amap.Range(func(key, value interface{}) bool {
+		m[fmt.Sprint(key)] = value
+		return true
+	})
+
+	b, err := json.MarshalIndent(m, "", " ")
+	if err != nil {
+		panic(err)
+	}
+	return string(b)
+}
+
+// 根据主机名 - hostname，返回还可以做任务的数目
+// 如果是mer，返回-10000
+// 如果是未分类的任务，返回-20000
+func parseSyncMap(task, hostname string) int {
 	var securityMap sync.Map
-	securityMap = scheduleTaskMaps[key]
+
+	securityMap, ok := scheduleTaskMaps[task]
+	if !ok {
+		// unclassifed task marker as -20000
+		return -20000
+	}
 	if temptask, ok := securityMap.Load(hostname); ok {
 		currentVaule := temptask.(int)
-		// currentVaule := taskHostPair[hostname]
-		if currentVaule > 0 {
-			return currentVaule
-		}
+		return currentVaule
 	}
-	return -1
+	return 0
 }
 
-var (
-	faultLogFileName      = " fault_sectors_"
-	skipLogFileName       = " skip_sectors_"
-	recoverLogFileName    = " recovered_sectors_"
-	windowPostLogFileName = " windowpost_"
-)
-
-func sectorLog(logLevel string, sectors []int, index uint64, err error) {
-	SectorStatusLogPath := SchedLogPath + "/" + time.Now().Format("2006-01-02 15:04:05")[:10]
-	indexstr := string(strconv.Itoa(int(index)))
-	indexstr = indexstr + ".log"
-	timePrefix := time.Now().Format("2006-01-02 15:04:05")
-	if logLevel == faultLogFileName {
-		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+faultLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
-	} else if logLevel == skipLogFileName {
-		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+skipLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
-	} else if logLevel == recoverLogFileName {
-		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "len is %V data is %v \n", len(sectors), sectors)
-	} else if logLevel == windowPostLogFileName {
-		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+recoverLogFileName+indexstr, "submitPost failed: deadline is %v and err is %+v \n", index, err)
-	} else {
-		logger.DebugWithFilePath(SectorStatusLogPath+"/"+timePrefix+windowPostLogFileName+indexstr, "window post submit succssfully %v \n", "")
-	}
-}
-
-func main() {
-	addWorkerToTaskWorkerRemaining("idc24")
-	addWorkerToTaskWorkerRemaining("idc25")
-	fmt.Println(scheduleTaskMaps)
-	currentValue := parseSyncMap("seal/v0/commit/1", "idc24")
-	fmt.Println(currentValue)
-	currentValue1 := parseSyncMap("seal/v0/precommit/1", "idc25")
-	fmt.Println(currentValue1)
-	removeWorkerFromTaskWorkerMap("idc24")
-	currentValue2 := parseSyncMap("seal/v0/commit/1", "idc24")
-	fmt.Println(currentValue2)
-	fmt.Println(scheduleTaskMaps)
-
-	fmt.Println("===========================")
-	ss := make(map[string]sync.Map, 100)
-	var s1 sync.Map
-	s1.Store("hello", 0)
-	ss["ap"] = s1
-	s2 := ss["pc1"]
-	if val, ok := s2.Load("sssss"); ok {
-		fmt.Println(val)
-	}
-	fmt.Println(reflect.TypeOf(s2))
-
-	//taskTypeList := []string{"seal/v0/addpiece", "seal/v0/precommit/1", "seal/v0/precommit/2", "seal/v0/commit/1", "seal/v0/commit/2"}
-	//hostnamelist := []string{"worker-1-148-gpu","worker-1-147-gpu","worker-2-56","worker-2-57","worker_0_198_gpu","worker_0_199_gpu","worker_0_200_gpu","worker_0_201_gpu","worker_0_202_gpu","worker-31-2-gpu"}
-	//for i:=0;i<len(taskTypeList);i++{
-	//	tempMap := ss[taskTypeList[i]]
-	//	for i := 0; i < len(hostnamelist);i++{
-	//		if value,ok := tempMap.Load()
-	//	}
-	//}
+func testLog() {
 	var temp []int
 	index := uint64(1)
 	sectorLog("", temp, index, nil)
+}
+
+// UpdateRecordConfig
+func UpdateRecordConfig() {
+	Locks.Lock()
+	loadTaskConfig("new")
+	for taskType, taskWorkerPair := range taskNewRecord {
+		fmt.Println(taskType)
+		for hostname, value := range taskWorkerPair.workerRemainingMap {
+			fmt.Println(hostname, taskNewRecord[taskType].workerRemainingMap[hostname], value)
+			currentValue := parseSyncMap(string(taskNameMapping[taskType]), hostname)
+			currentValue += taskNewRecord[taskType].workerRemainingMap[hostname] - taskWorkerRecord[taskType].workerRemainingMap[hostname]
+			securityMap := scheduleTaskMaps[taskType]
+			securityMap.Store(hostname, currentValue)
+		}
+	}
+	// TODO x'
+	taskWorkerRecord, taskNewRecord = taskNewRecord, taskWorkerRecord
+	for tasktype, securityMap := range scheduleTaskMaps {
+		logger.DebugWithFilePath(SchedLogPath+"/reload_task_config.log", "Current remaining map for %v: %v\n", tasktype, stringfySyncMap(&securityMap))
+	}
+	logger.DebugWithFilePath(SchedLogPath+"/reload_task_config.log", "\n\n Previous config map is: %v \n\n Current config map is %v\n\n", taskNewRecord, taskWorkerRecord)
+	Locks.Unlock()
+}
+
+func main() {
+	addWorkerToTaskWorkerRemaining("xiaohong")
+	addWorkerToTaskWorkerRemaining("miner")
+	fmt.Println(scheduleTaskMaps)
+	//currentValue := parseSyncMap("seal/v0/commit/1", "xiaohong")
+	//fmt.Println(currentValue)
+	//currentValue1 := parseSyncMap("seal/v0/precommit/1", "xiaohong")
+	//fmt.Println(currentValue1)
+	//removeWorkerFromTaskWorkerRemaining("xiaohong")
+	//currentValue2 := parseSyncMap("seal/v0/commit/1", "xiaohong")
+	//fmt.Println(currentValue2)
+	fmt.Println(scheduleTaskMaps)
+	//for tasktypes,securityMap := range scheduleTaskMaps{
+	//	fmt.Println( tasktypes, securityMap)
+	//}
+	fmt.Println("===========================")
+	//ss := make(map[string]sync.Map, 100)
+	//var s1 sync.Map
+	//s1.Store("hello", 0)
+	//ss["ap"] = s1
+	//s2 := ss["pc1"]
+	//if val, ok := s2.Load("sssss"); ok {
+	//	fmt.Println(val)
+	//}
+	//fmt.Println(reflect.TypeOf(s2))
+	UpdateRecordConfig()
+	//for tasktype, securityMap := range scheduleTaskMaps {
+	//	fmt.Println( tasktype, stringfySyncMap(&securityMap))
+	//}
+
 }

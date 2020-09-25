@@ -18,7 +18,7 @@ var (
 
 // MonitorUnit 监控
 type MonitorUnit struct {
-	Ap AP    
+	Ap  AP
 	Pc1 PC1
 }
 
@@ -32,10 +32,9 @@ type PC1 struct {
 	hostnameValuePair map[string]int
 }
 
-
-// CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
+// CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go1
 func main() {
-	// p,err := readconfig.ReadConf("/home/zky/go/src/middleware/config.toml")
+	// p,err := readconfig.ReadConf("/home/zky/go/src/middleware/worker_task_config.toml")
 	// if err != nil{
 	// 	fmt.Printf("%v",err)
 	// }
@@ -45,7 +44,7 @@ func main() {
 	// 使用环境变量
 	// useEnvViper()
 	v := viper.New()
-	v.SetConfigFile("config.toml")
+	v.SetConfigFile("worker_task_config.toml")
 	// v.AddConfigPath("/home/zky/go/src/learn_go/middleware/")
 	// v.SetConfigType("toml")
 

@@ -187,7 +187,7 @@ func clientMain() *net.TCPConn {
 		for {
 			time.Sleep(time.Second * 4)
 			// TODO 到时候会改成配置文件的具体路径 采用热更新的方式进行
-			// viper.SetConfigFile("/home/zky/go/src/learn_go/sockets/simpleheart/config.toml")
+			// viper.SetConfigFile("/home/zky/go/src/learn_go/sockets/simpleheart/worker_task_config.toml")
 			viper.SetConfigName("config")
 			viper.AddConfigPath("/home/zky/go/src/learn_go/sockets/simpleheart/")
 			viper.SetConfigType("toml")

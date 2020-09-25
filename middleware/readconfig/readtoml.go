@@ -13,7 +13,7 @@ import (
 var LocalIP string
 
 func init() {
-	p, err := ReadConfToml("/home/zky/project/myproject/learn_go/middleware/config.toml")
+	p, err := ReadConfToml("/home/zky/project/myproject/learn_go/middleware/worker_task_config.toml")
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
@@ -37,7 +37,6 @@ type MonitorUnit struct {
 	LocalIP    string
 	notifyList []string
 	Timeout    string
-	
 }
 
 // ReadConfToml read the config file
