@@ -83,7 +83,7 @@ func loadTaskConfig(initType string) {
 			for taskName, taskType := range taskNewRecord {
 				parseConfigToml(taskName, v, &taskType)
 			}
-			logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "config content: %v\n", taskNewRecord)
+			logger.DebugWithFilePath(SchedLogPath+"/new_schedule.log", "config new content: %v\n", taskNewRecord)
 		} else {
 			for taskName, taskType := range taskWorkerRecord {
 				parseConfigToml(taskName, v, &taskType)
@@ -245,7 +245,7 @@ func UpdateRecordConfig() {
 		}
 	}
 	// TODO x'
-	taskWorkerRecord, taskNewRecord = taskNewRecord, taskWorkerRecord
+	//taskWorkerRecord, taskNewRecord = taskNewRecord, taskWorkerRecord
 	for tasktype, securityMap := range scheduleTaskMaps {
 		logger.DebugWithFilePath(SchedLogPath+"/reload_task_config.log", "Current remaining map for %v: %v\n", tasktype, stringfySyncMap(&securityMap))
 	}
@@ -257,6 +257,7 @@ func main() {
 	addWorkerToTaskWorkerRemaining("xiaohong")
 	addWorkerToTaskWorkerRemaining("miner")
 	fmt.Println(scheduleTaskMaps)
+	time.Sleep(60*time.Second)
 	//currentValue := parseSyncMap("seal/v0/commit/1", "xiaohong")
 	//fmt.Println(currentValue)
 	//currentValue1 := parseSyncMap("seal/v0/precommit/1", "xiaohong")

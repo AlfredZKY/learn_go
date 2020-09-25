@@ -4,7 +4,7 @@
   default = -1
 [ap]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
-  value = [5,6,7]
+  value = [1,6,7]
   default = -1
 
 

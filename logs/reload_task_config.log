@@ -1,0 +1,13 @@
+[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {}
+[0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[]} c1:{map[]} c2:{map[]} miner:{map[]} pc1:{map[]} pc2:{map[]}] 
+
+ Current config map is map[ap:{map[]} c1:{map[]} c2:{map[]} miner:{map[]} pc1:{map[]} pc2:{map[]}]
+
+[0m

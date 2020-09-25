@@ -1,0 +1,193 @@
+[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+} %!v(MISSING)
+[0m[32m2020-09-24 18:35:32 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:35:58 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-24 18:36:54 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 253 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 251 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 15:46:31 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 253 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:01:11 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:02:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:06:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 11
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for miner: {
+ "miners": 0
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 250 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 252 
+
+ Previous config map is: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}] 
+
+ Current config map is map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+
+[0m

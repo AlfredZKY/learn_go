@@ -1,0 +1,5 @@
+[32m2020-09-24 16:47:33 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 112 removing worker from map: xiaohong
+[0m[32m2020-09-24 16:47:33 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 119 removing worker from map done: xiaohong
+[0m[32m2020-09-24 16:50:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 112 removing worker from map: xiaohong
+[0m[32m2020-09-24 16:50:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 119 removing worker from map done: xiaohong
+[0m
