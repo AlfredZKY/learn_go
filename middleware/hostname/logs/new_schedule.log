@@ -1475,4 +1475,1008 @@
 [0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 73 Loading worker_task_config.toml 
 [0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 86 config new content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
 [0m[32m2020-09-25 19:13:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 93 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: xiaohong
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:39:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:39:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config new content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:39:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: xiaohong
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:11 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:44:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config new content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: xiaohong
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 miner is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:45:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:45:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miners:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:45:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: xiaohong
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: miner
+[0m[32m2020-09-25 19:47:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:48:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:48:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:48:04 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 150 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 159 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 98 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 161 loading config done! 
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: xiaohong
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 140 checking worker existence: miner
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 This worker exists: miner
+[0m[32m2020-09-25 19:48:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 168 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:49:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:49:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config new content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:49:32 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 100 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 141 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 151 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 160 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 101 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 162 loading config done! 
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 141 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 149 This worker exists: xiaohong
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 169 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 141 checking worker existence: miner
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 149 This worker exists: miner
+[0m[32m2020-09-25 19:53:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 169 trying to add new worker to map: miner
+[0m[32m2020-09-25 19:54:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:54:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 94 config new content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:54:58 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 101 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 145 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 This worker does not exist: xiaohong
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 164 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 103 config content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 106 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 166 loading config done! 
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 145 checking worker existence: xiaohong
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 153 This worker exists: xiaohong
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 173 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 145 checking worker existence: miner
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 153 This worker exists: miner
+[0m[32m2020-09-25 19:59:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 173 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:00:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:00:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config new content: map[ap:{map[xiaohong:1 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:00:21 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 106 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 165 This worker does not exist: xiaohong
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 174 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 95 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 176 loading config done! 
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: xiaohong
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: miner
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: miner
+[0m[32m2020-09-25 20:07:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:08:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:08:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:08:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 165 This worker does not exist: xiaohong
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 174 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 95 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 176 loading config done! 
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: xiaohong
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: miner
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: miner
+[0m[32m2020-09-25 20:09:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:10:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:10:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:10:48 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 165 This worker does not exist: xiaohong
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 174 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 95 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 176 loading config done! 
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: xiaohong
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: miner
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: miner
+[0m[32m2020-09-25 20:12:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:13:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:13:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:13:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 95 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:16:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:17:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:17:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 93 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:17:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 95 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:18:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:18:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:18:10 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:23:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:23:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 92 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:23:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 94 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:25:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:25:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:25:13 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 165 This worker does not exist: xiaohong
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 174 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 92 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 94 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 176 loading config done! 
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: xiaohong
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: miner
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: miner
+[0m[32m2020-09-25 20:27:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:28:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:28:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:28:11 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 165 This worker does not exist: xiaohong
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 174 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 80 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 92 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 94 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 176 loading config done! 
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: xiaohong
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: xiaohong
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: xiaohong
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 checking worker existence: miner
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 This worker exists: miner
+[0m[32m2020-09-25 20:30:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 183 trying to add new worker to map: miner
+[0m[32m2020-09-25 20:31:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 99 Loading worker_task_config.toml 
+[0m[32m2020-09-25 20:31:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 112 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-25 20:31:06 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 114 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 10:49:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 10:58:07 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 10:59:42 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:00:14 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:00:37 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:01:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:04:03 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:04:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 225 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 234 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 134 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 146 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 148 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 236 loading config done! 
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: xiaohong
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 215 checking worker existence: miner
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 223 This worker exists: miner
+[0m[32m2020-09-26 11:41:31 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 243 trying to add new worker to map: miner
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 211 This worker does not exist: xiaohong
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 220 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 141 Loading worker_task_config.toml 
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 153 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 155 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 222 loading config done! 
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 checking worker existence: xiaohong
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 209 This worker exists: xiaohong
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 229 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 checking worker existence: miner
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 209 This worker exists: miner
+[0m[32m2020-09-26 11:53:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 229 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 250 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 259 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 180 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 192 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 194 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 261 loading config done! 
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: xiaohong
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: miner
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: miner
+[0m[32m2020-09-26 14:10:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 250 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 259 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 180 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 192 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 194 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 261 loading config done! 
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: xiaohong
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: miner
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: miner
+[0m[32m2020-09-26 14:10:55 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 250 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 259 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 180 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 192 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 194 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 261 loading config done! 
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: xiaohong
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 240 checking worker existence: miner
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 This worker exists: miner
+[0m[32m2020-09-26 14:12:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 187 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 199 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:13:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 187 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 199 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:14:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 187 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 199 config content: map[ap:{map[xiaohong:3 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:15:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 187 Loading worker_task_config.toml 
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 199 config content: map[ap:{map[xiaohong:6 xiaoli:6 xiaowang:7]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:5 xiaoli:6 xiaowang:7]} miner:{map[miner:5]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} pc2:{map[xiaohong:5 xiaoli:6 xiaowang:7]}]
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 201 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:18:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:25:47 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:27:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:28:40 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:30:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:35:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:38:56 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 257 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 266 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 268 loading config done! 
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: xiaohong
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 247 checking worker existence: miner
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 255 This worker exists: miner
+[0m[32m2020-09-26 14:44:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 275 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 14:50:41 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 14:52:17 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 14:53:43 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 14:56:02 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 14:56:26 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: miner
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: miner
+[0m[32m2020-09-26 15:01:59 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: miner
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:28:23 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:32:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 1
+}
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 15:32:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 1
+}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:35:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 15:36:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 1
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 1
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:54:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 111
+}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 15:57:36 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": -1
+}
+[0m[32m2020-09-26 16:00:34 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 2
+}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:19:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 2
+}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 16:22:54 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": -2
+}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 16:26:28 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 269 loading config done! 
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 276 trying to add new worker to map: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 303 adding new worker to map done: xiaohong
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for miner: {}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 2
+}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-26 17:44:39 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 305 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 200 config content: map[ap:{map[xiaohong:-2 xiaoli:6 xiaowang:879689789678]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:-50000000000 xiaoli:6 xiaowang:734534534534543534]} miner:{map[miner:77777777]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:32423]} pc2:{map[xiaohong:5 xiaoli:34523452346 xiaowang:7]}]
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": -2
+}
+[0m[32m2020-09-27 14:30:49 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 200 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:879689789678]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:-50000000000 xiaoli:6 xiaowang:734534534534543534]} miner:{map[miner:77777777]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:32423]} pc2:{map[xiaohong:5 xiaoli:34523452346 xiaowang:7]}]
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 2
+}
+[0m[32m2020-10-13 11:18:57 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 200 config content: map[ap:{map[xiaohong:2 xiaoli:6 xiaowang:879689789678]} c1:{map[xiaohong:5 xiaoli:6 xiaowang:7]} c2:{map[xiaohong:-50000000000 xiaoli:6 xiaowang:734534534534543534]} miner:{map[miner:77777777]} pc1:{map[xiaohong:5 xiaoli:6 xiaowang:32423]} pc2:{map[xiaohong:5 xiaoli:34523452346 xiaowang:7]}]
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 256 This worker exists: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {
+ "xiaohong": 2
+}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {
+ "xiaohong": 5
+}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {
+ "xiaohong": -50000000000
+}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-10-13 11:23:33 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {
+ "xiaohong": 5
+}
 [0m

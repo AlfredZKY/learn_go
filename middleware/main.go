@@ -32,7 +32,7 @@ type PC1 struct {
 	hostnameValuePair map[string]int
 }
 
-// CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go1
+// CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
 func main() {
 	// p,err := readconfig.ReadConf("/home/zky/go/src/middleware/worker_task_config.toml")
 	// if err != nil{

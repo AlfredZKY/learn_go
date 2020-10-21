@@ -1,0 +1,31 @@
+title = "TOML Example"
+[miner]
+hostname = ["miner"]
+value = [5]
+default = -1
+[ap]
+hostname = ["xiaohong","xiaoli","xiaowang"]
+value = [3,6,7]
+default = -1
+
+
+[pc1]
+hostname = ["xiaohong","xiaoli","xiaowang"]
+value = [5,6,7]
+default = -1
+
+
+[pc2]
+hostname = ["xiaohong","xiaoli","xiaowang"]
+value = [5,6,7]
+default = -1
+
+[c1]
+hostname = ["xiaohong","xiaoli","xiaowang"]
+value = [5,6,7]
+default = -1
+
+[c2]
+hostname = ["xiaohong","xiaoli","xiaowang"]
+value = [5,6,7]
+default = -1

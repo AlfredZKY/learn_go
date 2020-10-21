@@ -20,4 +20,7 @@
 [0m[32m2020-09-25 19:01:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 156 Check config file for : miner
 [0m[32m2020-09-25 19:05:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 156 Check config file for : miner
 [0m[32m2020-09-25 19:12:02 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 156 Check config file for : miner
+[0m[32m2020-09-25 19:38:20 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 Check config file for : miner
+[0m[32m2020-09-25 19:43:00 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 Check config file for : miner
+[0m[32m2020-09-25 19:44:46 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 163 Check config file for : miner
 [0m

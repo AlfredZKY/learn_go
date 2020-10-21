@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
-	"sync"
+	"math/big"
 
 	//"learn_go/highConcurrency/resource"
 	"log"
@@ -89,8 +89,17 @@ func main() {
 
 	log.Println(maxIndexBits, maxHeight, width, widthBits)
 	const SectorsMax = 1 << 40
-	// fmt.Println(SectorsMax / 1024 / 1024 / 1024)
+	fmt.Println(SectorsMax / 1024 / 1024 / 1024)
 	fmt.Println(SectorsMax)
+	var BaselineInitialValue = big.NewInt(2_888_888_880_000_000_000)
+	fmt.Println(BaselineInitialValue)
+	Eibs := big.NewInt(1024*1024*1024*1024*1024*1024)
+	fmt.Println(Eibs)
+	ip := big.NewInt(0)
+	ip.Div(BaselineInitialValue,Eibs)
+	fmt.Println("----------------------")
+	fmt.Printf("%v\n",ip)
+	fmt.Println("----------------------")
 	log.Println(MaxIndex)
 
 	val := "fool"
@@ -103,13 +112,13 @@ func main() {
 	a, c := 0, 1
 	log.Println(myadd(a, c))
 
-	var syncMap sync.Map
-	m1 := make(map[string]sync.Map, 1000)
-	syncMap.Store("w1", 1)
-	m1["ap"] = syncMap
-
-	tempSyncMap := m1["p1"]
-	tempSyncMap.Store("w2", 5)
-	fmt.Println(tempSyncMap)
+	//var syncMap sync.Map
+	//m1 := make(map[string]sync.Map, 1000)
+	//syncMap.Store("w1", 1)
+	//m1["ap"] = syncMap
+	//
+	//tempSyncMap := m1["p1"]
+	//tempSyncMap.Store("w2", 5)
+	//fmt.Println(tempSyncMap)
 
 }

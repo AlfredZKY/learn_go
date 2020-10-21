@@ -1,30 +1,32 @@
 [miner]
-  hostnames = ["miners"]
-  value = [5]
+  hostnames = ["miner"]
+  value = [77777777]
   default = -1
+  taskname = "miner"
 [ap]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
-  value = [1,6,7]
+  value = [2,6,879689789678]
   default = -1
-
+  taskname = "ap"
 
 [pc1]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
-  value = [5,6,7]
+  value = [5,6,32423]
   default = -1
-
+  taskname = "pc1"
 
 [pc2]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
-  value = [5,6,7]
+  value = [5,34523452346,7]
   default = -1
-
+taskname = "pc2"
 [c1]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
   value = [5,6,7]
   default = -1
-
+taskname = "c1"
 [c2]
   hostnames = ["xiaohong","xiaoli","xiaowang"]
-  value = [5,6,7]
+  value = [-50000000000,6,734534534534543534]
   default = -1
+taskname = "c2"
