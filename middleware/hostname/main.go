@@ -147,7 +147,7 @@ func parseConfigTomlNew(config *tomlConfig,temp interface{}){
 
 func loadTomlConfig(temp interface{}){
 	var config tomlConfig
-	if _,err := toml.DecodeFile("worker_task_config.toml",&config);err != nil {
+	if _,err := toml.DecodeFile("./worker_task_config.toml",&config);err != nil {
 		log.Fatal(err.Error())
 	}
 	parseConfigTomlNew(&config,temp)
@@ -242,6 +242,7 @@ func removeWorkerFromTaskWorkerRemaining(hostname string) {
 		securityMap.Delete(hostname)
 	}
 	logger.DebugWithFilePath(SchedLogPath+"/new_schedule_remove.log", "removing worker from map done: %v\n", hostname)
+	fmt.Println("delete completed")
 }
 
 func checkWorkerExistence(hostname string) bool {
@@ -333,7 +334,9 @@ func parseSyncMap(task, hostname string) int {
 		// unclassifed task marker as -20000
 		return -20000
 	}
+	hostname = "hello"
 	if temptask, ok := securityMap.Load(hostname); ok {
+		fmt.Println(temptask,reflect.TypeOf(temptask))
 		currentVaule := temptask.(int)
 		return currentVaule
 	}
@@ -353,6 +356,8 @@ func UpdateRecordConfig() {
 	time.Sleep(time.Second*60)
 	loadTomlConfig(taskNewRecord)
 	fmt.Println(taskNewRecord)
+
+
 
 	for taskType, taskWorkerPair := range taskNewRecord {
 		for hostname, _ := range taskWorkerPair.workerRemainingMap {
@@ -401,26 +406,27 @@ func main() {
 	//for tasktypes,securityMap := range scheduleTaskMaps{
 	//	fmt.Println( tasktypes, securityMap)
 	//}
-	//ss := make(map[string]sync.Map, 100)
-	//var s1 sync.Map
-	//s1.Store("hello", 0)
-	//ss["ap"] = s1
-	//s2 := ss["pc1"]
-	//if val, ok := s2.Load("sssss"); ok {
-	//	fmt.Println(val)
-	//}
-	//fmt.Println(reflect.TypeOf(s2))
-	UpdateRecordConfig()
-	//
-	//for i:=0; i < 5; i++ {
-	//	UpdateRecordConfig()
-	//	time.Sleep(10*time.Second)
-	//}
 
+	//fmt.Println(reflect.TypeOf(s2))
+	//removeWorkerFromTaskWorkerRemaining("xiaohong")
+	UpdateRecordConfig()
+
+	ss := make(map[string]sync.Map, 100)
+	var s1 sync.Map
+	s1.Store("hello",0)
+	ss["ap"] = s1
+
+	s2 := ss["ap"]
+	if val,ok := s2.Load("hello");ok{
+		if val != nil {
+			fmt.Println(val,reflect.TypeOf(val))
+		}else{
+			fmt.Println(nil)
+		}
+	}
 	//for tasktype, securityMap := range scheduleTaskMaps {
 	//	fmt.Println( tasktype, stringfySyncMap(&securityMap))
 	//}
 	//loadTaskConfigOld()
 	//time.Sleep(time.Second*60)
-	//loadTaskConfigNew()
 }

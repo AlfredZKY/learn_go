@@ -2,4 +2,10 @@
 [0m[32m2020-09-24 16:47:33 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 119 removing worker from map done: xiaohong
 [0m[32m2020-09-24 16:50:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 112 removing worker from map: xiaohong
 [0m[32m2020-09-24 16:50:25 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 119 removing worker from map done: xiaohong
+[0m[32m2020-11-04 22:34:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 237 removing worker from map: xiaohong
+[0m[32m2020-11-04 22:34:27 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 244 removing worker from map done: xiaohong
+[0m[32m2020-11-04 22:35:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 237 removing worker from map: xiaohong
+[0m[32m2020-11-04 22:35:25 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 244 removing worker from map done: xiaohong
+[0m[32m2020-11-04 22:36:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 237 removing worker from map: xiaohong
+[0m[32m2020-11-04 22:36:16 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 244 removing worker from map done: xiaohong
 [0m

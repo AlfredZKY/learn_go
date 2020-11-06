@@ -26,3 +26,22 @@ func TestStringToRune(t*testing.T){
 		t.Logf("%[1]c %[1]d %[1]x",c)
 	}
 }
+
+
+func checkHostName(hostname string) bool {
+	if hostname == "miner" ||  hostname == "c2_1" || hostname == "c2_2" || hostname == "c2_3" ||hostname == "c2_4" || hostname == "c2_5" || hostname == "c2_6"{
+		return true
+	}
+	return false
+}
+
+func TestStringFind(t*testing.T){
+	var srcStr = [...]string{"pc1","pc2","c1","c2_"}
+	t.Log(srcStr)
+	for _,v := range srcStr {
+		res := checkHostName(v)
+		if res {
+			t.Log(v)
+		}
+	}
+}
