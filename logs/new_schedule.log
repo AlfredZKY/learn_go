@@ -74,4 +74,154 @@
 [0m[32m2020-09-25 19:08:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 161 trying to add new worker to map: miner
 [0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 73 Loading worker_task_config.toml 
 [0m[32m2020-09-25 19:09:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 80 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {}
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {}
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {}
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {}
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {}
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 248 checking worker existence: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 258 This worker does not exist: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 267 xiaohong is not in current record, re-initializing record from config file...
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 188 Loading worker_task_config.toml 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 195 Fatal error config file: open ./worker_task_config.toml: no such file or directory 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 202 Loading worker_task_config.toml successful! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 270 loading config done! 
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 277 trying to add new worker to map: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 304 adding new worker to map done: xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for miner: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/1: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/2: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/commit/2: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/addpiece: {}
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 306 Current remaining map for seal/v0/precommit/1: {}
 [0m

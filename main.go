@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"math/big"
+	"sync"
 
 	//"learn_go/highConcurrency/resource"
 	"log"
@@ -121,4 +122,21 @@ func main() {
 	//tempSyncMap.Store("w2", 5)
 	//fmt.Println(tempSyncMap)
 
+	var readyCh chan struct{}
+	if readyCh == nil {
+		fmt.Println("readyCh")
+	}
+
+	var lc sync.Mutex
+	fmt.Printf("%v\n", lc)
+	lc.Lock()
+	fmt.Printf("%v\n",lc)
+	lc.Unlock()
+	fmt.Printf("%v\n",lc)
+
+	defer func(){
+		if r:=recover();r!=nil{
+			fmt.Printf("%v\n",lc)
+		}
+	}()
 }

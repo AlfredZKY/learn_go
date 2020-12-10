@@ -1,17 +1,131 @@
+// 将设置放入此文件中以覆盖默认设置
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch",
-            "type": "go",
-            "request": "launch",
-            "mode": "auto",
-            "program": "${fileDirname}",
-            "env": {},
-            "args": ["cat"]
-        }
-    ]
+    "workbench.colorCustomizations": {
+        "activityBar.foreground": "#ee6e73",
+        "activityBarBadge.background": "#f44336"
+    },
+    // Editor 
+    // 控制字体系列。
+    "editor.fontFamily": "mononoki",
+    // 控制字体粗细。
+    "editor.fontWeight": "normal",
+    // 控制字体大小。
+    "editor.fontSize": 18,
+
+    // Terminal    
+    // 自定义要在 OS X 上运行的终端应用程序。
+    "terminal.external.osxExec": "iTerm.app",
+    // 控制是否自动保存更新后的文件。接受的值:“off”、“afterDelay”、“onFocusChange”(编辑器失去焦点)、“onWindowChange”(窗口失去焦点)。如果设置为“afterDelay”，则可在 "files.autoSaveDelay" 中配置延迟。
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1500,
+    // 启用要发送给 Microsoft 的使用情况数据和错误。
+    "telemetry.enableTelemetry": false,
+    // 启用要发送给 Microsoft 的故障报表。
+    // 此选项需重启才可生效。
+    "telemetry.enableCrashReporter": false,
+    "window.zoomLevel": 0,
+    "terminal.integrated.fontSize": 18,
+    "window.titleBarStyle": "custom",
+    "editor.minimap.enabled": true,
+    "grunt.autoDetect": "off",
+    "terminal.integrated.shell.osx": "zsh",
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "vetur.validation.template": false,
+    "workbench.sideBar.location": "left",
+    "editor.minimap.showSlider": "always",
+    "go.alternateTools": {
+        "go-langserver": "gopls"
+    },
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "extensions.ignoreRecommendations": true,
+    "emmet.triggerExpansionOnTab": true,
+    "material-icon-theme.showUpdateMessage": false,
+    "workbench.editor.swipeToNavigate": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        
+    },
+    "go.addTags": {
+        "tags": "bson,json",
+        "options": "",
+        "promptForTags": false,
+        "transform": "snakecase"
+    },
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": false,
+        "addTags": true,
+        "removeTags": true,
+        "testAtCursor": false,
+        "testFile": false,
+        "testPackage": false,
+        "generateTestForFunction": true,
+        "generateTestForFile": true,
+        "generateTestForPackage": true,
+        "addImport": true,
+        "testCoverage": false,
+        "playground": true
+    },
+    "git.enableSmartCommit": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
+    "go.gotoSymbol.includeGoroot": true,
+    "go.inferGopath": true,
+    "workbench.statusBar.feedback.visible": false,
+    "python.linting.flake8Enabled": true,
+    "python.pythonPath": "/usr/local/anaconda3/bin/python",
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E501",
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "javascript.validate.enable": false,
+    "workbench.activityBar.visible": true,
+    "editor.fontLigatures": true,
+    "workbench.settings.editor": "json",
+    "files.associations": {
+        "*.wpy": "vue"
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "go.useLanguageServer": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "sync.gist": "18766fbe2c94b44a31b008f01d39b293",
+    "sync.autoUpload": true,
+    "sync.quietSync": true,
+    "search.exclude": {
+        "node_modules": true
+    },
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.rendererType": "dom",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.formatTool": "goimports",
+    "[markdown]": {
+        "editor.defaultFormatter": "TomasHubelbauer.vscode-markdown-table-format"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }

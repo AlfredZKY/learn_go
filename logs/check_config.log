@@ -1,3 +1,6 @@
 [32m2020-09-25 19:08:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 156 Check config file for : xiaohong
 [0m[32m2020-09-25 19:08:53 DEBUG /home/zky/project/my/learn_go/middleware/hostname/main.go 156 Check config file for : miner
+[0m[32m2020-11-04 22:12:22 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 272 Check config file for : xiaohong
+[0m[32m2020-11-04 22:19:01 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 272 Check config file for : xiaohong
+[0m[32m2020-11-04 22:20:50 DEBUG /Users/zky/projects/myprojects/learn_go/middleware/hostname/main.go 272 Check config file for : xiaohong
 [0m
