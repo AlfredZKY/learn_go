@@ -424,6 +424,7 @@ func main() {
 			fmt.Println(nil)
 		}
 	}
+	panic()
 	//for tasktype, securityMap := range scheduleTaskMaps {
 	//	fmt.Println( tasktype, stringfySyncMap(&securityMap))
 	//}
