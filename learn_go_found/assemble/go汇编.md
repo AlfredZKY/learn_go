@@ -1,10 +1,8 @@
 # go生成汇编代码
-- go tool 6g -S name.go
 - go tool compile -N -l -S name.go >> main.S
 - go build -gcflags -S main.go
 
 # 生成反汇编
-- go tool 6l -a elfname
 - go tool objdump name.o
 
 # 注意
